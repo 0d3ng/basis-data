@@ -6,7 +6,7 @@
 |------------|------------------------------------|-----------|--------|
 | 1941720159 | ALVI RAHMADHANI                    | 75        | 65     |
 | 1941720006 | ARIN KISTIA NUGRAENI               | 75        | 70     |
-| 1941720097 | ARYA DUTA NUSA                     |           | 70     |
+| 1941720097 | ARYA DUTA NUSA                     | 70        | 70     |
 | 1941720220 | ARYA SEPTIAWAN                     | 70        | 75     |
 | 1941720190 | BRIAN ADAM BHAGASKARA              | 70        | 75     |
 | 1941720048 | DEVI PUSPITASARI                   | 75        | 65     |
