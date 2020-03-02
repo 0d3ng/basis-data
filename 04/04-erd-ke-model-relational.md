@@ -129,45 +129,118 @@ Setiap himpunan entitas akan diimplementasikan sebagai sebuah tabel sesuai denga
 
     Setelah melakukan pemilihan kursus, maka proses pendaftaran dilanjutkan ke kasir. Kasir menyimpan informasi mengenai mengenai kode kasir, nama, alamat dan nomor telepon. Kode kasir terdiri dari 5 karakter (harus diawali dengan huruf ‘KY’ dan diikuti dengan 3 digit angka), selain itu nama petugas kasir juga wajib diisi. Sekali mendaftar beberapa kursus dapat dilakukan sekaligus, dan setiap jenis kursus diperoleh dari banyak proses pendaftaran”
 
-2. Buatlah tabel deskripsi untuk tabel Anggota sesuai dengan skenario uji coba bagian 1 nomor 1!
+2. Buatlah tabel deskripsi untuk **tabel Anggota** sesuai dengan skenario uji coba bagian 1 nomor 1!
     
     Tabel Anggota
     
     Primary key : kdAnggota
 
-    | Nama Field         | Tipe Data                          | Length | Keterangan                                                                         |
-    |--------------------|------------------------------------|--------|------------------------------------------------------------------------------------|
-    | KdAnggota          | char                               | 5      | Harus diisi dan panjang=5, harus diawali dengan ‘NT’ dan 3 digit terakhirnya angka |
-    | Nama               | varchar                            | 30     | Harus diisi                                                                        |
-    | Alamat             | varchar                            | 50     | \-                                                                                 |
-    | Telp               | integer                            | \-     | Panjangnya maksimal 10
+    <table>
+    <tr>
+        <td>Nama Field</td>
+        <td>Tipe Data</td>
+        <td>Length</td>
+        <td>Keterangan</td>
+    </tr>
+    <tr>
+        <td>KdAnggota</td>
+        <td>char</td>
+        <td>5</td>
+        <td>Harus diisi dan panjang=5, harus diawali dengan ‘NT’ dan 3 digit terakhirnya angka</td>
+    </tr>
+    <tr>
+        <td>Nama</td>
+        <td>varchar</td>
+        <td>30</td>
+        <td>Harus diisi</td>
+    </tr>
+    <tr>
+        <td>Alamat</td>
+        <td>varchar</td>
+        <td>50</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Telp</td>
+        <td>integer</td>
+        <td>-</td>
+        <td>Panjangnya maksimal 10</td>
+    </tr>
+    </table>
 
-3. Buatlah tabel deskripsi untuk tabel Kasir sesuai dengan skenario uji coba bagian 1 nomor 1!
+3. Buatlah tabel deskripsi untuk **tabel Kasir** sesuai dengan skenario uji coba bagian 1 nomor 1!
 
     Tabel Kasir
     
     Primary key : kdKasir
 
-| Nama Field         | Tipe Data                          | Length | Keterangan                                                                         |
-|--------------------|------------------------------------|--------|------------------------------------------------------------------------------------|
-| KdKasir            | char                               | 5      | Harus diisi dan panjang=5, harus diawali dengan ‘NT’ dan 3 digit terakhirnya angka |
-| Nama               | varchar                            | 30     | Harus diisi                                                                        |
-| Alamat             | varchar                            | 50     | \-                                                                                 |
-| Telp               | integer                            | \-     | Panjangnya maksimal 10
+    <table>
+    <tr>
+        <td>Nama Field</td>
+        <td>Tipe Data</td>
+        <td>Length</td>
+        <td>Keterangan</td>
+    </tr>
+    <tr>
+        <td>KdKasir</td>
+        <td>char</td>
+        <td>5</td>
+        <td>Harus diisi dan panjang=5, harus diawali dengan ‘KY’ dan 3 digit terakhirnya angka</td>
+    </tr>
+    <tr>
+        <td>Nama</td>
+        <td>varchar</td>
+        <td>30</td>
+        <td>Harus diisi</td>
+    </tr>
+    <tr>
+        <td>Alamat</td>
+        <td>varchar</td>
+        <td>50</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Telp</td>
+        <td>integer</td>
+        <td>-</td>
+        <td>Panjangnya maksimal 10</td>
+    </tr>
+    </table>
 
-4. Buatlah tabel deskripsi untuk tabel Kursus sesuai dengan skenario uji coba bagian 1 nomor 1!
+4. Buatlah tabel deskripsi untuk **tabel Kursus** sesuai dengan skenario uji coba bagian 1 nomor 1!
 
     Tabel Kursus
     
     Primary key : kdKursus
 
-| Nama Field         | Tipe Data                          | Length | Keterangan                                                                         |
-|--------------------|------------------------------------|--------|------------------------------------------------------------------------------------|
-| KdKursus           | char                               | 5      | Harus diisi dan panjang=5, harus diawali dengan ‘NT’ dan 3 digit terakhirnya angka |
-| NamaKursus         | varchar                            | 30     | Harus diisi                                                                        |
-| Biaya              | integer                            | \-     | Panjangnya maksimal 10
+    <table>
+    <tr>
+        <td>Nama Field</td>
+        <td>Tipe Data</td>
+        <td>Length</td>
+        <td>Keterangan</td>
+    </tr>
+    <tr>
+        <td>KdKursus</td>
+        <td>char</td>
+        <td>5</td>
+        <td>Harus diisi dan panjang=5, harus diawali dengan ‘MK’ dan 3 digit terakhirnya angka</td>
+    </tr>
+    <tr>
+        <td>NamaKursus</td>
+        <td>varchar</td>
+        <td>30</td>
+        <td>Harus diisi</td>
+    </tr>
+    <tr>
+        <td>Biaya</td>
+        <td>integer</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    </table>
 
-5. Buatlah tabel deskripsi untuk tabel HeaderPendaftaran sesuai dengan skenario uji coba bagian 1 nomor 1!
+5. Buatlah tabel deskripsi untuk **tabel HeaderPendaftaran** sesuai dengan skenario uji coba bagian 1 nomor 1!
     
     Tabel HeaderPendaftaran
     
@@ -175,14 +248,40 @@ Setiap himpunan entitas akan diimplementasikan sebagai sebuah tabel sesuai denga
     
     Foreign key : kdAnggota, kdKasir
 
-| Nama Field         | Tipe Data                          | Length | Keterangan                                                                         |
-|--------------------|------------------------------------|--------|------------------------------------------------------------------------------------|
-| KdPendaftaran      | char                               | 5      | Harus diisi dan panjang=5, harus diawali dengan ‘KP’ dan 3 digit terakhirnya angka |
-| KdKasir            | char                               | 5      | \-                                                                                 |
-| kdAnggota          | char                               | 5      | \-                                                                                 |
-| TanggalPendaftaran | Datetime                           | \-     | \-  
+    <table>
+    <tr>
+        <td>Nama Field</td>
+        <td>Tipe Data</td>
+        <td>Length</td>
+        <td>Keterangan</td>
+    </tr>
+    <tr>
+        <td>KdPendaftaran</td>
+        <td>char</td>
+        <td>5</td>
+        <td>Harus diisi dan panjang=5, harus diawali dengan ‘KP’ dan 3 digit terakhirnya angka</td>
+    </tr>
+    <tr>
+        <td>KdKasir</td>
+        <td>char</td>
+        <td>5</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>kdAnggota</td>
+        <td>char</td>
+        <td>5</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>TanggalPendaftaran</td>
+        <td>Datetime</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    </table>
 
-6. Buatlah tabel deskripsi untuk tabel Detail Pendaftaran sesuai dengan skenario uji coba bagian 1 nomor 1!
+6. Buatlah tabel deskripsi untuk **tabel Detail Pendaftaran** sesuai dengan skenario uji coba bagian 1 nomor 1!
 
     Tabel DetailPendaftaran
 
@@ -190,10 +289,67 @@ Setiap himpunan entitas akan diimplementasikan sebagai sebuah tabel sesuai denga
 
     Foreign Key : kdKursus, kdPendaftaran
 
-| Nama Field         | Tipe Data                          | Length | Keterangan  |
-|--------------------|------------------------------------|--------|-------------|
-| kdKursus           | char                               | 5      | \-          |
-| kdPendaftaran      | char                               | 5      | \-          |
-| Jumlah Pertemuan   | integer                            | \-     | Harus diisi |
+    <table>
+    <tr>
+        <td>Nama Field</td>
+        <td>Tipe Data</td>
+        <td>Length</td>
+        <td>Keterangan</td>
+    </tr>
+    <tr>
+        <td>kdKursus</td>
+        <td>char</td>
+        <td>5</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>kdPendaftaran</td>
+        <td>char</td>
+        <td>5</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Jumlah Pertemuan</td>
+        <td>integer</td>
+        <td>-</td>
+        <td>Harus diisi</td>
+    </tr>
+    </table>
 
 7. Lanjutkan praktikum ke praktikum-bagian 2!
+
+## Praktikum – Bagian 2: Membuat CDM
+1. Bukalah file PowerDesigner.exe pada folder PowerDesigner (Sybase Power Designer versi 12.5 portable) untuk mulai membuat CDM!   
+    
+    ![](images/06.png)
+    
+2. Kemudian klik menu ‘new’ di kiri atas untuk mulai membuat CDM. Selanjutnya akan muncul gambar seperti ini:
+    
+    ![](images/07.png)
+    
+    Pilih model type ‘Conceptual Data Model’ dan di tab ‘General’ sebelah kanan, isikan model name dengan ‘Amazing_Course’ dan klik button ‘OK’!
+3. Buatlah entitas dengan memilih menu ‘Palette’!
+    
+    ![](images/08.png)
+
+4. Double klik pada setiap entitas dan isikan atribut sesuai dengan tabel deskripsi! 
+Lakukan tahap ini untuk tabel Anggota, Kasir, Kursus dan HeaderPendaftaran!
+Setelah mengisikan ‘Name’, ‘Data_Type’, dan ‘Length’ centang pilihan ‘M’ untuk mandatory, ‘P’ untuk primary key!
+    
+    ![](images/09.png)
+
+5. Buatlah relasi  dengan memilih menu ‘Palette’!
+
+    ![](images/10.png)
+
+6. Double klik pada relasi untuk mengganti cardinalitas ataupun merubah nama sesuai tampilan berikut!
+
+    ![](images/11.png)
+
+7. Pastikan CDM sudah sesuai dengan gambar di bawah ini!
+
+    ![](images/12.png)
+
+8. Lanjutkan praktikum ke **praktikum-bagian 3!**
+
+## Praktikum – Bagian 3: Membuat PDM
