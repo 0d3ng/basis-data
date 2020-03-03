@@ -650,6 +650,6 @@ Praktikum dan tugas dikumpulkan dalam sebuah laporan yang berisi deskripsi tabel
 3. Fathansyah, “Basisdata Revisi Kedua”, Bandung: Informatika, 2015.
 4. http://www.dcs.warwick.ac.uk/~hugh/TTM/The-Relational-Model.pdf
 5. http://infolab.stanford.edu/~ullman/focs/ch08.pdf
-6. http://www.inf.unibz.it/~nutt/IDBs1011/IDBSlides/5-db-erToRel.pdfInf
-7. http://teknikinformatika.fasilkom.mercubuana.ac.id/wp-content/uploads/2015/03/3.-Modul-3	-Model-Data-Relasional.pdf
+6. http://www.inf.unibz.it/~nutt/IDBs1011/IDBSlides/5-db-erToRel.pdf
+7. http://teknikinformatika.fasilkom.mercubuana.ac.id/wp-content/uploads/2015/03/3.-Modul-3-Model-Data-Relasional.pdf
 8. http://www.databaseanswers.org
