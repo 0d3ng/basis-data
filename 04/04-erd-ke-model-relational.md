@@ -319,7 +319,8 @@ Setiap himpunan entitas akan diimplementasikan sebagai sebuah tabel sesuai denga
 7. Lanjutkan praktikum ke praktikum-bagian 2!
 
 ## Praktikum – Bagian 2: Membuat CDM
-1. Bukalah file PowerDesigner.exe pada folder PowerDesigner (Sybase Power Designer versi 12.5 portable) untuk mulai membuat CDM!   
+1. Bukalah file PowerDesigner.exe pada folder PowerDesigner (Sybase Power Designer versi 12.5 portable) untuk mulai membuat CDM!
+    > Silakan download di [sini](https://drive.google.com/open?id=1jKlvNzMSncLoz60jjnFoY0dsT6vIqxsM) untuk master Power Desginer.
     
     ![](images/06.png)
 
