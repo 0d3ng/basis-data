@@ -5,5 +5,6 @@
 * [ERD](02/02.ERD.md)
 * [ERD-2](03/03-erd-2.md)
 * [ERD ke Model Relational](04/04-erd-ke-model-relational.md)
+* [ERD ke Model Relational(2)](05/05-pemetaan-erd-ke-model-relational.md)
 * [Nilai Jobsheet](00/nilai.md)
 * [Nilai Teori](00/nilai-teori.md)
