@@ -261,6 +261,7 @@ Untuk menampilkan daftar nama tabel yang terdapat dalam database yang sedang akt
 
 ## Tugas
 1. Buatlah basis data Akademik dengan data sebagai berikut :
+
     ```shell script
     No_Mhs	Nama_mhs	Jurusan	Kd_MK	Nama_mk	Kd_Dosen	Nm_Dosen	nilai
     1921001	Aminah	MI	MI350	Basis Data	B104	Ati	85
@@ -269,6 +270,7 @@ Untuk menampilkan daftar nama tabel yang terdapat dalam database yang sedang akt
     1921003	Della	TI	TI201	Mobile 	C102	Leo	78
     1921004	Firda	TI	TI201	Mobile	C102	Leo	80
     ```
+   
       + deskripsikan struktur data dari table-tabel berikut serta isikan datanya:     
         - Tabel Mahasiswa {No_Mhs, Nama_mhs}  
         - Tabel Mata_Kuliah {Kd_MK, Nama_MK}    
@@ -299,7 +301,7 @@ Untuk menampilkan daftar nama tabel yang terdapat dalam database yang sedang akt
         NP005	OB	Peg16	Didit 	D	500.000
         NP005	OB	Peg17	Dani 	D	500.000
         ```
-    
+      
       + Deskripsikan struktur data dari table-tabel berikut serta isikan datanya:
         - Table Pegawai {Nopegawai, NamaPegawai}
         - Tabel Golongan {Golongan}
