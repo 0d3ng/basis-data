@@ -9,5 +9,6 @@
 * [Normalisasi 1NF sampai 3NF](06/06-normalisasi-1NF-3NF.md)
 * [Normalisasi BCNF, 4NF, dan 5NF](07/07-BCNF-4NF-5NF.md)
 * [MySQL (DDL dan DML)](08/08-ddl.md)
+* [MySQL – Data Manipulation Language (DML)](09/09-dml.md)
 * [Nilai Jobsheet](00/nilai.md)
 * [Nilai Teori](00/nilai-teori.md)
