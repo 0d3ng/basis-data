@@ -18,18 +18,18 @@
 | 1941720183 | GILANG PERMANA PUTRA SHAKTI        | 70        | 70     | 75       | 70       | 75       | 75       | 75       | 40  |
 | 1941720186 | HISYAM HARYO MAHDYAN               | 70        | 60     | 75       | 85       | 75       | 85       | 80       | 40  |
 | 1941720182 | IVANKA MAULUDI JUNIAR              | 75        | 60     | 75       | 75       | 70       | 70       | 75       | 25  |
-| 1941720133 | MOCHAMAD FARHAN FITRAHTUR RACHMAD  | 70        | 75     | 80       | 85       | 80       | 80       | 80       |
-| 1941720231 | MOCHAMMAD IQBAL ISLAMAY ARSY       | 65        | 65     | 70       |          | 65       |          |          |
-| 1941720123 | MOHAMMAD VIDELA ROSENDY DIRGANTARA | 75        | 70     | 75       | 85       | 70       | 80       | 75       |
-| 1941720074 | MUHAMMAD AKBAR AZMI                | 80        | 70     | 70       | 85       | 70       | 80       | 70       |
-| 1941720224 | MUHAMMAD HAJAR PRIATMAJA           | 70        | 50     | 70       |          | 75       |          | 75       |
-| 1941720230 | MUHAMMAD REZA PAHLEVI              | 70        | 70     | 75       | 85       | 75       | 75       | 75       |
-| 1941720130 | NAILA NABILA                       | 75        | 75     | 75       | 80       | 80       | 80       | 85       |
-| 1941720040 | NAUFAL YUKAFI RIDLO                | 70        | 55     | 80       | 85       | 85       | 90       | 85       |
-| 1941720179 | REDHIA FARARRI                     | 65        | 70     | 70       | 80       | 75       | 80       | 85       |
-| 1941720226 | RISKY WISNU OKTOVIANTO             | 75        | 75     | 75       | 85       | 75       | 80       | 70       |
-| 1941720227 | RIZAL WHISNU WIRATAMA              | 70        | 75     | 70       | 80       | 70       | 75       | 80       |
-| 1941720215 | SANGGA ASMARA PANJAITAN            | 70        | 70     | 80       | 85       | 80       | 10       | 70       |
-| 1941720063 | SRI KYNANTI                        | 70        | 65     | 75       | 85       | 70       | 80       | 80       |
-| 1941720053 | TITA WIJAYANTI                     | 70        | 75     | 70       | 80       | 75       | 80       | 85       |
-| 1941720144 | ZIDAN SHABIRA AS SIDIQ             | 75        | 70     |          | 80       | 70       | 80       | 85       |
+| 1941720133 | MOCHAMAD FARHAN FITRAHTUR RACHMAD  | 70        | 75     | 80       | 85       | 80       | 80       | 80       | 60  |
+| 1941720231 | MOCHAMMAD IQBAL ISLAMAY ARSY       | 65        | 65     | 70       |          | 65       |          |          | 40  |
+| 1941720123 | MOHAMMAD VIDELA ROSENDY DIRGANTARA | 75        | 70     | 75       | 85       | 70       | 80       | 75       | 40  |
+| 1941720074 | MUHAMMAD AKBAR AZMI                | 80        | 70     | 70       | 85       | 70       | 80       | 70       | 30  |
+| 1941720224 | MUHAMMAD HAJAR PRIATMAJA           | 70        | 50     | 70       |          | 75       |          | 75       | 10  |
+| 1941720230 | MUHAMMAD REZA PAHLEVI              | 70        | 70     | 75       | 85       | 75       | 75       | 75       | 20  |
+| 1941720130 | NAILA NABILA                       | 75        | 75     | 75       | 80       | 80       | 80       | 85       | 45  |
+| 1941720040 | NAUFAL YUKAFI RIDLO                | 70        | 55     | 80       | 85       | 85       | 90       | 85       | 50  |
+| 1941720179 | REDHIA FARARRI                     | 65        | 70     | 70       | 80       | 75       | 80       | 85       | 50  |
+| 1941720226 | RISKY WISNU OKTOVIANTO             | 75        | 75     | 75       | 85       | 75       | 80       | 70       | 10  |
+| 1941720227 | RIZAL WHISNU WIRATAMA              | 70        | 75     | 70       | 80       | 70       | 75       | 80       | 60  |
+| 1941720215 | SANGGA ASMARA PANJAITAN            | 70        | 70     | 80       | 85       | 80       | 10       | 70       | 55  |
+| 1941720063 | SRI KYNANTI                        | 70        | 65     | 75       | 85       | 70       | 80       | 80       | 50  |
+| 1941720053 | TITA WIJAYANTI                     | 70        | 75     | 70       | 80       | 75       | 80       | 85       | 70  |
+| 1941720144 | ZIDAN SHABIRA AS SIDIQ             | 75        | 70     |          | 80       | 70       | 80       | 85       | 50  |
