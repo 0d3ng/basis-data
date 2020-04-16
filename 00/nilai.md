@@ -34,4 +34,4 @@
 | 1941720053 | TITA WIJAYANTI                     | 70        | 75     | 70       | 80       | 75       | 80       | 85       | 70  |
 | 1941720144 | ZIDAN SHABIRA AS SIDIQ             | 75        | 70     |          | 80       | 70       | 80       | 85       | 50  |
 
-Versi pdf dapat di download di [sini](nilai-jobsheet-basis-data.pdf)
+Versi pdf dapat didownload di [sini](nilai-jobsheet-basis-data.pdf)
