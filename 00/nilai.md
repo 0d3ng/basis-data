@@ -52,7 +52,7 @@ Versi pdf dapat didownload di [sini](nilai-jobsheet-basis-data.pdf)
 | 1941720047 | ELLA AMELIA WIDODO                 | 85        | 90        | 90        | 85        | 80   |
 | 1941720151 | FAHMI KHAIRUDIN                    | 80        | 85        | 80        | 80        | 80   |
 | 1941720132 | FAYYADH AL\-BAITY                  | 90        | 85        | 85        | 80        | 85   |
-| 1941720007 | FERDY FEBRIYANTO                   | 90        | 85        |           | 85        | 85   |
+| 1941720007 | FERDY FEBRIYANTO                   | 90        | 85        | 90        | 85        | 85   |
 | 1941720183 | GILANG PERMANA PUTRA SHAKTI        |           | 85        | 75        | 80        |      |
 | 1941720186 | HISYAM HARYO MAHDYAN               | 90        | 90        | 90        | 90        | 80   |
 | 1941720182 | IVANKA MAULUDI JUNIAR              | 85        | 70        | 80        | 85        | 70   |
