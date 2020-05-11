@@ -1,0 +1,638 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MySQL – Data Manipulation Language (DML) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../10/12.select.html" />
+    
+    
+    <link rel="prev" href="../08/08-ddl.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../01/01.contoh-penerapan-basis-data.html">
+            
+                <a href="../01/01.contoh-penerapan-basis-data.html">
+            
+                    
+                    Contoh Penerapan Basis Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../02/02.ERD.html">
+            
+                <a href="../02/02.ERD.html">
+            
+                    
+                    ERD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../03/03-erd-2.html">
+            
+                <a href="../03/03-erd-2.html">
+            
+                    
+                    ERD-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../04/04-erd-ke-model-relational.html">
+            
+                <a href="../04/04-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                <a href="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../06/06-normalisasi-1NF-3NF.html">
+            
+                <a href="../06/06-normalisasi-1NF-3NF.html">
+            
+                    
+                    Normalisasi 1NF sampai 3NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../07/07-BCNF-4NF-5NF.html">
+            
+                <a href="../07/07-BCNF-4NF-5NF.html">
+            
+                    
+                    Normalisasi BCNF, 4NF, dan 5NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../08/08-ddl.html">
+            
+                <a href="../08/08-ddl.html">
+            
+                    
+                    MySQL (DDL dan DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="09-dml.html">
+            
+                <a href="09-dml.html">
+            
+                    
+                    MySQL – Data Manipulation Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../10/12.select.html">
+            
+                <a href="../10/12.select.html">
+            
+                    
+                    MySQL – Data Retrieval Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../11/13.select-multitable.html">
+            
+                <a href="../11/13.select-multitable.html">
+            
+                    
+                    Select Multi Tabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../00/nilai.html">
+            
+                <a href="../00/nilai.html">
+            
+                    
+                    Nilai Jobsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../00/nilai-teori.html">
+            
+                <a href="../00/nilai-teori.html">
+            
+                    
+                    Nilai Teori
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >MySQL – Data Manipulation Language (DML)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jobsheet-11-mysql-&#x2013;-data-manipulation-language-dml">Jobsheet-11: MySQL &#x2013; Data Manipulation Language (DML)</h1>
+<h2 id="topik">Topik</h2>
+<p>Data Manipulation Language (DML) pada DBMS MySQL</p>
+<p>Mahasiswa diharapkan dapat:</p>
+<ol>
+<li>Memahami penggunaan SQL statement INSERT.</li>
+<li>Memahami penggunaan SQL statement UPDATE.</li>
+<li>Memahami penggunaan SQL statement DELETE.</li>
+</ol>
+<h2 id="pendahuluan">Pendahuluan</h2>
+<p>DML merupakan istilah untuk beberapa sintaksis (syntax) dari SQL yang digunakan untuk melakukan perubahan pada data (isi tabel-tabel) dalam suatu database. DML terdiri dari 3 klausa utama yaitu:</p>
+<ol>
+<li>INSERT        : Menambah baris baru pada sebuah tabel</li>
+<li>UPDATE    : Mengubah nilai suatu baris pada sebuah tabel.</li>
+<li>DELETE    : Menghapus suatu baris dari sebuah tabel.</li>
+</ol>
+<p>Pada DML terdapat dua jenis bahasa, yaitu :</p>
+<ol>
+<li><p>High-Level(Non_procedural) DML.</p>
+<ul>
+<li>Digunakan secara interaktif (interpreter)</li>
+<li><p>Dapat dijadikan satu dengan general purpose programming language (embedded)</p>
+<p>High-Level DML yang biasa digunakan secara interaktif disebut &quot;Query Language&quot;.</p>
+</li>
+</ul>
+</li>
+<li><p>Low-Level(Proedural) DML.</p>
+<p> Digunakan secara embedded dalam suatu general purpose programming language</p>
+</li>
+</ol>
+<p>Bilamana kedua jenis DML diatas digunakan secara &quot;embedded&quot;, maka : bahasa pemrograman yang digunakan disebut sebagai &quot;Host Language&quot; dan &quot;DML-nya disebut &quot;Sub Language&quot;</p>
+<p><strong>Operasi INSERT</strong></p>
+<p>Operasi insert bertujuan untuk menyisipkan satu tuple baru ke dalam suatu relasi R. </p>
+<p>Klausa pembentuk: </p>
+<ol>
+<li><code>INSERT</code> </li>
+<li><code>INTO</code></li>
+<li><code>VALUES</code></li>
+</ol>
+<p>Format:</p>
+<ol>
+<li><code>INSERT INTO nama_tabel (kolom1, kolom2, ...dst.) VALUES (nilai_kolom1, nilai_kolom2, ...dst.);</code></li>
+<li><code>INSERT INTO nama_tabel VALUES (nilai_kolom1, nilai_kolom2, ...dst.);</code></li>
+<li><code>[Salah satu dari kedua format sebelumnya], (nilai_kolom_kolom_baris1), (nilai_kolom_kolom_baris2), ...dst.</code> </li>
+</ol>
+<p>Operasi ini memungkinkan untuk melanggar empat jenis constraint sebagaimana dijelaskan berikut ini :</p>
+<ol>
+<li>DOMAIN Constraint dapat dilanggar jika suatu nilai attribute yang diberikan tidak ada dalam domain yang berkorespondensi dengan attribute tadi.</li>
+<li>KEY Constraint dapat dilanggar jika nilai key dalam tuple baru t sudah ada dalam tuple lain dalam relasi r(R).</li>
+<li>ENTITY INTEGRITY Constraint dapat dilanggar jika primary key dari tuple baru t adalah NULL</li>
+<li>REFERENTIAL INTEGRITY Constraint dapat dilanggar jika nilai dari suatu foreign key dalam t mengacu ke suatu tuple yang tidak ada dalam relasi yang diacu.</li>
+</ol>
+<p>Ada dua pilihan tindakan yang dapat dilakukan jika ada satu atau lebih constraint yang dilanggar akibat operasi insert, yaitu :</p>
+<ol>
+<li>Menolak (reject) operasi insertion. Biasanya DBMS memberikan penjelasan mengapa proses insertion ditolak.</li>
+<li>Berusaha memperbaiki alasan penolakan proses insertion. Dimana insertion akan diterima jika user melakukan perubahan nilai-nilai attribute sehingga insertion diterima.</li>
+</ol>
+<p><strong>Operasi DELETE</strong></p>
+<p>Operasi delete bertujuan untuk menghapus satu atau beberapa tuple di dalam suatu relasi R. Operasi ini hanya dapat melanggar referential integrity, jika tuple yang dihapus diacu oleh kunci-kunci tamu dari tuple yang lain dalam basis data.</p>
+<p>Klausa pembentuk:</p>
+<ol>
+<li><code>DELETE</code></li>
+<li><code>FROM</code></li>
+<li><code>WHERE [opsional]</code></li>
+</ol>
+<p>Format:</p>
+<ol>
+<li><code>DELETE FROM nama_tabel WHERE nama_kolom_patokan [operator_perbandingan] nilai_patokan;</code></li>
+<li><code>DELETE * FROM nama_tabel; atau DELETE FROM nama_tabel;</code></li>
+</ol>
+<p>Operator perbandingan/comparison operator dapat berupa: <code>=, &lt;, &gt;, &lt;=, &gt;=, &lt;&gt;</code></p>
+<p>Ada empat pilihan tindakan yang dapat dilakukan jika suatu deletion melanggar constraint yang telah ditentukan, yaitu :</p>
+<ol>
+<li>Menolak(reject) proses deletion.</li>
+<li>Berusaha untuk melakukan &#x201C;cascade deletion&#x201D;, yaitu dengan menghapus sejumlah tuple yang mengacu pada tuple yang akan dihapus.</li>
+<li>Melakukan modifikasi nilai attribute yang mengacu pada tuple yang dihapus, yaitu setiap nilai diset NULL atau diganti dengan nilai dari tuple lain yang valid sebagai acuan baru. Akan tetapi, bila attribute yang mengacu yang menyebabkan pelanggaran adalah bagian dari primary key, maka ia tidak dapat diset NULL (karena melanggar entity integrity).</li>
+<li>Kombinasi 2 dan 3.</li>
+</ol>
+<p><strong>Operasi UPDATE</strong></p>
+<p>Operasi update digunakan untuk merubah nilai-nilai satu atau lebih attribute dalam satu atau lebih tuple dalam sejumlah relasi R.</p>
+<p>Klausa pembentuk:</p>
+<ol>
+<li><code>UPDATE</code></li>
+<li><code>SET</code></li>
+<li><code>WHERE [opsional]</code></li>
+</ol>
+<p>Format:</p>
+<ol>
+<li><code>UPDATE nama_tabel SET nama_kolom = nilai_baru WHERE nama_kolom_patokan [operator_perbandingan] nilai_patokan;</code></li>
+<li><code>UPDATE nama_tabel SET nama_kolom1 = nilai_baru1, nama_kolom2 = nilai_baru2, ...dst. WHERE nama_kolom_patokan [operator_perbandingan] nilai_patokan;</code></li>
+</ol>
+<p>Operator perbandingan/comparison operator dapat berupa: <code>=, &lt;, &gt;, &lt;=, &gt;=, &lt;&gt;</code></p>
+<p>Operasi UPDATE bisa dilakukan pada tiga jenis attibut, dengan permasalahan yang berbeda sebagaimana berikut ini :</p>
+<ol>
+<li>Modifikasi nilai suatu foreign key, maka DBMS harus melakukan pengecekan bahwa nilai-nilai baru yang diberikan mengacu pada tuple yang ada dalam relasi-relasi yang dijadikan acuan.</li>
+<li>modifikasi nilai suatu primary key serupa dengan proses deletion satu tuple dan inserting yang lain pada tempat yang sama. Akibatnya, pilihan- pilihan seperti yang dilakukan pada operasi INSERT dan DELETE dapat dipakai agar modifikasi tidak melanggar constraint.</li>
+<li>modifikasi suatu attribute yang bukan primary key atau bukan foreign key biasanya tidak akan menimbulkan masalah. DBMS hanya perlu untuk mengecek apakah nilai-nilai baru yang diberikan mempunyai tipe data dan domain yang valid.</li>
+</ol>
+<h2 id="praktikum-&#x2013;-bagian-1-membuat-database-untuk-percobaan">Praktikum &#x2013; Bagian 1: Membuat Database untuk Percobaan</h2>
+<ol>
+<li><p>Perhatikan skema/model relasional/EER diagram dari database berikut.</p>
+<p> <img src="images/image002.png" alt=""></p>
+</li>
+<li><p>Skema tersebut adalah sekema database pada sebuah sistem informasi yang digunakan oleh suatu perusahaan yang bergerak di bidang pembuatan perangkat lunak. Pertama-tama, buatlah database tersebut dengan mengeksekusi baris-baris kode DDL berikut.</p>
+<p> <img src="images/image003.png" alt=""></p>
+<p> <img src="images/image004.png" alt=""></p>
+<p> <img src="images/image005.png" alt=""></p>
+<p> <img src="images/image006.png" alt=""></p>
+<p> <img src="images/image007.png" alt=""></p>
+</li>
+<li><p>Cek database Anda dengan perintah &#x2018;SHOW TABLES&#x2019; untuk memastikan bahwa semua tabel sudah dibuat.</p>
+<p> <img src="images/image008.png" alt=""></p>
+</li>
+<li><p>Buat 1 tabel backup untuk tabel departemen bernama departemen_backup. Tabel ini akan bermanfaat ketika bagian INSERT dan DELETE kita kerjakan.</p>
+<p> <img src="images/image009.png" alt=""></p>
+</li>
+<li><p>Cek strukturnya.</p>
+<p> <img src="images/image010.png" alt=""></p>
+</li>
+<li><p>Setelah selesai membuat database diatas, lanjutkan ke <strong>Praktikum &#x2013; Bagian 2.</strong></p>
+</li>
+</ol>
+<h2 id="praktikum-&#x2013;-bagian-2-percobaan-statement-insert">Praktikum &#x2013; Bagian 2: Percobaan Statement INSERT</h2>
+<ol>
+<li><p>Untuk menambahkan data (mengisi) suatu tabel, digunakan statement (pernyataan) INSERT. Eksekusi SQL berikut untuk menambahkan 1 baris (record) baru pada tabel departemen.</p>
+<p> <img src="images/image011.png" alt=""></p>
+</li>
+<li><p>Statement SQL tersebut menambahkan 1 baris baru ke tabel departemen pada kolom yang dinyatakan di dalam tanda kurung () pertama. Untuk melihat hasil SQL yang kita eksekusi tersebut, gunakan statement SELECT seperti berikut.</p>
+<p> <img src="images/image012.png" alt=""></p>
+</li>
+<li><p>Pembahasan lebih lengkap mengenai SELECT dijadwalkan untuk disampaikan pada pertemuan berikutnya, namun secara umum, statement SELECT digunakan untuk menyajikan record-record yang ada pada suatu tabel. Karakter * akan menampilkan isi dari semua kolom yang ada pada tabel. Statement SELECT tersebut menghasilkan:</p>
+<p> <img src="images/image013.png" alt=""></p>
+</li>
+<li><p>Apabila data di-insert-kan pada semua kolom tabel, maka kita dapat langsung menggunakan klausa VALUES tanpa harus menuliskan nama-nama kolom dahulu.</p>
+<p> <img src="images/image014.png" alt=""></p>
+</li>
+<li><p>Untuk menambahkan beberapa kolom sekaligus dalam 1 statement digunakan statement dengan format seperti berikut.</p>
+<p> <img src="images/image015.png" alt=""></p>
+</li>
+<li><p>Dan seperti berikut, jika hanya kolom tertentu saja yang akan diberi nilai.</p>
+<p> <img src="images/image016.png" alt=""></p>
+<p> <img src="images/image017.png" alt=""></p>
+<p> <img src="images/image018.png" alt=""></p>
+</li>
+<li><p>Statement INSERT juga dapat dieksekusi dengan menggunakan klausa SET alih-alih VALUES.</p>
+<p> <img src="images/image019.png" alt="">  </p>
+<p> <img src="images/image020.png" alt=""> </p>
+</li>
+<li><p>Pada statement INSERT juga dapat digunakan klausa SELECT.
+Misalnya kita ingin menyalin semua baris pada tabel departemen ke tabel departemen_backup, maka kita SQL berikut dapat digunakan.</p>
+<p> <img src="images/image021.png" alt=""></p>
+<p> <img src="images/image022.png" alt=""></p>
+</li>
+<li><p>Sekarang penambahan data pada tabel karyawan dapat dilakukan karena data departemen sudah siap. Eksekusi SQL berikut ini untuk menambahkan beberapa data pegawai.</p>
+<p> <img src="images/image023.png" alt=""></p>
+<p> <img src="images/image024.png" alt=""></p>
+</li>
+<li><p>Setelah berhasil mengeksekusi SQL tersebut, lanjutkan ke <strong>Praktikum - Bagian 3.</strong></p>
+</li>
+</ol>
+<h2 id="praktikum---bagian-3-percobaan-statement-update">Praktikum - Bagian 3: Percobaan Statement UPDATE</h2>
+<ol>
+<li><p>UPDATE digunakan untuk mengubah nilai suatu baris pada sebuah tabel. Format dasar statement ini adalah sebagai berikut:</p>
+<p> <img src="images/image025.png" alt=""></p>
+</li>
+<li><p>Statement tersebut mengubah nilai SEMUA baris dari tabel departemen pada kolom nik_manajer dengan nilai 741104013. Apabila kita tampilkan isi tabel, maka sekarang semua manajer akan dikepalai oleh karyawan dengan nik tersebut.</p>
+<p> <img src="images/image026.png" alt=""></p>
+</li>
+<li><p>Untuk mengubah nilai pada baris tertentu saja, kita tambahkan klausa WHERE pada statement UPDATE. Misalkan kita akan menjadikan karyawan dengan nip 7411040719 sebagai manajer pada departemen PKU, maka dapat digunakan SQL sebagai berikut:</p>
+<p> <img src="images/image027.png" alt=""></p>
+<p> <img src="images/image028.png" alt=""></p>
+</li>
+<li><p>Klausa WHERE tidak selalu hanya membatasi UPDATE pada 1 baris saja, ia juga bisa memberlakukan UPDATE pada banyak baris sekaligus. Semuanya tergantung pada kondisi yang kita tentukan. Statement berikut ini akan mengosongkan nik_manajer untuk semua departemen yang dikepalai oleh karyawan dengan nik 741104013.</p>
+<p> <img src="images/image029.png" alt=""></p>
+<p> <img src="images/image030.png" alt=""></p>
+</li>
+<li><p>Untuk mengubah beberapa kolom sekaligus dalam satu kali eksekusi statement UPDATE, dapat digunakan format berikut.</p>
+<p> <img src="images/image031.png" alt=""></p>
+<p> <img src="images/image032.png" alt=""></p>
+</li>
+<li><p>Kita juga dapat menggunakan statement UPDATE dengan SELECT. 
+Misalkan kita ingin mengeset nik_manajer departemen &#x2018;RND&#x2019; dengan nik karyawan yang bernama &#x2018;Ahmad Husain&#x2019;, maka dapat digunakan SQL dengan format berikut.</p>
+<p> <img src="images/image033.png" alt=""></p>
+<p> <img src="images/image034.png" alt=""></p>
+</li>
+<li><p>Setelah berhasil mengeksekusi SQL tersebut, lanjutkan ke <strong>Praktikum - Bagian 4.</strong></p>
+</li>
+</ol>
+<h2 id="praktikum---bagian-4-percobaan-statement-delete">Praktikum - Bagian 4: Percobaan Statement DELETE</h2>
+<ol>
+<li><p>DELETE digunakan untuk menghapus satu atau lebih baris dari sebuah tabel. 
+Misalkan kita ingin menghapus departemen yang memiliki nilai pada kolom nik_manajernya, maka format dasar statement seperti berikut dapat kita gunakan:</p>
+<p> <img src="images/image035.png" alt=""></p>
+<p> <img src="images/image036.png" alt=""></p>
+</li>
+<li><p>HATI-HATI apabila kita menggunakan statement DELETE tanpa WHERE! Cobalah eksekusi syntax SQL berikut:</p>
+<p> <img src="images/image037.png" alt=""></p>
+</li>
+<li><p>Semua data dalam satu tabel departemen akan hilang!</p>
+<p> <img src="images/image038.png" alt=""></p>
+</li>
+<li><p>Lanjutkan ke bagian Tugas!</p>
+</li>
+</ol>
+<h2 id="tugas">Tugas</h2>
+<ol>
+<li>Pastikan isi pada tabel-tabel Anda sesuai dengan kondisi akhir pada bagian Praktikum.</li>
+<li>Himpunlah screenshot sintaksis SQL berikut hasil SELECT yang Anda dapat di komputer Anda pada bagian Praktikum dalam sebuah laporan dengan format PDF!
+Untuk nomor 2 dan seterusnya, buatlah juga screenshot sintaksis SQL berikut hasilnya (SELECT).</li>
+<li>Kembalikan lagi data yang hilang pada tabel departemen dengan cara mengisikan data yang sudah ada pada tabel departemen_backup!</li>
+<li>Tambahkan sedikitnya 15 (sepuluh) data karyawan dengan ketentuan:<ul>
+<li>10 orang berjenis kelamin PRIA.</li>
+<li>5 orang lainnya WANITA.</li>
+<li>Masing-masing departemen ditempati oleh TEPAT 1 orang Karyawan KECUALI:<ul>
+<li>Departemen dengan kode CSR dimana pada departemen ini harus ada TEPAT 3 orang karyawan berjenis kelamin WANITA </li>
+<li>Departemen HRD dimana pada departemen ini anggotanya TEPAT 2 orang berjenis kelamin 1 PRIA dan 1 WANITA.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Buatlah SEMUA departemen sedemikian sehingga masing-masing memiliki manajer dimana manajernya haruslah karyawan yang bekerja pada departemen tersebut!</li>
+<li>Tambahkan sedikitnya 6 proyek baru dengan 6 klien berbeda dimana pada masing-masing proyek minimal terdapat 4 penugasan.</li>
+<li>Backup tabel departemen dengan terlebih dahulu menghapus semua nilai pada tabel departemen_backup, kemudian salin semua isi tabel departemen kedalam tabel tersebut.</li>
+<li>Cobalah untuk menghapus semua departemen yang pada namanya ada kata &#x2018;dan&#x2019; hanya dengan 1 statement DELETE.</li>
+</ol>
+<h2 id="daftar-pustaka">Daftar Pustaka</h2>
+<p>&#x2022;    Dwi Puspitasari, S.Kom, &#x201C;Buku Ajar Dasar Basis Data&#x201D;, Program Studi Manajemen Informatika Politeknik Negeri Malang, 2012.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../08/08-ddl.html" class="navigation navigation-prev " aria-label="Previous page: MySQL (DDL dan DML)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../10/12.select.html" class="navigation navigation-next " aria-label="Next page: MySQL – Data Retrieval Language (DML)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MySQL – Data Manipulation Language (DML)","level":"1.11","depth":1,"next":{"title":"MySQL – Data Retrieval Language (DML)","level":"1.12","depth":1,"path":"10/12.select.md","ref":"10/12.select.md","articles":[]},"previous":{"title":"MySQL (DDL dan DML)","level":"1.10","depth":1,"path":"08/08-ddl.md","ref":"08/08-ddl.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"09/09-dml.md","mtime":"2020-05-11T16:40:53.419Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-11T16:41:36.880Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

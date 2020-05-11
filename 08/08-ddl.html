@@ -1,0 +1,691 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MySQL (DDL dan DML) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../09/09-dml.html" />
+    
+    
+    <link rel="prev" href="../07/07-BCNF-4NF-5NF.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../01/01.contoh-penerapan-basis-data.html">
+            
+                <a href="../01/01.contoh-penerapan-basis-data.html">
+            
+                    
+                    Contoh Penerapan Basis Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../02/02.ERD.html">
+            
+                <a href="../02/02.ERD.html">
+            
+                    
+                    ERD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../03/03-erd-2.html">
+            
+                <a href="../03/03-erd-2.html">
+            
+                    
+                    ERD-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../04/04-erd-ke-model-relational.html">
+            
+                <a href="../04/04-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                <a href="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../06/06-normalisasi-1NF-3NF.html">
+            
+                <a href="../06/06-normalisasi-1NF-3NF.html">
+            
+                    
+                    Normalisasi 1NF sampai 3NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../07/07-BCNF-4NF-5NF.html">
+            
+                <a href="../07/07-BCNF-4NF-5NF.html">
+            
+                    
+                    Normalisasi BCNF, 4NF, dan 5NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="08-ddl.html">
+            
+                <a href="08-ddl.html">
+            
+                    
+                    MySQL (DDL dan DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../09/09-dml.html">
+            
+                <a href="../09/09-dml.html">
+            
+                    
+                    MySQL – Data Manipulation Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../10/12.select.html">
+            
+                <a href="../10/12.select.html">
+            
+                    
+                    MySQL – Data Retrieval Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../11/13.select-multitable.html">
+            
+                <a href="../11/13.select-multitable.html">
+            
+                    
+                    Select Multi Tabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../00/nilai.html">
+            
+                <a href="../00/nilai.html">
+            
+                    
+                    Nilai Jobsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../00/nilai-teori.html">
+            
+                <a href="../00/nilai-teori.html">
+            
+                    
+                    Nilai Teori
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >MySQL (DDL dan DML)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jobsheet-10-mysql-data-definition-language-ddl">Jobsheet-10: MySQL (Data Definition Language (DDL))</h1>
+<h2 id="topik">Topik</h2>
+<p>Dasar MySQL dan Data Definition Language (DDL)</p>
+<p>Mahasiswa diharapkan dapat:</p>
+<ol>
+<li>Memahami dasar-dasar MySQL</li>
+<li>Membuat database dan tabel dengan menerapkan data definition language (DDL)</li>
+<li>Memahami penggunaan perintah-perintah untuk mendefinisikan atribut-atribut database, tabel, field, maupun batasan-batasan terhadap suatu atribut dan hubungan antar tabel</li>
+</ol>
+<h2 id="pendahuluan">Pendahuluan</h2>
+<p><strong>Basis Data:</strong> Himpunan kelompok data (arsip) yang saling berhubungan, yang diorganisasi sedemikan rupa, sehingga kelak dapat dimanfaatkan kembali dengan cepat.</p>
+<p>Bahasa Basis Data</p>
+<p>DBMS merupakan perantara antara user dengan database. Cara komunikasi diatur dalam suatu bahasa khusus yang ditetapkan oleh DBMS. Misalnya SQL,dBase,QUEL, dsb.
+Ada beberapa bentuk bahasa sql, namun yang biasa digunakan adalah 2 bentuk bahasa sql yaitu DDL dan DML</p>
+<p>Data Definition Language (DDL) &gt;&gt; digunakan dalam membuat tabel baru, indeks, mengubah tabel, menentukan struktur tabel, dsb</p>
+<p>Data Manipulation Language (DML) &gt;&gt; digunakan dalam memanipulasi dan pengambilan data pada database. Manipulasi data dapat mencakup :</p>
+<ul>
+<li>Pemanggilan data yang tersimpan dalam database (query)</li>
+<li>Penyisipan/penambahan data baru ke database</li>
+<li>Penghapusan data dari database</li>
+<li>Pengubahan data pada database</li>
+</ul>
+<p><strong>Dasar-Dasar MySQL</strong></p>
+<p>Dalam bahasa SQL pada umumnya informasi tersimpan dalam tabel-tabel yang secara logik merupakan struktur dua dimensi terdiri dari baris (row atau record) dan kolom (column atau field). Sedangkan dalam sebuah database dapat terdiri dari beberapa table. Beberapa tipe data dalam MySQL yang sering dipakai: </p>
+<p><img src="images/01.png" alt=""></p>
+<p>Data Definition Language (DDL) merupakan sekumpulan set perintah yang bertujuan untuk mendefinisikan atribut-atribut database, tabel, atribut kolom (field), maupun batasan-batsan terhadap suatu atribut dan relasi/ hubungan antar tabel. Yang termasuk dalam kelompok perintah DDL adalah :</p>
+<ul>
+<li><code>Create</code></li>
+<li><code>Alter</code></li>
+<li><code>Drop</code></li>
+</ul>
+<p><strong>CREATE</strong> merupakan perintah DDL yang digunakan untuk membuat database maupun tabel. Nama database maupun tabel tidak boleh mengandung spasi (space). Nama database tidak boleh sama antar database.</p>
+<p><strong>ALTER</strong> merupakan perintah DDL yang digunakan untuk mengubah nama/struktur tabel</p>
+<p><strong>DROP</strong> merupakan perintah DDL yang digunakan untuk menghapus database ataupun tabel</p>
+<p>a. Database</p>
+<p>Perintah untuk membuat database sebagai berikut  :</p>
+<ul>
+<li><p><code>CREATE DATABASE namadatabase;</code></p>
+<p>  Contoh : </p>
+<p>  <code>CREATE DATABASE db_polinema;</code></p>
+<p>  Untuk menampilkan daftar nama database yang terdapat dalam database server pada MySQL menggunakan perintah :</p>
+</li>
+<li><p><code>SHOW DATABASES;</code></p>
+<p>  Sebelum membuat suatu tabel yang akan digunakan untuk menyimpan data, terlebih dahulu harus memilih/mengaktifkan salah satu database sebagai database aktif yang akan digunakan untuk menyimpan beberapa tabel yang akan dibuat. Untuk memilih/mengaktifkan salah satu database menggunakan perintah berikut :</p>
+</li>
+<li><p><code>USE namadatabase;</code></p>
+<p>  Sebagai contoh, database db_polinema yang akan digunakan / diaktifkan maka perintahnya sebagai berikut:</p>
+<p>  <code>USE db_polinema;</code></p>
+<p>  Perintah yang berfungsi untuk menghapus database maupun tabel adalah perintah DROP. Untuk menggunakan perintah tersebut, berikut penulisan perintahnya :</p>
+</li>
+<li><p><code>DROP DATABASE namadatabase;</code></p>
+<p>  Misalnya database db_polinema yang akan dihapus maka perintahnya sebagai berikut :</p>
+<p>  <code>DROP DATABASE db_polinema;</code></p>
+</li>
+</ul>
+<p>b. Tabel</p>
+<ul>
+<li><p>Membuat Tabel</p>
+<p>  Nama tabel tidak boleh mengandung spasi (space). Ketika membuat tabel, ada beberapa yang harus dideklarasikan dalam pembuatannya yaitu antara lain meliputi : nama tabel, nama kolom (field), tipe data dari field dan panjang data. Perintah yang digunakan untuk membuat tabel secara umum adalah sebagai berikut :</p>
+<p>  <code>CREATE TABLE namatabel (field1 typedata1, field2 typedata2);</code>
+   Contoh berikut ini adalah syntax untuk membuat tabel mahasiswa :</p>
+<pre><code>`CREATE TABLE mahasiswa (nim CHAR (20),nama_mhs CHAR(50),umur INT, PRIMARY KEY(nim));`
+</code></pre></li>
+<li><p>Menampilkan tabel
+Untuk menampilkan daftar nama tabel yang terdapat dalam database yang sedang aktif/digunakan menggunakan perintah :</p>
+<p>  <code>SHOW TABLES;</code></p>
+</li>
+<li><p>Menampilkan deskripsi atribut tabel</p>
+<p>  Untuk menampilkan deskripsi atribut-atribut yang terdapat pada suatu tabel dengan menggunakan perintah :</p>
+<p>  <code>DESC namatabel;</code></p>
+<p>  Contoh: <code>DESC mahasiswa;</code></p>
+</li>
+<li><p>Menghapus Tabel</p>
+<p>  Untuk menghapus Tabel perintahnya sama dengan untuk menghapus database yaitu dengan menggunakan perintah DROP. Perintah yang digunakan adalah :</p>
+<p>  <code>DROP TABLE namatabel;</code></p>
+<p>  Misalnya yang akan dihapus adalah tabel mahasiswa :</p>
+<p>  <code>DROP TABLE mahasiswa;</code></p>
+</li>
+<li><p>Mengisi Data
+  Untuk memasukkan sebuah baris (record) kedalam tabel MySQL adalah sebagai berikut :</p>
+<p>  <code>INSERT INTO table [(column1, column2,...) VALUES (value1, value2,...)];</code></p>
+<p>  Contoh : <code>Insert into mahasiswa (nim,nama,umur) values (&#x2018;001&#x2019;,&#x2019;imam&#x2019;,20);</code> </p>
+</li>
+<li><p>Mendefinisikan Null/Not Null</p>
+<p>  Null ataupun Not Null merupakan pernyataan yang digunakan untuk membuat kolom yang akan dibuat boleh kosong (Null) atau tidak boleh kosong (Not Null). Ketika pada kolom tabel tidak di set, maka secara default akan bernilai Null (boleh kosong). Untuk mendefinisikannya maka perintah yang akan digunakan adalah :</p>
+<p>  <code>CREATE TABLE mahasiswa (nim CHAR (20) NOT NULL, nama_mhs CHAR (50) NOT NULL, umur INT, PRIMARY KEY (nim));</code></p>
+</li>
+<li><p>Mendefinisikan Nilai Default
+  Nilai default merupakan nilai yang diberikan secara otomatis oleh sistem untuk suatu kolom ketika terjadi penambahan baris baru, sementara nilai pada kolom tersebut tidak diisi oleh pengguna.</p>
+<p>  Contoh : <code>CREATE TABLE mahasiswa (nim CHAR (20), nama-mhs CHAR (50), umur INT DEFAULT 0, PRIMARY KEY (nim));</code></p>
+</li>
+<li><p>Mendefinisikan PRIMARY KEY pada Tabel</p>
+<p>  Suatu keharusan dalam suatu tabel adalag harus memiliki satu kolom yang dijadikan sebagai perwakilan dari tabel tersebut. Pembuatan perwakilan tabel ini berfungsi untuk melakukan hubungan / relasional dengan tabel lain. Bentuk perwakilan ini dalam database disebut sebagai PRIMARY KEY yang aturan pembuatannya adalah sebagai berikut :</p>
+<ul>
+<li>Satu tabel bisa memiliki 2 primary key </li>
+<li>Nama kolom kunci tidak digunakan pada kolom lain satu tabel</li>
+<li>Nama kolom kunci tidak boleh sama dengan kolom kunci yang ada pada tabel lain</li>
+<li><p>Bentuk kolom kunci harus diset NOT NULL</p>
+<p>Terdapat tiga cara untuk mendefinisikan primary key. Berikut ini perintah yang digunakan :</p>
+<p><code>CREATE TABLE mahasiswa (nim CHAR (20), nama_mhs CHAR (50), umur INT, PRIMARY KEY (nim));</code></p>
+<p>Atau
+<code>CREATE TABLE mahasiswa (nim CHAR (20) NOT NULL PRIMARY KEY, nama_mhs CHAR (50), umur INT);</code></p>
+<p>Atau
+<code>ALTER TABLE mahasiswa ADD CONSTRAINT namaconstraint PRIMARY KEY(namakolom);</code></p>
+</li>
+</ul>
+</li>
+<li><p>Menghapus PRIMARY KEY pada tabel</p>
+<p>  Cara 1: Jika primary key dibuat menggunakan alter table:
+  <code>ALTER TABLE namatabel DROP CONSRTRAINT namaconstraint;</code></p>
+<p>  Cara 2: Jika primary key dibuat melalui create table:
+  <code>ALTER TABLE namatable DROP PRIMARY KEY;</code></p>
+</li>
+<li><p>Menambah kolom baru pada tabel </p>
+<p>  Untuk menambah kolom baru pada suatu tabel bisa menggunakan perintah sebagai berikut :</p>
+<p>  <code>ALTER TABLE namatabel ADD fieldbaru typedata(lebar);</code></p>
+<p>  Namatabel merupakan nama tabel yang akan ditambahkan kolomnya. Filedbaru merupakan nama kolom yang akan ditambahkan, typedata(lebar) merupakan type data dan lebar data yang akan ditambahkan. Contohnya menambahkan kolom telepon pada tabel mahasiswa setelah kolom umur:</p>
+<p>  <code>ALTER TABLE mahasiswa ADD COLUMN telepon CHAR (15) AFTER umur;</code></p>
+</li>
+<li><p>Mengubah Tipe Data atau Lebar Kolom pada Tabel</p>
+<p>  Perintah yang digunakan adalah :</p>
+<p>  <code>ALTER TABLE namatabel MODIFY COLUMN field type(lebar);</code></p>
+<p>  Contoh : 
+  <code>ALTER TABLE mahasiswa MODIFY COLUMN telepon(12);</code></p>
+</li>
+<li><p>Mengubah Nama Kolom(Field)
+  Perintah yang digunakan adalah :</p>
+<p>  <code>ALTER TABLE namatabel CHANGE COLUMN namakolomlama namakolombaru typedatabaru(lebarbaru);</code></p>
+<p>  Contoh : 
+  <code>ALTER TABLE mahasiswa CHANGE COLUMN telepon phone CHAR(25);</code></p>
+</li>
+<li><p>Menghapus Kolom pada Tabel</p>
+<p>  Perintah yang digunakan adalah :</p>
+<p>  <code>ALTER TABLE namatabel DROP COLUMN namakolom;</code></p>
+<p>  Contoh :
+  <code>ALTER TABLE mahasiswa DROP COLUMN phone;</code></p>
+</li>
+<li><p>Mendefinisikan Foreign Key</p>
+<p>  Foreign Key adalah salah satu jenis constraint yang digunakan untuk merelasikan antar dua tabel atau lebih. Foreign Key digunakan pada tabel kedua (detail) yang mereferensi ke tabel utama yang mempunyai constraint primary key.</p>
+<p>  <img src="images/02.png" alt=""></p>
+<p>  Pada gambar diatas, kolom Cust_ID pada tabel Orders berperan sebagai foreign key yang mereferensi ke tabel Customers pada kolom ID.</p>
+<p>  <code>ALTER TABLE namatabel ADD FOREIGN KEY namafield REFERENCES namatabelreferensi (namafieldreferensi);</code></p>
+</li>
+</ul>
+<h2 id="praktikum">Praktikum</h2>
+<ol>
+<li>Buka prompt jalankan perintah berikut ini :
+<code>C:\&gt;Program Files\xampp\mysql\bin&gt;mysql &#x2013;u root &#x2013;p (enter)</code>
+<img src="images/03.png" alt=""></li>
+<li>Buatlah sebuah database dengan nama <code>db_polinema</code>
+<img src="images/04.png" alt=""></li>
+<li>Buatlah beberapa tabel dalam database tersebut sesuai dengan kriteria berikut:
+ <code>shell script
+ nim    Int (8) Primary Key
+ nama_mhs    Char (50)
+ jenis_kelamin    Enum (&#x2018;L&#x2019;,&#x2019;P&#x2019;) DEFAULT &#x2018;L&#x2019;
+ alamat    Varchar (50)
+ kota    Varchar (20) DEFAULT &#x2018;MALANG&#x2019;
+ asal_sma    Char (30)
+ no_hp    Varchar (12)
+ umur    INT
+ kode_prodi    Char (6) foreign key fk0 (kode_prodi) referensces prodi (kode_prodi)</code>
+ <img src="images/05.png" alt=""></li>
+<li>Tabel prodi
+ <code>shell script
+ Field    Type Data
+ kode_prodi    Char (6) Primary Key
+ nama_prodi    Char (30)</code>
+<img src="images/06.png" alt="">    </li>
+<li>Tabel mata_kuliah
+ <code>shell script
+ Field    Type Data
+ mk_id    Char (10) Primary Key
+ nama_mk    Char (50)
+ jumlah_jam    Float (4,2)
+ sks    Integer</code>
+<img src="images/07.png" alt=""></li>
+<li>Tabel ruang
+ <code>shell script
+ Field    Type Data
+ ruang_id    Char (3) Primary Key
+ nama_ruang    Char (20)
+ Kapasitas    Integer</code>
+<img src="images/08.png" alt=""></li>
+<li>Tabel dosen
+ <code>shell script
+ Field    Type Data
+ nidn    integer (20) Primary Key
+ nama_dosen    Char (50)
+ status    Enum (&#x2018;PNS&#x2019;,&#x2019;KONTRAK&#x2019;) Default &#x2018;PNS&#x2019;
+ jenis_kelamin    Enum (&#x2018;L&#x2019;,&#x2019;P&#x2019;) Default &#x2018;L&#x2019;
+ no_hp    Varchar (15)</code>
+<img src="images/09.png" alt=""></li>
+<li><strong>Soal</strong>, Tambahkan sebuah kolom agama (varchar(10)) pada tabel mahasiswa sebagai kolom terakhir<blockquote>
+<p>Catat : Buat Screenshot dari perintah yang anda ketikkan</p>
+</blockquote>
+</li>
+<li><strong>Soal</strong>, Tambahkan kolom alamat(varchar(50)) pada tabel dosen sebagai kolom terakhir<blockquote>
+<p>Catat : Buat Screenshot dari perintah yang anda ketikkan</p>
+</blockquote>
+</li>
+<li><strong>Soal</strong>, Lakukan insert data ke dalam tabel-tabel yang ada pada pada database db_polinema sesuai dengan field, tipe data dan panjang datanya<blockquote>
+<p>Catat : Buat Screenshot dari perintah yang anda ketikkan</p>
+</blockquote>
+</li>
+<li><strong>Soal</strong>, Tampilkan semua tabel yang ada didalam database db_polinema<blockquote>
+<p>Catat : Buat Screenshot dari perintah yang anda ketikkan</p>
+</blockquote>
+</li>
+<li><strong>Soal</strong>, Tampilkan semua isi tabel yang ada didalam tabel mahasiswa<blockquote>
+<p>Catat : Buat Screenshot dari perintah yang anda ketikkan</p>
+</blockquote>
+</li>
+<li><strong>Soal</strong>, Tampilkan struktur(metadata) tabel mahasiswa<blockquote>
+<p>Catat : Buat Screenshot dari perintah yang anda ketikkan</p>
+</blockquote>
+</li>
+<li><strong>Soal</strong>, hilangkan kolom asal_sma yang terdapat didalam tabel mahasiswa<blockquote>
+<p>Catat : Buat Screenshot dari perintah yang anda ketikkan</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="tugas">Tugas</h2>
+<ol>
+<li><p>Buatlah basis data Akademik dengan data sebagai berikut :</p>
+<p> <code>shell script
+ No_Mhs    Nama_mhs    Jurusan    Kd_MK    Nama_mk    Kd_Dosen    Nm_Dosen    nilai
+ 1921001    Aminah    MI    MI350    Basis Data    B104    Ati    85
+ 1921001    Budiman    MI    MI465    Pemrograman    B105    Dita    87
+ 1921002    Carina    MI    MI465    Pemrograman    B105    Dita    85
+ 1921003    Della    TI    TI201    Mobile     C102    Leo    78
+ 1921004    Firda    TI    TI201    Mobile    C102    Leo    80</code></p>
+<ul>
+<li>deskripsikan struktur data dari table-tabel berikut serta isikan datanya:     <ul>
+<li>Tabel Mahasiswa {No_Mhs, Nama_mhs}  </li>
+<li>Tabel Mata_Kuliah {Kd_MK, Nama_MK}    </li>
+<li>Tabel nilai {No_Mhs, Kode_MK}</li>
+</ul>
+</li>
+<li>tambahkan kolom Jurusan pada tabel Mahasiswa di kolom terakhir</li>
+<li>tambahkan kolom Kode Dosen pada tabel Mata_Kuliah</li>
+<li>tambahkan kolom nilai pada tabel nilai serta berikanlah kunci foreign key</li>
+<li>tambahkan Tabel Dosen dengan atributnya Kd_Dosen dan Nama Dosen</li>
+<li>tampilkan semua data yang ada pada tiap tabel</li>
+</ul>
+</li>
+<li><p>Buatlah basis data Pegawai yang terdiri dari tabel sebagai berikut :</p>
+<p>  <code>shell script
+  Noproyek    NamaProyek    Nopegawai    NamaPegawai    Golongan    BesarGaji
+  NP001    BRR    Peg01    Anton     A    1.000.000
+  NP001    BRR    Peg02    Paula     B    900.000
+  NP001    BRR    Peg06    Koko     C    750.000
+  NP002    PEMDA    Peg01    Anton     A    1.000.000
+  NP002    PEMDA    Peg12    Sita    B    900.000
+  NP002    PEMDA    Peg14    Yusni     B    900.000
+  NP003    CBR    Peg02    Paula     B    900.000
+  NP003    CBR    Peg03    Daniar     C     750.000
+  NP003    CBR    Peg04    Lubis    C     750.000
+  NP004    ASK    Peg07    Keni     B     900.000
+  NP004    ASK    Peg08    Sofi    B     900.000
+  NP004    ASK    Peg06    Yuni     C     750.000
+  NP005    OB    Peg15    Udin    D    500.000
+  NP005    OB    Peg16    Didit     D    500.000
+  NP005    OB    Peg17    Dani     D    500.000</code></p>
+<ul>
+<li>Deskripsikan struktur data dari table-tabel berikut serta isikan datanya:<ul>
+<li>Table Pegawai {Nopegawai, NamaPegawai}</li>
+<li>Tabel Golongan {Golongan}</li>
+<li>Tabel Proyek {Noproyek]</li>
+<li>Tabel Proyekpegawai {Noproyek}</li>
+</ul>
+</li>
+<li>Tambahkan kolom Golongan pada tabel Pegawai di kolom terakhir</li>
+<li>Tambahkan kolom BesarGaji pada tabel Golongan di kolom terakhir</li>
+<li>Tambahkan kolom NamaProyek pada table Proyek</li>
+<li>Tambahkan kolom NoPegawai pada table Proyekpegawai serta berikanlah kunci foreign key</li>
+<li>Tampilkan semua data yang ada pada tiap tabel</li>
+</ul>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../07/07-BCNF-4NF-5NF.html" class="navigation navigation-prev " aria-label="Previous page: Normalisasi BCNF, 4NF, dan 5NF">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../09/09-dml.html" class="navigation navigation-next " aria-label="Next page: MySQL – Data Manipulation Language (DML)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MySQL (DDL dan DML)","level":"1.10","depth":1,"next":{"title":"MySQL – Data Manipulation Language (DML)","level":"1.11","depth":1,"path":"09/09-dml.md","ref":"09/09-dml.md","articles":[]},"previous":{"title":"Normalisasi BCNF, 4NF, dan 5NF","level":"1.9","depth":1,"path":"07/07-BCNF-4NF-5NF.md","ref":"07/07-BCNF-4NF-5NF.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"08/08-ddl.md","mtime":"2020-05-11T16:40:53.415Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-11T16:41:36.880Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,473 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Contoh Penerapan Basis Data · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../02/02.ERD.html" />
+    
+    
+    <link rel="prev" href="../00/kontrak.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="01.contoh-penerapan-basis-data.html">
+            
+                <a href="01.contoh-penerapan-basis-data.html">
+            
+                    
+                    Contoh Penerapan Basis Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../02/02.ERD.html">
+            
+                <a href="../02/02.ERD.html">
+            
+                    
+                    ERD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../03/03-erd-2.html">
+            
+                <a href="../03/03-erd-2.html">
+            
+                    
+                    ERD-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../04/04-erd-ke-model-relational.html">
+            
+                <a href="../04/04-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                <a href="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../06/06-normalisasi-1NF-3NF.html">
+            
+                <a href="../06/06-normalisasi-1NF-3NF.html">
+            
+                    
+                    Normalisasi 1NF sampai 3NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../07/07-BCNF-4NF-5NF.html">
+            
+                <a href="../07/07-BCNF-4NF-5NF.html">
+            
+                    
+                    Normalisasi BCNF, 4NF, dan 5NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../08/08-ddl.html">
+            
+                <a href="../08/08-ddl.html">
+            
+                    
+                    MySQL (DDL dan DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../09/09-dml.html">
+            
+                <a href="../09/09-dml.html">
+            
+                    
+                    MySQL – Data Manipulation Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../10/12.select.html">
+            
+                <a href="../10/12.select.html">
+            
+                    
+                    MySQL – Data Retrieval Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../11/13.select-multitable.html">
+            
+                <a href="../11/13.select-multitable.html">
+            
+                    
+                    Select Multi Tabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../00/nilai.html">
+            
+                <a href="../00/nilai.html">
+            
+                    
+                    Nilai Jobsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../00/nilai-teori.html">
+            
+                <a href="../00/nilai-teori.html">
+            
+                    
+                    Nilai Teori
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Contoh Penerapan Basis Data</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jobsheet-1---contoh-penerapan-basis-data">Jobsheet 1 - Contoh Penerapan Basis Data</h1>
+<h2 id="tujuan">Tujuan</h2>
+<p>Mahasiswa memahami konsep penyajian data berdasarkan kebutuhan/ permasalahan tertentu</p>
+<h2 id="contoh-penerapan-basis-data">Contoh penerapan basis data</h2>
+<p>Penerapan database bisa ditemukan dengan mudah disekitar kita, misalkan adalah sebuah sistem akademik yang digunakan
+untuk melakukan krs.</p>
+<ul>
+<li>Nama database: <code>akademik</code></li>
+<li>Tabel yang terdapat pada database <code>akademik</code><ul>
+<li>Tabel <code>dosen</code><ul>
+<li><code>kode dosen</code></li>
+<li><code>nama dosen</code></li>
+<li><code>tanggal lahir</code></li>
+</ul>
+</li>
+<li>Tabel <code>mahasiswa</code>  <ul>
+<li><code>nim</code></li>
+<li><code>nama</code></li>
+<li><code>alamat</code></li>
+<li><code>tanggal lahir</code></li>
+<li><code>jenis kelamin</code></li>
+</ul>
+</li>
+<li>Tabel <code>matakuliah</code><ul>
+<li><code>kode matakuliah</code></li>
+<li><code>nama matakuliah</code></li>
+<li><code>semester</code></li>
+<li><code>sks</code></li>
+</ul>
+</li>
+<li>Tabel <code>ruangan</code><ul>
+<li><code>kode ruangan</code></li>
+<li><code>nama ruangan</code></li>
+<li><code>kuota</code></li>
+<li><code>lokasi lantai</code>  </li>
+</ul>
+</li>
+<li>Tabel <code>krs</code><ul>
+<li><code>nama matakuliah</code></li>
+<li><code>semester</code></li>
+<li><code>nama dosen</code></li>
+<li><code>nama ruangan</code></li>
+<li><code>jumlah sks</code>  </li>
+</ul>
+</li>
+<li>Tabel <code>jadwal kuliah</code><ul>
+<li><code>nama matakuliah</code></li>
+<li><code>nama dosen</code></li>
+<li><code>nama ruangan</code></li>
+<li><code>waktu</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="tugas">Tugas</h2>
+<ol>
+<li>Buatlah kelompok yang beranggotakan 3 orang.</li>
+<li>Carilah artikel tentang contoh penerapan database.</li>
+<li>Presentasikan di depan kelas hasil diskusi dari kelompok Anda.</li>
+<li>Hal yang dipresentasikan adalah design basis data dari artikel yang telah kelompok Anda cari.</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../00/kontrak.html" class="navigation navigation-prev " aria-label="Previous page: Kontrak Kuliah">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../02/02.ERD.html" class="navigation navigation-next " aria-label="Next page: ERD">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Contoh Penerapan Basis Data","level":"1.3","depth":1,"next":{"title":"ERD","level":"1.4","depth":1,"path":"02/02.ERD.md","ref":"02/02.ERD.md","articles":[]},"previous":{"title":"Kontrak Kuliah","level":"1.2","depth":1,"path":"00/kontrak.md","ref":"00/kontrak.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"01/01.contoh-penerapan-basis-data.md","mtime":"2020-05-11T16:40:53.383Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-11T16:41:36.880Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

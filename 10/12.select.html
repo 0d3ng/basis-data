@@ -1,0 +1,756 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MySQL – Data Retrieval Language (DML) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../11/13.select-multitable.html" />
+    
+    
+    <link rel="prev" href="../09/09-dml.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../01/01.contoh-penerapan-basis-data.html">
+            
+                <a href="../01/01.contoh-penerapan-basis-data.html">
+            
+                    
+                    Contoh Penerapan Basis Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../02/02.ERD.html">
+            
+                <a href="../02/02.ERD.html">
+            
+                    
+                    ERD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../03/03-erd-2.html">
+            
+                <a href="../03/03-erd-2.html">
+            
+                    
+                    ERD-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../04/04-erd-ke-model-relational.html">
+            
+                <a href="../04/04-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                <a href="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../06/06-normalisasi-1NF-3NF.html">
+            
+                <a href="../06/06-normalisasi-1NF-3NF.html">
+            
+                    
+                    Normalisasi 1NF sampai 3NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../07/07-BCNF-4NF-5NF.html">
+            
+                <a href="../07/07-BCNF-4NF-5NF.html">
+            
+                    
+                    Normalisasi BCNF, 4NF, dan 5NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../08/08-ddl.html">
+            
+                <a href="../08/08-ddl.html">
+            
+                    
+                    MySQL (DDL dan DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../09/09-dml.html">
+            
+                <a href="../09/09-dml.html">
+            
+                    
+                    MySQL – Data Manipulation Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12" data-path="12.select.html">
+            
+                <a href="12.select.html">
+            
+                    
+                    MySQL – Data Retrieval Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../11/13.select-multitable.html">
+            
+                <a href="../11/13.select-multitable.html">
+            
+                    
+                    Select Multi Tabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../00/nilai.html">
+            
+                <a href="../00/nilai.html">
+            
+                    
+                    Nilai Jobsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../00/nilai-teori.html">
+            
+                <a href="../00/nilai-teori.html">
+            
+                    
+                    Nilai Teori
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >MySQL – Data Retrieval Language (DML)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jobsheet-12-mysql-&#x2013;-data-retrieval-language-drl">Jobsheet-12: MySQL &#x2013; Data Retrieval Language (DRL)</h1>
+<h2 id="topik">Topik</h2>
+<p>Data Retrieval Language (DRL) pada DBMS MySQL</p>
+<h2 id="tujuan">Tujuan</h2>
+<p>Mahasiswa diharapkan dapat memahami penggunaan dan dapat membuat SQL statement SELECT dengan berbagai klausa.</p>
+<h2 id="pendahuluan">Pendahuluan</h2>
+<p>DRL atau DSL (Data Selection Language) adalah set perintah yang dgunakan untuk mengambil data dari server basis data. DRL terdiri dari klausa yang dapat dikembangkan lebih lanjut, antara lain:</p>
+<ol>
+<li><code>FROM</code>: Memilih nama sebuah tabel </li>
+<li><code>WHERE</code>: Menunjukkan secara spesifik suatu row/baris yang akan dicari</li>
+<li><code>GROUP BY</code>: Menyusung data ke dalam grup</li>
+<li><code>HAVING</code>: Memilih diantara kelompok-kelompok data yang didefinisikan klausa GROUP BY</li>
+<li><code>ORDER BY</code>: Secara spesifik digunakan untuk menentukan suatu baris pada kolom tertentu</li>
+<li><code>AS</code>: Memberikan nama alias sementara untuk tabel atau kolom</li>
+</ol>
+<p>DRL lebih diterapkan dalam beberapa hal dalam beberapa hal seperti :</p>
+<ol>
+<li><code>QUERY</code></li>
+<li><code>SUB-QUERY</code></li>
+<li><code>FUNGSI AGREGASI</code></li>
+</ol>
+<h3 id="query">Query</h3>
+<p>Query merupakan operasi yang melibatkan satu atau lebih tabel untuk melakukan retrival data. Pengambilan data dilakukan dengan beberapa klausa berikut :</p>
+<ol>
+<li><p><code>SELECT *</code> untuk memilih semua kolom
+Format</p>
+<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> table_name;
+</code></pre>
+</li>
+<li><p><code>SELECT</code> dengan <code>WHERE</code> untuk menampilkan baris dengan suatu kondisi</p>
+<p>  Format</p>
+<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> column1, column2,...
+  <span class="hljs-keyword">FROM</span> table_name
+  <span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+</li>
+<li><p><code>SELECT</code> dengan <code>DISTINCT</code> untuk menampilkan data dengan eliminasi data yang sama (duplicate)</p>
+<p>  Format</p>
+<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> <span class="hljs-keyword">column</span> <span class="hljs-keyword">FROM</span> table_name;
+</code></pre>
+</li>
+<li><p><code>SELECT</code> dengan <code>IN</code> untuk menampilkan data yang spesifik</p>
+<p>  Format</p>
+<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> column_name(s)
+          <span class="hljs-keyword">FROM</span> table_name
+          <span class="hljs-keyword">WHERE</span> column_name <span class="hljs-keyword">IN</span> (value1, value2, ...);
+</code></pre>
+</li>
+<li><p><code>SELECT</code> dengan <code>BETWEEN</code> untuk menampilkan data pada jarak (range) tertentu</p>
+<p>  Format</p>
+<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> column_name(s)
+          <span class="hljs-keyword">FROM</span> table_name
+          <span class="hljs-keyword">WHERE</span> column_name <span class="hljs-keyword">BETWEEN</span> value1 <span class="hljs-keyword">AND</span> value2;
+</code></pre>
+</li>
+<li><p><code>SELECT</code> dengan <code>LIKE</code> untuk menampilkan data yang memiliki kemiripan dengan keyword yang diinginkan</p>
+<p>  Format</p>
+<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> column1,column2,...
+          <span class="hljs-keyword">FROM</span> table_name
+          <span class="hljs-keyword">WHERE</span> columnN <span class="hljs-keyword">LIKE</span> pattern;
+</code></pre>
+</li>
+<li><p><code>SELECT</code> dengan <code>GROUP BY</code> untuk menampilkan susunan data dalam bentuk grup</p>
+<p>  Format</p>
+<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> column1, column2,...
+          condition
+          <span class="hljs-keyword">FROM</span> table_name
+          <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> column1, column2, ...;
+</code></pre>
+</li>
+<li><p><code>SELECT</code> dengan <code>ORDER BY</code> untuk menampilkan baris secara spesifik dan terurut maju atau mundur</p>
+<p>  Format</p>
+<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> column1, column2, ...
+          <span class="hljs-keyword">FROM</span> table_name
+          <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> column1, column2, ... <span class="hljs-keyword">ASC</span>|<span class="hljs-keyword">DESC</span>;
+</code></pre>
+</li>
+<li><p><code>SELECT</code> dengan<code>AND, OR and NOT</code> untuk menampilkan data dengan kondisi dan atau atau tidak</p>
+<p>  Format</p>
+<p>  <code>AND</code></p>
+<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> column1, column2, ...
+          <span class="hljs-keyword">FROM</span> table_name
+          <span class="hljs-keyword">WHERE</span> condition1 <span class="hljs-keyword">AND</span> condition2 <span class="hljs-keyword">AND</span> condition3 ...;
+</code></pre>
+<p>  <code>OR</code></p>
+<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> column1, column2, ...
+          <span class="hljs-keyword">FROM</span> table_name
+          <span class="hljs-keyword">WHERE</span> condition1 <span class="hljs-keyword">OR</span> condition2 <span class="hljs-keyword">OR</span> condition3 ...;
+</code></pre>
+<p>  <code>NOT</code></p>
+<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> column1, column2, ...
+          <span class="hljs-keyword">FROM</span> table_name
+          <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">NOT</span> condition;
+</code></pre>
+</li>
+<li><p><code>SELECT</code> dengan <code>UNION, INTERSECT dan EXCEPT</code> untuk menampikan data dengan operasi himpunan yang melibatkan lebih 
+dari satu tabel</p>
+<p> Format
+ <code>UNION</code></p>
+<p> Tanpa duplikasi</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table1
+         <span class="hljs-keyword">UNION</span>
+         <span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table2;
+</code></pre>
+<p> Dengan duplikasi</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table1
+         <span class="hljs-keyword">UNION</span> ALL
+         <span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table2;
+</code></pre>
+<p> <code>INTERSECT</code>
+ Tanpa duplikasi</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table1
+         <span class="hljs-keyword">INTERSECT</span>
+         <span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table2;
+</code></pre>
+<p> Dengan duplikasi</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table1
+         <span class="hljs-keyword">INTERSECT</span> ALL
+         <span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table2;
+</code></pre>
+<p> <code>EXCEPT</code>
+ Tanpa duplikasi</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table1
+         <span class="hljs-keyword">EXCEPT</span>
+         <span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table2;
+</code></pre>
+<p> Dengan duplikasi</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table1
+         <span class="hljs-keyword">EXCEPT</span> ALL
+         <span class="hljs-keyword">SELECT</span> column_name(s) <span class="hljs-keyword">FROM</span> table2;
+</code></pre>
+</li>
+</ol>
+<h3 id="sub-query">Sub Query</h3>
+<p>Sub-query adalah adanya query di dalam query lain. Sub-query juga disebut dengan perintah <code>SELECT</code> bersarang (nested SELECT). 
+Retrival data dalam sub-query dilakukan oleh <code>SELECT</code> untuk menemukan data pada <code>SELECT</code> utama. Klausa <code>GROUP BY</code> dan <code>HAVING</code> 
+juga dapat digunakan untuk retrival data pasa sub-query. Sub-query biasanya digunakan untuk test keanggotaan himpunan 
+atau perbandingan himpunan dan kardinalitas. 
+Format
+Untuk test keanggotaan</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">WHERE</span> column_name <span class="hljs-keyword">IN</span> (<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">STATEMENT</span>);
+</code></pre>
+<p>atau</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> column1, column2, ...;
+HAVING column_name IN (<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">STATEMENT</span>);
+</code></pre>
+<p>Untuk perbandingan himpunan</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> column_name(s)
+<span class="hljs-keyword">FROM</span> table_name 
+<span class="hljs-keyword">operator</span>
+(<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">STATEMENT</span>);
+</code></pre>
+<h3 id="fungsi-agregasi">Fungsi Agregasi</h3>
+<p>Fungsi agregasi akan melakukan perhitungan kepada sekumpulan nilai dan menghasilkan suatu nilai tunggal.</p>
+<p>Jenis: </p>
+<ol>
+<li><p><code>AVG</code> untuk menghitung rata-rata
+Format</p>
+<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">AVG</span>(column_name)
+  <span class="hljs-keyword">FROM</span> table_name
+  <span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+</li>
+<li><code>MAX</code> untuk mencari nilai tertinggi
+Format<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">MAX</span>(column_name)
+  <span class="hljs-keyword">FROM</span> table_name
+  <span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+</li>
+<li><code>MIN</code> untuk mencari nilai terendah
+Format<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">MIN</span>(column_name)
+  <span class="hljs-keyword">FROM</span> table_name
+  <span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+</li>
+<li><code>SUM</code> untuk menjumlahkan sekumpulan nilai
+Format<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">SUM</span>(column_name)
+  <span class="hljs-keyword">FROM</span> table_name
+  <span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+</li>
+<li><code>COUNT()</code> untuk menunjukkan jumlah baris pada kolom yang diinginkan
+Format<pre><code class="lang-sql">  <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">COUNT</span>(column_name)
+  <span class="hljs-keyword">FROM</span> table_name
+  <span class="hljs-keyword">WHERE</span> condition;
+</code></pre>
+</li>
+</ol>
+<h2 id="praktikum-&#x2013;-bagian-1-membuat-database-untuk-percobaan">Praktikum &#x2013; Bagian 1: Membuat Database untuk Percobaan</h2>
+<ol>
+<li><p>Studi kasus yang digunakan sama dengan jobsheet DML dengan skema/model relasional/EER diagram dari database berikut.</p>
+<p> <img src="images/image002.png" alt=""></p>
+</li>
+<li><p>Skema tersebut adalah skema database pada sebuah sistem informasi yang digunakan oleh suatu perusahaan yang bergerak di bidang pembuatan perangkat lunak. Sesuai dengan percobaan pada jobsheet DML. Insert kembali departemen yang mengandung nama &#x2018;dan&#x2019;, dengan cara menyalin dari tabel departemen_backup, sehingga menghasilkan record keseluruhan tabel sebagai berikut (record tidak harus sama persis dengan tampilan ini):</p>
+<p> <code>SELECT * FROM departemen;</code></p>
+<p> <img src="images/image004.png" alt=""></p>
+<p> <code>SELECT * FROM karyawan;</code></p>
+<p> <img src="images/image006.png" alt=""></p>
+<p> <code>SELECT * FROM klien;</code></p>
+<p> <img src="images/image008.png" alt=""></p>
+<p> <code>SELECT * FROM proyek;</code></p>
+<p> <img src="images/image010.png" alt=""></p>
+<p> <code>SELECT * FROM penugasan;</code></p>
+<p> <img src="images/image012.png" alt=""></p>
+</li>
+<li><p>Setelah selesai membuat database diatas, lanjutkan ke Praktikum &#x2013; Bagian 2.</p>
+</li>
+</ol>
+<h2 id="praktikum-&#x2013;-bagian-2-percobaan-select-query">Praktikum &#x2013; Bagian 2: Percobaan SELECT QUERY</h2>
+<ol>
+<li><p>Untuk menampilkan baris dengan suatu kondisi tertentu, digunakan statement SELECT dengan WHERE. Eksekusi SQL berikut untuk menampilkan (record) pada tabel karyawan yang memiliki kolom departemen_kode=&#x2019;MKT&#x2019;.</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> nama 
+ <span class="hljs-keyword">FROM</span> karyawan 
+ <span class="hljs-keyword">WHERE</span> departemen_kode = <span class="hljs-string">&apos;MKT&apos;</span>;
+</code></pre>
+<p> <img src="images/image014.png" alt=""></p>
+</li>
+<li><p>Untuk menampilkan data dengan eliminasi data yang sama (duplicate), digunakan statement SELECT dengan DISTINCT. Eksekusi SQL berikut untuk menampilkan kolom total_jam dari tabel penugasan yang bernilai tidak sama.</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> total_jam 
+ <span class="hljs-keyword">FROM</span> penugasan;
+</code></pre>
+<p> <img src="images/image016.png" alt=""></p>
+</li>
+<li><p>Untuk menampilkan data yang spesifik digunakan statement SELECT dengan IN. Eksekusi SQL berikut untuk menampilkan kolom nim dan nik dari tabel karyawan yang memiliki gaji 3100000 atau 6900000.</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> nik, nama 
+ <span class="hljs-keyword">FROM</span> karyawan 
+ <span class="hljs-keyword">WHERE</span> gaji <span class="hljs-keyword">IN</span> (<span class="hljs-number">3100000</span>,<span class="hljs-number">6900000</span>);
+</code></pre>
+<p> <img src="images/image018.png" alt=""></p>
+</li>
+<li><p>Untuk menampilkan data pada jarak (range) tertentu digunakan statement SELECT dengan BETWEEN. Eksekusi SQL berikut untuk menampilkan kolom nik dan nama dari tabel karyawan yang memiliki gaji diantara 2000000 dan 4000000.</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> nik, nama 
+ <span class="hljs-keyword">FROM</span> karyawan 
+ <span class="hljs-keyword">WHERE</span> gaji 
+ <span class="hljs-keyword">BETWEEN</span> <span class="hljs-number">2000000</span> <span class="hljs-keyword">AND</span> <span class="hljs-number">4000000</span>;
+</code></pre>
+<p> <img src="images/image020.png" alt=""></p>
+</li>
+<li><p>Untuk menampilkan data yang memiliki kemiripan dengan keyword yang diinginkan digunakan SELECT dengan LIKE. Eksekusi SQL berikut untuk menampilkan kolom nama, alamat, dan jenis pada tabel klien yang memiliki nama dengan huruf awal &#x2018;a&#x2019;.</p>
+<p> <code>SELECT nama, alamat, jenis FROM klien WHERE nama like &apos;a%&apos;;</code></p>
+<p> <img src="images/image022.png" alt=""></p>
+</li>
+<li><p>Untuk menampilkan susunan data dalam bentuk grup, digunakan SELECT dengan GROUP BY. Eksekusi SQL berikut untuk menampilkan kolom nik, nama, gaji, dan departemen_kode pada tabel karyawan yang dikelompokkan berdasarkan gaji.</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> nik, nama, gaji, departemen_kode 
+ <span class="hljs-keyword">FROM</span> karyawan 
+ <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> gaji;
+</code></pre>
+<p><img src="images/image024.png" alt=""></p>
+</li>
+<li><p>Untuk menampilkan baris secara spesifik dan terurut maju atau mundur, digunakan SELECT dengan ORDER BY. Eksekusi SQL berikut untuk menampilkan kolom nama dan tanggal_mulai pada tabel proyek dari tanggal yang paling lama hingga baru.</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> nama, tanggal_mulai 
+ <span class="hljs-keyword">FROM</span> proyek 
+ <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> tanggal_mulai <span class="hljs-keyword">ASC</span>;
+</code></pre>
+<p> <img src="images/image026.png" alt=""></p>
+</li>
+<li><p>Untuk menampilkan data dengan kondisi dan atau atau tidak, digunakan SELECT dengan AND, OR and NOT. Eksekusi SQL berikut untuk menampilkan semua kolom pada tabel karyawan dengan jenis kelamin &#x2018;WANITA&#x2019; dan gaji &lt; 5000000.</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> * 
+ <span class="hljs-keyword">FROM</span> karyawan 
+ <span class="hljs-keyword">WHERE</span> jenis_kelamin = <span class="hljs-string">&apos;WANITA&apos;</span> <span class="hljs-keyword">AND</span> gaji &lt; <span class="hljs-number">5000000</span>;
+</code></pre>
+<p><img src="images/image028.png" alt=""></p>
+</li>
+<li><p>Untuk menampilkan data dari kolom yang terlibat dalam dua tabel dapat digunakan SELECT dengan UNION. UNION secara otomatis akan menghilangkan duplikasi. Eksekusi SQL berikut untuk menampilkan kolom nik yang yang ada di tabel penugasan atau departemen. </p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> nik 
+ <span class="hljs-keyword">FROM</span> penugasan 
+ <span class="hljs-keyword">UNION</span> ALL 
+ <span class="hljs-keyword">SELECT</span> nik_manajer <span class="hljs-keyword">FROM</span> departemen;
+</code></pre>
+<p><img src="images/image030.png" alt=""></p>
+</li>
+<li><p>Untuk menampilkan data dari kolom yang terlibat dalam dua tabel dapat digunakan SELECT dengan UNION ALL. UNION ALL juga akan menampilkan duplikasi data. Eksekusi SQL berikut untuk menampilkan kolom nik yang yang ada di tabel penugasan atau departemen. </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> nik 
+<span class="hljs-keyword">FROM</span> penugasan 
+<span class="hljs-keyword">UNION</span> ALL 
+<span class="hljs-keyword">SELECT</span> nik_manajer <span class="hljs-keyword">FROM</span> departemen;
+</code></pre>
+<p><img src="images/image032.png" alt=""></p>
+</li>
+<li><p>Setelah berhasil mengeksekusi SQL tersebut, lanjutkan ke Praktikum - Bagian 3.</p>
+</li>
+</ol>
+<h2 id="praktikum---bagian-3-percobaan-select-sub-query">Praktikum - Bagian 3: Percobaan SELECT Sub-Query</h2>
+<ol>
+<li><p>Untuk menampilkan data (test keanggotaan sub-query) yang berasal dari pemilihan tampilan data lain digunakan tambahan statement IN. Eksekusi SQL berikut untuk menampilkan kolom nomor_proyek, nik, total_jam pada tabel penugasan dimana total_jam adalah total_jam yang paling lama pada tabel penugasan.</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> nomor_proyek, nik, total_jam 
+ <span class="hljs-keyword">FROM</span> penugasan 
+ <span class="hljs-keyword">WHERE</span> total_jam 
+ <span class="hljs-keyword">in</span> (<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">MAX</span>(total_jam) <span class="hljs-keyword">FROM</span> penugasan);
+</code></pre>
+<p><img src="images/image034.png" alt=""></p>
+</li>
+<li><p>Untuk menampilkan data (perbandingan himpunan sub-query) yang berasal dari pemilihan tampilan data lain digunakan tambahan operator. Eksekusi SQL berikut untuk menampilkan kolom nomor_proyek, nik, total_jam pada tabel penugasan berdasarkan semua record kolom total_jam harus bernilai kurang dari total_jam yang dimiliki oleh nomor proyek 1 dari tabel penugasan.</p>
+<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> nomor_proyek, nik, total_jam 
+ <span class="hljs-keyword">FROM</span> penugasan 
+ <span class="hljs-keyword">WHERE</span> total_jam &lt; ALL (<span class="hljs-keyword">SELECT</span> total_jam <span class="hljs-keyword">FROM</span> penugasan <span class="hljs-keyword">WHERE</span> nomor_proyek = <span class="hljs-number">1</span>);
+</code></pre>
+<p><img src="images/image036.png" alt=""></p>
+</li>
+<li><p>Setelah berhasil mengeksekusi SQL tersebut, lanjutkan ke Praktikum - Bagian 4.</p>
+</li>
+</ol>
+<h2 id="praktikum---bagian-4-percobaan-fungsi-agregasi">Praktikum - Bagian 4: Percobaan FUNGSI AGREGASI</h2>
+<ol>
+<li><p>Untuk menghitung rata-rata, digunakan tambahan statement AVG. Eksekusi SQL berikut untuk menampilkan rata-rata gaji sesuai kolom gaji dari tabel karyawan.</p>
+<p> <code>SELECT AVG(gaji) FROM karyawan;</code></p>
+<p> <img src="images/image037.png" alt=""></p>
+</li>
+<li><p>Untuk menghitung nilai tertinggi, digunakan tambahan statement MAX. Eksekusi SQL berikut untuk menampilkan gaji tertinggi sesuai kolom gaji dari tabel karyawan. </p>
+<p> <code>SELECT MAX(gaji) FROM karyawan;</code></p>
+<p> <img src="images/image038.png" alt=""></p>
+</li>
+<li><p>Untuk menghitung nilai terendah, digunakan tambahan statement MIN. Eksekusi SQL berikut untuk menampilkan gaji terendah sesuai kolom gaji dari tabel karyawan. </p>
+<p> <code>SELECT MIN(gaji) FROM karyawan;</code></p>
+<p> <img src="images/image039.png" alt=""></p>
+</li>
+<li><p>Untuk menghitung total gaji keseluruhan digunakan tambahan statement SUM. Eksekusi SQL berikut untuk menampilkan total gaji sesuai kolom gaji dari tabel karyawan. </p>
+<p> <code>SELECT SUM(gaji) FROM karyawan</code></p>
+<p> <img src="images/image040.png" alt=""></p>
+</li>
+<li><p>Untuk menunjukkan jumlah baris pada kolom yang diinginkan digunakan COUNT(). Eksekusi SQL berikut untuk menampilkan jumlah baris pada kolom dari tabel karyawan.</p>
+<p> <code>SELECT COUNT(gaji) FROM karyawan;</code></p>
+<p> <img src="images/image041.png" alt=""></p>
+</li>
+<li><p>Lanjutkan ke bagian Tugas!</p>
+</li>
+</ol>
+<h2 id="tugas">Tugas</h2>
+<ol>
+<li>Himpunlah screenshot sintaksis SQL berikut hasil SELECT yang Anda dapat di komputer Anda pada bagian Praktikum dalam sebuah laporan dengan format PDF!</li>
+<li>Bagaimana sintaksis untuk melakukan pencarian tanggal selesai proyek yang paling akhir dengan memberikan nama alias &#x2018;baru&#x2019;, dan juga pencarian tanggal selesai proyek paling awal dengan memberikan nama alias kolom &#x2018;lama&#x2019;?Tunjukkan outputnya!</li>
+<li>Lakukan pencarian jumlah karyawan yang bekerja pada kode_departemen &#x2018;CSR&#x2019; kemudian tunjukkan sintaksis dan outputnya!</li>
+<li>Carilah data yang menunjukkan semua nik dari seorang manajer yang berperan dalam penugasan. Gunakan operasi intersect! Tunjukkan sintaksis dan output pencarian tersebut!</li>
+<li>Tunjukkan total nik, nomor_proyek dan total_jam dari tabel penugasan yang dikelompokkan berdasarkan nomor proyek yang sama berjumlah kurang dari dua. Kelompok tersebut diurutkan sesuai nomor_proyek secara terurut dari atas ke bawah. Sertakan sintaksis dan output dari sintaksis SELECT tersebut. </li>
+</ol>
+<h2 id="daftar-pustaka">Daftar Pustaka</h2>
+<ul>
+<li>Dwi Puspitasari, S.Kom, &#x201C;Buku Ajar Dasar Basis Data&#x201D;, Program Studi Manajemen Informatika Politeknik Negeri Malang, 2012.</li>
+<li><a href="http://www.tutorialride.com" target="_blank">http://www.tutorialride.com</a></li>
+<li><a href="https://www.w3schools.com/" target="_blank">https://www.w3schools.com/</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../09/09-dml.html" class="navigation navigation-prev " aria-label="Previous page: MySQL – Data Manipulation Language (DML)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../11/13.select-multitable.html" class="navigation navigation-next " aria-label="Next page: Select Multi Tabel">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MySQL – Data Retrieval Language (DML)","level":"1.12","depth":1,"next":{"title":"Select Multi Tabel","level":"1.13","depth":1,"path":"11/13.select-multitable.md","ref":"11/13.select-multitable.md","articles":[]},"previous":{"title":"MySQL – Data Manipulation Language (DML)","level":"1.11","depth":1,"path":"09/09-dml.md","ref":"09/09-dml.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"10/12.select.md","mtime":"2020-05-11T16:40:53.427Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-11T16:41:36.880Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

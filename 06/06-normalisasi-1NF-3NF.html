@@ -1,0 +1,603 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Normalisasi 1NF sampai 3NF · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../07/07-BCNF-4NF-5NF.html" />
+    
+    
+    <link rel="prev" href="../05/05-pemetaan-erd-ke-model-relational.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../01/01.contoh-penerapan-basis-data.html">
+            
+                <a href="../01/01.contoh-penerapan-basis-data.html">
+            
+                    
+                    Contoh Penerapan Basis Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../02/02.ERD.html">
+            
+                <a href="../02/02.ERD.html">
+            
+                    
+                    ERD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../03/03-erd-2.html">
+            
+                <a href="../03/03-erd-2.html">
+            
+                    
+                    ERD-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../04/04-erd-ke-model-relational.html">
+            
+                <a href="../04/04-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                <a href="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="06-normalisasi-1NF-3NF.html">
+            
+                <a href="06-normalisasi-1NF-3NF.html">
+            
+                    
+                    Normalisasi 1NF sampai 3NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../07/07-BCNF-4NF-5NF.html">
+            
+                <a href="../07/07-BCNF-4NF-5NF.html">
+            
+                    
+                    Normalisasi BCNF, 4NF, dan 5NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../08/08-ddl.html">
+            
+                <a href="../08/08-ddl.html">
+            
+                    
+                    MySQL (DDL dan DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../09/09-dml.html">
+            
+                <a href="../09/09-dml.html">
+            
+                    
+                    MySQL – Data Manipulation Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../10/12.select.html">
+            
+                <a href="../10/12.select.html">
+            
+                    
+                    MySQL – Data Retrieval Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../11/13.select-multitable.html">
+            
+                <a href="../11/13.select-multitable.html">
+            
+                    
+                    Select Multi Tabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../00/nilai.html">
+            
+                <a href="../00/nilai.html">
+            
+                    
+                    Nilai Jobsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../00/nilai-teori.html">
+            
+                <a href="../00/nilai-teori.html">
+            
+                    
+                    Nilai Teori
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Normalisasi 1NF sampai 3NF</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jobsheet-minggu-ke-7-normalisasi-data-1nf-hingga-3nf">Jobsheet Minggu ke-7: Normalisasi Data 1NF hingga 3NF</h1>
+<h2 id="topik">Topik</h2>
+<p>Contoh Penerapan Normalisasi Data 1NF hingga 3NF</p>
+<h2 id="tujuan">Tujuan</h2>
+<p>Mahasiswa memahami:</p>
+<ol>
+<li>Konsep normaslisasi skema relasional ke dalam bentuk yang diinginkan</li>
+<li>Ciri-ciri tahapan normalisasi 1NF hingga 3NF</li>
+</ol>
+<h2 id="pendahuluan">Pendahuluan</h2>
+<h3 id="pengertian-normalisasi">Pengertian normalisasi</h3>
+<p>Normalisasi diartikan sebagai suatu teknik yang menstrukturkan/ mendekomposisi/ memecah data dalam cara&#x2013;cara tertentu untuk mencegah timbulnya permasalahan pengolahan data dalam basis data. Permasalahan yang dimaksud adalah berkaitan dengan penyimpangan&#x2013;penyimpangan (anomalies) yang terjadi akibat adanya kerangkapan data dalam relasi dan inefisiensi pengolahan.
+Proses normalisasi akan menghasilkan relasi yang optimal, yaitu :</p>
+<ol>
+<li>Memiliki struktur record yang mudah untuk dimengerti.</li>
+<li>Memiliki struktur record yang sederhana dalam pemeliharaan.</li>
+<li>Memiliki struktur record yang mudah untuk ditampilkan kembali untuk memenuhi kebutuhan pemakai.</li>
+<li>Minimalisasi kerangkapan data guna meningkatkan kinerja sistem.</li>
+</ol>
+<p>Dalam pendekatan normalisasi, perancangan basis data bertitik tolak dari situasi nyata. Ia telah memiliki item&#x2013;item data yang siap ditempatkan dalam baris dan kolom pada tabel&#x2013;tabel relasional. Demikian juga dengan sejumlah aturan tentang keterhubungan antara item&#x2013;item data tersebut. Sementara pendekatan model data ER lebih tepat dilakukan jika yang diketahui baru prinsip sistem secara keseluruhan. </p>
+<h3 id="atribut-tabel">Atribut Tabel</h3>
+<p>Atribut identik dengan pemakaian istilah kolom data. Istilah atribut ini lebih umum digunakan dalam perancangan basis data, karena istilah itu lebih impresif dalam menunjukkan fungsinya sebagai pembentuk karakteristik (sifat&#x2013;sifat) yang melekat pada sebuah table.</p>
+<ol>
+<li><p><strong>Atribut Sederhana (Simple Attribute) dan Atribut Komposit (Composite Attribute)</strong></p>
+<p> Atribut sederhana adalah atribut atomik yang tidak dapat dipilah lagi. Sementara atribut komposit merupakan atribut yang masih dapat diuraikan lagi menjadi sub&#x2013;sub atribut yang masing&#x2013;masing memiliki makna.</p>
+</li>
+<li><p><strong>Atribut Bernilai Tunggal (Single Valued Attribute) dan Atribut Bernilai Banyak (Multi Valued Atrtribute)</strong></p>
+<p> Atribut bernilai tunggal ditujukan pada atribut&#x2013;atribut yang memiliki paling banyak satu nilai untuk setiap basis data. Pada data mahasiswa, semua atribut (nim, nama_mhs, alamat_mhs dan tgl_lahir) merupakan atribut bernilai tunggal, karena atribut&#x2013;atribut tersebut hanya dapat berisi 1 (satu) nilai. Jika seorang mahasiswa yang memiliki 2 (dua) tempat tinggal, maka hanya salah satu saja yang boleh diisikan ke dalam atribut alamat_mhs.</p>
+</li>
+<li><p><strong>Atribut Harus Bernilai (Mandatory Attribute) dan Nilai Null</strong></p>
+<p> Ada sejumlah atribut pada sebuah tabel yang kita tetapkan harus berisi data. Jadi nilainya tidak boleh kosong. Atribut semacam ini disebut Mandatory Attribute. Pada tabel mahasiswa, misalnya atribut nim dan nama_mhs dapat kita golongkan sebagai Mandatory Attribute, karena setiap mahasiswa yang datanya ingin disimpan ke tabel tersebut, paling tidak harus diketahui dengan pasti nim dan namanya. Sebaliknya ada atribut&#x2013;atribut lain dari suatu tabel yang nilainya boleh dikosongkan (Non Mandatory Attribute). Nilai Null digunakan untuk menyatakan/ mengisi atribut&#x2013;atribut demikian yang nilainya memang belum siap atau tidak ada.</p>
+</li>
+<li><p><strong>Atribut Turunan</strong></p>
+<p> Atribut turunan adalah atribut yang nilai&#x2013;nilainya diperbolehkan dari pengolahan atau dapat diturunkan dari atribut atau tabel lain yang berhubungan. Atribut demikian sebetulnya dapat ditiadakan dari sebuah tabel, karena nilai&#x2013;nilainya bergantung pada nilai yang ada di atribut lainnya. Penambahan atribut angkatan dan IP (Indeks Prestasi) pada tabel mahasiswa merupakan contoh atribut turunan</p>
+</li>
+</ol>
+<h3 id="domain-dan-tipe-data">Domain dan Tipe Data</h3>
+<ul>
+<li>Penetapan tipe data pada setiap atribut (kolom) digunakan untuk keperluan penentuan struktur setiap tabel. Penetapan tipe data ini akan berimplikasi pada adanya batas&#x2013;batas nilai yang mungkin disimpan/diisikan ke setiap atribut tersebut. Jika kita menetapkan bahwa tipe data untuk sebuah atribut adalah integer, maka kita hanya mungkin untuk menyimpan data angka yang bulat diantara &#x2013;32.768 hingga 32.768. Kita tidak mungkin untuk memasukkan data di luar batas nilai tersebut, data pecahan apalagi data berupa string/text.</li>
+<li>Domain memiliki banyak kesamaan pengertian dengan fungsi tipe data tersebut. Akan tetapi, tipe data merujuk pada kemampuan penyimpanan data yang mungkin bagi suatu atribut secara fisik, tanpa melihat layak tidaknya data tersebut bila dilihat dari kenyataan pemakaiannya. Sementara domain nilai lebih ditetapkan pada batas&#x2013;batas nilai yang diperbolehkan bagi suatu atribut, dilihat dari kenyataanya yang ada.</li>
+<li>Contoh : pada tabel kuliah, ditetapkan tipe data untuk atribut sks adalah integer. Dengan begitu secara fisik kita dapat menyimpan nilai &#x2013;1, 0 atau 100 untuk atribut sks. Tetapi kita mengetahui dengan pasti, bahwa nilai&#x2013;nilai tersebut tidak pantas (invalid) untuk menjadi data pada atribut sks. Lalu nilai&#x2013;nilai yang boleh (valid) untuk atribut sks adalah 1, 2, 3, 4 dan 6, maka dapat dikatakan, domain nilai untuk atribut sks adalah 1, 2, 3, 4 dan 6.</li>
+</ul>
+<h3 id="ketergantungan-fungsional-fungsional-dependency">Ketergantungan Fungsional (Fungsional Dependency)</h3>
+<p>Diberikan sebuah tabel T berisi paling sedikit 2 buah atribut, yaitu A dan B. Kita dapat menyatakan notasi berikut ini:</p>
+<p>A &#x2192; B</p>
+<p>Yang berarti A secara fungsional menentukan B atau B secara fungsional tergantung pada A, jika dan hanya jika setiap kumpulan baris (row) yang ada di tabel T, pasti ada 2 baris data (row) di tabel dengan nilai A yang sama, maka nilai B pasti juga sama. Definisi yang paling formal untuk itu adalah :
+Diberikan 2 row  r1 dan r2 dalam tabel T dimana A &#x2192; B.
+    jika <code>r1(A) = r2(A) maka r1(B) = r2(B)</code></p>
+<p><img src="images/01.png" alt=""></p>
+<p>Dengan melihat data di atas dan dengan pertimbangan intuisi kita, maka ketergantungan fungsional yang dapat kita ajukan adalah:</p>
+<ul>
+<li><p>nim &#x2192; nama_mhs</p>
+<p>  yang berarti bahwa atribut nama_mhs hanya tergantung pada atribut nim. Hal ini dibuktikan dari fakta : untuk setiap nilai nim yang sama maka pasti nilai nama_mhsnya juga sama.</p>
+</li>
+<li><p>nama_kul, nim &#x2192; indeks_nilai</p>
+<p>  yang berarti bahwa atribut indeks_nilai tergantung pada atribut nama_kul dan nim secara bersama&#x2013;sama, memang kita tidak dapat menunjukkan fakta, bahwa untuk setiap nilai nama_kul dan nim yang sama, maka nilai indeks_nilainya juga sama, karena nama_kul, nim merupakan key (sehingga bersifat unik) untuk tabel tersebut. Tetapi, ketergantungan fungsional tersebut sesuai dengan pengertian bahwa setiap indeks_nilai diperuntukkan pada mahasiswa tertentu untuk mata kuliah tertentu yang diambilnya. </p>
+</li>
+</ul>
+<p>Tanpa memperhatikan pengertian ketergantungan secara alamiah terhadap tabel tersebut, kita juga dapat mengajukan sejumlah ketidaktergantungan (non KF) dengan hanya melihat fakta yang ada,yaitu :</p>
+<ul>
+<li><p>nama_kul &#x219B; nim</p>
+<p>  yang artinya atribut nim tidak tergantung pada atribut nama_kul. Buktinya terlihat pada row 1 dan row 2 : dengan nilai nama_kul yang sama, tapi nilai nimnya berbeda.</p>
+</li>
+<li><p>nim &#x219B; nideks_nilai</p>
+<p>  yang artinya atribut indeks_nilai tidak bergantung pada atribut nim. Buktinya terlihat pada row 1 dan row 3 : dengan nilai nim yang sama, tapi nilai indeks_nilai berbeda.</p>
+</li>
+</ul>
+<h3 id="normalisasi-dan-ketergantungan-fungsional">Normalisasi dan Ketergantungan Fungsional</h3>
+<p>Dalam perspektif normalisasi, sebuah basis data dapat dikatakan baik, jika setiap tabel yang menjadi unsur pembentuk basis data tersebut juga telah berada dalam keadaan baik atau normal. Selanjutnya, sebuah tabel dapat dikategorikan baik (efisien) atau normal, jika telah memenuhi 3 (tiga) kriteria berikut :</p>
+<ol>
+<li>Jika ada dekomposisi (penguraian) tabel, maka dekomposisinya harus dijamin aman (Lossless&#x2013;Join Decomposition).</li>
+<li>Terpeliharanya ketergantungan fungsional pada saat perubahan data (Dependency Preservation).</li>
+<li>Tidak melanggar <code>Boyce&#x2013;Code Normal Form (BCNF)</code></li>
+</ol>
+<h3 id="lossless&#x2013;join-decomposition">Lossless&#x2013;Join Decomposition</h3>
+<p>Dekomposisi memang merupakan upaya untuk mendapatkan tabel yang baik. Tetapi jika tidak hati&#x2013;hati, upaya ini justru dapat menghasilkan kesalahan. Dekomposisi yang benar terjadi jika tabel&#x2013;tabel hasil dekomposisi kita gabungkan kembali dapat menghasilkan tabel awal sebelum didekomposisi. Dekomposisi yang benar semacam ini disebut Lossless&#x2013;Join Decomposition atau Lossless Decomposition (dekomposisi aman).</p>
+<p>Di bawah ini contoh abstrak yang menghasilkan dekomposisi tidak aman (Lossy&#x2013;Join Decomposition) :
+Diasumsikan ada table XYZ yang didefinisikan dua buah ketergantungan fungsional   X &#x2192; Y dan Y &#x2192; Z. Kedua ketergantungan fungsional tersebut diperoleh dari pengamatan terhadap data yang kurang memadai atau karena asumsi yang kurang tepat.</p>
+<h3 id="dependency-preservation">Dependency Preservation</h3>
+<p>Dependency Preservation (pemeliharaan ketergantungan) merupakan kriteria kedua yang harus dapat dicapai untuk mendapatkan tabel dan basis data yang baik. Ketika kita melakukan perubahan data, maka harus bisa dijamin agar perubahan tersebut tidak menghasilkan inkonsistensi data yang mengakibatkan ketergantungan fungsional yang sudah benar menjadi tidak terpenuhi. Akan tetapi, dalam upaya untuk memelihara ketergantungan fungsional yang ada untuk tetap terpenuhi tersebut, prosesnya harus dapat dilakukan dengan efisien.</p>
+<p>Bentuk&#x2013;Bentuk Normalisasi 
+Normalisasi data adalah proses yang berkaitan dengan model data relasional untuk mengorganisasi himpunan data dengan ketergantungan dan keterkaitan yang tinggi/ erat. Hasil dari proses normalisasi adalah tabel&#x2013;tabel data dalam bentuk normal (normal form),  yaitu tabel&#x2013;tabel data yang terhindar dari :</p>
+<ul>
+<li>Pengulangan informasi.</li>
+<li>Potensi inkonsistensi data pada operasi pengubahan.</li>
+</ul>
+<h3 id="bentuk-normal-tahap-pertama-1st-normal-form">Bentuk Normal Tahap Pertama (1<sup>st</sup> Normal Form)</h3>
+<p>Suatu tabel memenuhi 1stNF jika dan hanya jika tabel tersebut tidak memiliki atribut bernilai banyak atau lebih dari satu atribut dengan domain nilai yang sama.</p>
+<h3 id="bentuk-normal-tahap-kedua-2nd-normal-form">Bentuk Normal Tahap Kedua (2<sup>nd</sup> Normal Form)</h3>
+<p>Suatu tabel memenuhi 2ndNF jika dan hanya jika :</p>
+<ol>
+<li>Tabel tersebut memenuhi 1stNF</li>
+<li>Setiap atribut yang bukan kunci utama (primary key) tergantung secara fungsional terhadap semua atribut kunci utama dan bukan tergantung secara fungsional hanya pada sebagian atribut kunci utama.</li>
+</ol>
+<h3 id="bentuk-normal-tahap-ketiga-3rd-normal-form">Bentuk Normal Tahap Ketiga (3<sup>rd</sup> Normal Form)</h3>
+<p>Suatu tabel memenuhi bentuk normal 3<sup>rd</sup>NF jika dan hanya jika :</p>
+<ol>
+<li>Tabel tersebut memenuhi 2<sup>nd</sup>NF.</li>
+<li>Tidak ada atribut bukan kunci tergantung secara transitive pada kunci utama.</li>
+</ol>
+<h2 id="langkah-langkah-prakikum">Langkah-langkah prakikum</h2>
+<p><strong>Langkah 1</strong></p>
+<ol>
+<li>Bukalah berkas spreadsheet bernama <code>DataSoftwareHouseAustria.XLSX</code> di <a href="files/DataSoftwareHouseAustria.xlsx">sini</a> yang dilampirkan bersama jobsheet ini. </li>
+<li>File tersebut berisi data pegawai software house di Austria beserta atribut lain yang mendukung project yang dikerjakan di perusahaan tersebut. </li>
+<li>Teliti setiap atribut yang tertulis pada data tersebut dan amati ketidak sesuaian atribut yang ada sehingga mempersulit proses insert, update, delete dan modifikasi. </li>
+<li><p>Pertimbangkan pula bagaimana bentuk yang baik dan sesuai dengan aturan normalisasi yang efisien.</p>
+<p><img src="images/02.png" alt=""></p>
+</li>
+</ol>
+<p><strong>Langkah 2</strong></p>
+<ol>
+<li><p>Normalisasi data sesuai bentuk normal kesatu karena data pada langkah 1 tidak memenuhi bentuk normal data bagian satu (1NF). Maka akan menghasilkan dekomposisi tabel sebagai berikut :</p>
+<p><img src="images/03.png" alt=""></p>
+<p><img src="images/04.png" alt=""></p>
+</li>
+<li><p>Lakukan pengecekan (Lossless&#x2013;Join Decomposition) pada tabel baru hasil dekomposisi tersebut! \<soal></soal></p>
+</li>
+</ol>
+<p><strong>Langkah 3</strong></p>
+<ol>
+<li><p>Pengecekan FD pada tabel hasil langkah 2 akan menghasilkan data FD sebagai berikut :</p>
+<p>Pada tabel project</p>
+<p> num_project &#x2192; name_project</p>
+<p> Pada tabel employee</p>
+<ul>
+<li>{num_project, num_employee, num_jobclass} &#x219B; name_employee</li>
+<li>{num_project, num_employee, num_jobclass} &#x219B; street_address</li>
+<li>{num_project, num_employee, num_jobclass} &#x219B; city</li>
+<li>{num_project, num_employee, num_jobclass} &#x219B; postal_code</li>
+<li>{num_project, num_employee, num_jobclass} &#x219B; name_jobclass</li>
+<li>{num_project, num_employee, num_jobclass} &#x219B; chr_per_hour</li>
+<li><p>{num_project, num_employee, num_jobclass} &#x219B; hours_billed</p>
+<p><strong>FD</strong></p>
+</li>
+<li><p><u>num_project</u> &#x2192; name_project</p>
+</li>
+<li><u>no_employee</u> &#x2192;{name_employee, street_address, city, postal_code}</li>
+<li><u>no_jobclass</u> &#x2192;{name_jobclass, chr_per_hours}</li>
+<li>{<u>num_project</u>, num_employee,num_jobclass} &#x2192; hours_billed</li>
+</ul>
+</li>
+<li><p>Normalisasi tabel menjadi bentuk 2NF. Berdasarkan informasi FD maka dekomposisi tabel yang semula 2 tabel menjadi 4 tabel sebagai berikut :</p>
+<ul>
+<li>project{<u>num_project</u>, name_project}</li>
+<li>employee{<u>no_employee</u>, name_employee, street_address, city, postal_code}</li>
+<li>jobclass{<u>no_jobclass</u>, name_jobclass, chr_per_hours}</li>
+<li>hours{<u>num_project, num_employee,num_jobclass</u>, hours_billed}</li>
+</ul>
+</li>
+<li>Lakukan pengecekan <code>(Lossless&#x2013;Join Decomposition)</code> dan <code>(dependency preservation)</code> pada tabel baru hasil dekomposisi tersebut! \<soal></soal></li>
+</ol>
+<p><strong>Langkah 4</strong></p>
+<ol>
+<li>Mencari hubungan syarat 3NF dengan mempertimbangkan X &#x2192; A sesuai dengan ketentuan 3NF Terdapat beberapa non key yang memiliki ketergantungan dengan non key lain, sesuai FD baru sebagai berikut:<ul>
+<li>{city, street_address} &#x2192; postal_code dimana X adalah superkey </li>
+<li>name_project &#x2192; {name_employee, name_jobclass} dimana X adalah superkey </li>
+<li>{name_employee, name_jobclass} &#x2192; chr_per_hours dimana dimana X adalah superkey</li>
+</ul>
+</li>
+<li>Berdasarkan FD tersebut maka tabel pada langkah 3 diperbaharui dekomposisinya menjadi :<ul>
+<li>project{<u>num_project</u>, name_project}</li>
+<li>employee{<u>no_employee</u>, name_employee, street_address }</li>
+<li>jobclass{<u>no_jobclass</u>, name_jobclass, chr_per_hours}</li>
+<li>hours{<u>num_project</u>, num_employee,num_jobclass, hours_billed}</li>
+<li><strong>address{<u>city, street_address</u>, postal_code</strong>}</li>
+<li><strong>jobclass_detail{<u>name_project</u>, name_employee, name_jobclass}</strong></li>
+<li><strong>charge{<u>name_employee, name_jobclass</u>, chr_per_hours}</strong></li>
+</ul>
+</li>
+<li>Lakukan pengecekan <code>(Lossless&#x2013;Join Decomposition)</code> dan <code>(dependency preservation)</code> pada tabel baru hasil dekomposisi tersebut! \<soal></soal></li>
+</ol>
+<h2 id="tugas">Tugas</h2>
+<ol>
+<li>Jawablah \<soal> dengan terlebih dahulu melakukan langkah-langkah kegiatan diatas!</soal></li>
+<li><p>Lakukan normalisasi sesuai dengan langkah-langkah percobaan diatas sekaligus lakukan pengecekan mulai bentuk 1NF sampai dengan 3NF yang sesuai dengan 3 kriteria bentuk normal yang baik pada studi kasus di bawah ini!</p>
+<p><img src="images/05.png" alt=""></p>
+<p> Sebuah data peminjaman perpustakaan di Politeknik Negeri Balikpapan berikut memiliki keistimewaan pada jumlah hari peminjaman buku. Semakin lama jumlah hari peminjaman diartikan semakin banyak jumlah halaman buku yang dipinjam.</p>
+</li>
+<li><p>Lakukan normalisasi pada studi kasus di bawah ini mulai bentuk 1NF sampai dengan 3NF, sekaligus lakukan pengecekan yang sesuai dengan 3 kriteria bentuk normal yang baik! (Bentuk normalisasi tidak dibatasi, silahkan disesuaikan dengan kondisi studi kasus)
+Indonesia Air memiliki data penerbangan domestik yang rutin dilaksanakan dalam periode tertentu.</p>
+<p><img src="images/06.png" alt=""></p>
+</li>
+<li><p>Dokumentasikan jawaban pertanyaan 1 sampai 3 dalam sebuah laporan dengan format <strong>PDF</strong>!</p>
+</li>
+</ol>
+<h2 id="daftar-pustaka">Daftar Pustaka</h2>
+<ul>
+<li>Dwi Puspitasari, S.Kom, &#x201C;Buku Ajar Dasar Basis Data&#x201D;, Program Studi Manajemen
+Informatika Politeknik Negeri Malang, 2012.</li>
+<li>Fathansyah, &#x201C;Basisdata Revisi Kedua&#x201D;, Bandung: Informatika, 2015.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../05/05-pemetaan-erd-ke-model-relational.html" class="navigation navigation-prev " aria-label="Previous page: ERD ke Model Relational(2)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../07/07-BCNF-4NF-5NF.html" class="navigation navigation-next " aria-label="Next page: Normalisasi BCNF, 4NF, dan 5NF">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Normalisasi 1NF sampai 3NF","level":"1.8","depth":1,"next":{"title":"Normalisasi BCNF, 4NF, dan 5NF","level":"1.9","depth":1,"path":"07/07-BCNF-4NF-5NF.md","ref":"07/07-BCNF-4NF-5NF.md","articles":[]},"previous":{"title":"ERD ke Model Relational(2)","level":"1.7","depth":1,"path":"05/05-pemetaan-erd-ke-model-relational.md","ref":"05/05-pemetaan-erd-ke-model-relational.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"06/06-normalisasi-1NF-3NF.md","mtime":"2020-05-11T16:40:53.407Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-11T16:41:36.880Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

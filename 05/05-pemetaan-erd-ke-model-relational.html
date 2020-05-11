@@ -1,0 +1,557 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ERD ke Model Relational(2) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../06/06-normalisasi-1NF-3NF.html" />
+    
+    
+    <link rel="prev" href="../04/04-erd-ke-model-relational.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../01/01.contoh-penerapan-basis-data.html">
+            
+                <a href="../01/01.contoh-penerapan-basis-data.html">
+            
+                    
+                    Contoh Penerapan Basis Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../02/02.ERD.html">
+            
+                <a href="../02/02.ERD.html">
+            
+                    
+                    ERD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../03/03-erd-2.html">
+            
+                <a href="../03/03-erd-2.html">
+            
+                    
+                    ERD-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../04/04-erd-ke-model-relational.html">
+            
+                <a href="../04/04-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="05-pemetaan-erd-ke-model-relational.html">
+            
+                <a href="05-pemetaan-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../06/06-normalisasi-1NF-3NF.html">
+            
+                <a href="../06/06-normalisasi-1NF-3NF.html">
+            
+                    
+                    Normalisasi 1NF sampai 3NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../07/07-BCNF-4NF-5NF.html">
+            
+                <a href="../07/07-BCNF-4NF-5NF.html">
+            
+                    
+                    Normalisasi BCNF, 4NF, dan 5NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../08/08-ddl.html">
+            
+                <a href="../08/08-ddl.html">
+            
+                    
+                    MySQL (DDL dan DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../09/09-dml.html">
+            
+                <a href="../09/09-dml.html">
+            
+                    
+                    MySQL – Data Manipulation Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../10/12.select.html">
+            
+                <a href="../10/12.select.html">
+            
+                    
+                    MySQL – Data Retrieval Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../11/13.select-multitable.html">
+            
+                <a href="../11/13.select-multitable.html">
+            
+                    
+                    Select Multi Tabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../00/nilai.html">
+            
+                <a href="../00/nilai.html">
+            
+                    
+                    Nilai Jobsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../00/nilai-teori.html">
+            
+                <a href="../00/nilai-teori.html">
+            
+                    
+                    Nilai Teori
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ERD ke Model Relational(2)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jobsheet-minggu-ke-6-pemetaan-erd-ke-model-relasional2">Jobsheet Minggu ke-6: Pemetaan ERD ke Model Relasional(2)</h1>
+<h2 id="topik">Topik</h2>
+<p>Model Relasional (2)</p>
+<h2 id="tujuan">Tujuan</h2>
+<p>Mahasiswa diharapkan dapat memahami tentang model relasional</p>
+<h2 id="pendahuluan">Pendahuluan</h2>
+<p>Model relasional pertama kali diperkenalkan oleh E.F. Codd pada tahun 1970. Objektifitas dari model relasional ini adalah konsep kemandirian data, relasi yang normal tanpa adanya kelompok pengulangan serta perluasan dari bahasa manipulasi data yang berorientasi pada himpunan data.</p>
+<p>Model Data Relasional adalah suatu model basis data yang menggunakan tabel dua dimensi, yang terdiri atas baris dan kolom untuk menggambarkan sebuah berkas data. Model ini menunjukkan cara mengelola/mengorganisasikan data secara fisik dalam memory sekunder, yang akan berdampak pula pada bagaimana kita mengelompokkan data dan membentuk keseluruhan
+data yang terkait dalam sistem yang kita buat.</p>
+<p>Contoh Tabel dan keterhubungannya :</p>
+<p><img src="images/01.png" alt=""></p>
+<p>Keuntungan Model Data Relasional</p>
+<ol>
+<li>Bentuknya sederhana</li>
+<li>Mudah melakukan berbagai operasi data (query, update/edit, delete).</li>
+</ol>
+<p>Contoh-contoh model basis data:</p>
+<ol>
+<li>Model basis data hirarki</li>
+<li>Model basis data network/jaringan</li>
+<li>Model basis data relational (paling banyak digunakan)</li>
+</ol>
+<p>Contoh DBMS yang mengelola basis data relational :</p>
+<ul>
+<li>dBase III+</li>
+<li>MS.Access</li>
+<li>Borland-Paradox</li>
+<li>Oracle</li>
+<li>DB2</li>
+<li>SYBASE</li>
+<li>Informix</li>
+</ul>
+<p>Contoh Pembuatan Tabel.</p>
+<p><img src="images/02.png" alt=""></p>
+<p>Karakteristik dari tabel MKUL:</p>
+<ul>
+<li>data mata kuliah memiliki 3 buah kolom data</li>
+<li>kolom 1 berisi adta string/alphanumerik dengan lebar tetap, yaitu 5 digit/char.</li>
+<li>Kolom 2 berisi data string dengan lebar maksimum 30 digit.</li>
+<li>Kolom 3 berisi data integer dengan lebar maksimum 1 digit.</li>
+</ul>
+<p>Dari karakteristik di atas, kita bisa menetapkan struktur data tabel MKUL:</p>
+<ul>
+<li>nama kolom/field.</li>
+<li>Tipe data.</li>
+<li>Lebar (banyaknya digit maksimum yang bisa ditampung).</li>
+</ul>
+<p>Jadi, struktur tabel MKUL:
+<img src="images/03.png" alt=""></p>
+<p>Istilah dalam Model Data Relasional:</p>
+<ul>
+<li>Relasi: Sebuah tabel yang terdiri dari beberapa kolom dan beberapa baris.
+Atribut:Kolom pada sebuah relasi (field).</li>
+<li>Tupel: Baris pada sebuah relasi (record).
+Domain: Kumpulan nilai yang valid untuk satu atau lebih atribut</li>
+<li>Derajat (degree): Jumlah atribut dalam sebuah relasi (jumlah field)</li>
+<li>Cardinality: Jumlah tupel dalam sebuah relasi (jumlah record)</li>
+</ul>
+<p><img src="images/04.png" alt=""></p>
+<p>Relational Key</p>
+<p>Super key</p>
+<p>Satu atribut/kumpulan atribut yang secara unik mengidentifikasi sebuah tupel di
+dalam relasi (satu atau lebih field yang dapat dipilih untuk membedakan antara 1 record
+dengan record lainnya).
+Contoh: Untuk tabel MHS di atas, super key-nya:</p>
+<ul>
+<li>NPM</li>
+<li>NAMA (dengan syarat tidak ada nama yang sama)</li>
+<li>ALAMAT (dengan syarat tidak ada alamat yang sama)</li>
+<li>NPM + NAMA</li>
+<li>NPM + ALAMAT</li>
+<li>NAMA + ALAMAT</li>
+<li>NPM + NAMA + ALAMAT</li>
+</ul>
+<p>Candidate key</p>
+<p>Atribut di dalam relasi yang biasanya mempunyai nilai unik (super key dengan jumlah field
+yang paling sedikit)
+Maka, candidate key-nya adalah NPM, NAMA dan ALAMAT (karena hanya terdiri dari 1
+field saja)</p>
+<p>Primary key</p>
+<p>Candidate key yang dipilih untuk mengidentifikasikan tupel secara unik dalam relasi
+Maka, primary key yang dipilih adalah NPM (unik, tidak ada NPM yang sama).</p>
+<p>Alternate key</p>
+<p>Candidate key yang tidak dipilih sebagai primary key
+Maka, candidate key-nya NAMA dan ALAMAT</p>
+<p>Foreign key</p>
+<p>Atribut dengan domain yang sama yang menjadi kunci utama pada sebuah relasi tetapi
+pada relasi lain atribut tersebut hanya sebagai atribut biasa</p>
+<p><img src="images/05.png" alt=""></p>
+<ul>
+<li>Relational Integrity Rules</li>
+<li><p>Null</p>
+<p> Nilai suatu atribut yang tidak diketahui dan tidak cocok untuk baris (tuple) tersebut</p>
+</li>
+<li><p>Entity Integrity</p>
+<p> Tidak ada satu komponen primary key yang bernilai null.</p>
+</li>
+<li><p>Referential Integrity
+ Suatu domain dapat dipakai sebagai kunci primer bila merupakan atribut tunggal pada domain yang bersangkutan.</p>
+</li>
+<li><p>Pemetaan ERD pada tabel
+Aturan umum dalam pemetaan model data yang digambarkan dalam ERD (level konseptual)
+menjadi tabel adalah :</p>
+</li>
+</ul>
+<p>a. Setiap himpunan entitas akan diimplementasikan sebagai sebuah tabel (file data)</p>
+<p><img src="images/06.png" alt=""></p>
+<p>b. Relasi dengan derajat relasi satu-ke-satu, yang menghubungkan 2 buah himpunan
+entitas akan direpresentasikan dalam bentuk penambahan / penyertaan atribut-atribut
+relasi ke tabel yang mewakili salah satu dari kedua himpunan entitas</p>
+<p><img src="images/07.png" alt=""></p>
+<p>c. Relasi dengan derajat relasi satu-ke-banyak, yang menghubungkan 2 buah himpunan
+entitas, juga akan direpresentasikan dalam bentuk pemberian / pencantuman atribut
+kunci dari himpunan entitas pertama (yang berderajat 1) ke tabel yang mewakili
+himpunan entitas kedua (yang berderajat M).</p>
+<p><img src="images/08.png" alt=""></p>
+<p>Pemetaan ERD pada bentu relasional
+Berikut ini adalah contoh bentuk ERD pada suatu data perusahaan.</p>
+<p><img src="images/09.png" alt=""></p>
+<p>Kemudian dipetakan menjadi bentuk relasi</p>
+<p><img src="images/10.png" alt=""></p>
+<p>Mapping Skema ER Diagram dengan Referential Integrity Constraint. Referential Integrity
+adalah sebuah cara untuk menjaga konsistensi data antara tabel yang saling ber-Relasi.</p>
+<p><img src="images/11.png" alt=""></p>
+<h2 id="tugas-praktikum">Tugas Praktikum</h2>
+<ol>
+<li><p>Buat ERD dan model relasional untuk basis data &#x201C;Peminjaman dan Pengembalian&#x201D; pada perpustakaan umum, berdasarkan ketentuan berikut ini:</p>
+<p> a. Dalam basis data peminjaman dan pengembalian perlu dicatat data buku, anggota, kategori buku, peminjaman, serta pengembalian.</p>
+<p> b. Data buku yang perlu dicatat adalah kode buku yang unik, judul, pengarang, penerbit, tahun terbit, kategori buku, jumlah.</p>
+<p> c. Data anggota yang perlu dicatat adalah no anggota dan nama yang unik, alamat, no telepon, no ktp/no siswa, jenis kelamin, dan keterangan.</p>
+<p> d. Kategori buku yang perlu dicatat adalah kode dan keterangan yang menunjukkan kategori dari buku. Satu kategori buku bisa banyak buku, sedangkan satu buku hanya memiliki satu kategori, misalnya kategori &#x2018;buku pelajaran&#x2019; bisa terdapat buku &#x2018;basis data&#x2019;, &#x2018;matematika&#x2019;, &#x2018;bahasa inggris&#x2019;, dll.</p>
+<p> e. Data peminjaman yang perlu dicatat adalah no peminjaman, tgl peminjaman, tgl harus kembali, dan jumlah buku yang dipinjam. Satu peminjaman bisa meminjam banyak buku, sehingga dalam peminjaman perlu dicatat daftar buku yang dipinjam.</p>
+<p> f. Data pengembalian perlu dicatat tanggal kembali dan buku yang dikembalikan. Pengembalian mengacu pada peminjaman. Satu peminjaman bisa banyak pengembalian.</p>
+</li>
+<li><p>Buat ERD dan model relasional untuk studi kasus berikut:</p>
+<p> Polinema ingin membuat sebuah sistem yang melayani penyewaan fasilitas olahraga. Diketahui fasilitas olahraga yang disediakan adalah beberapa lapangan dengan tiap lapangannya memiliki beberapa properti, misalnya bola dan gawang di lapangan futsal atau net di lapangan bulutangkis. Fasilitas Olahraga ini bisa disewa baik oleh civitas akademika maupun masyarakat umum.</p>
+<p> Proses Penyewaan memiliki beberapa tahapan. Pertama, si penyewa diharuskan registrasi terlebih dahulu. Registrasi yang dimaksud adalah menuliskan data - data diri si penyewa sebelum melakukan penyewaan. Setelah melakukan registrasi, si penyewa akan mendapat nomor id untuk melakukan reservasi. Pada saat reservasi, penyewa akan menentukan lapangan yang akan di sewa, tanggal menyewa, jam mulai menyewa serta jam akhir menyewa. Setelah penyewa memilih, petugas unit pengelola fasilitas olahraga akan mengecek apakah lapangan yang dipilih sudah disewa orang lain atau belum. Petugas unit pengelola fasilitas olahraga yang melayani proses reservasi maupun registrasi penyewa ada lah petugas yang sudah terdaftar dalam sistem. Jika sudah disewa maka petugas akan memberitahukan kepada penyewa bahwa ia tidak bisa melakukan penyewaan pada jam tersebut. Jika belum, maka penyewa dapat melakukan penyewaan lapangan yang dipilih. Penyewa diharuskan meninggalkan tanda pengenal saat melakukan penyewaan sebagai jaminan. </p>
+<p> Untuk penyewaan lapangan, dikenakan biaya sesuai dengan lapangan yang disewa. Harga sewa pada siang hari dan harga sewa pada malam hari memiliki perbedaan. Malam hari lebih mahal dibandingkan siang hari. Biaya sewa akan dibayar setelah jam untuk menyewa telah habis. Jika penyewa sudah membayar, barulah petugas mengembalikan tanda pengenal penyewa yang dipakai sebagai jaminan di awal penyewaan. Setiap penyewa dapat melakukan penyewaan lebih dari satu kali.</p>
+</li>
+</ol>
+<h2 id="daftar-pustaka">Daftar Pustaka</h2>
+<ul>
+<li>Dwi Puspitasari, S.Kom, &#x201C;Buku Ajar Dasar Basis Data&#x201D;, Program Studi Manajemen
+Informatika Politeknik Negeri Malang, 2012.</li>
+<li>Fathansyah, &#x201C;Basisdata Revisi Kedua&#x201D;, Bandung: Informatika, 2015.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../04/04-erd-ke-model-relational.html" class="navigation navigation-prev " aria-label="Previous page: ERD ke Model Relational">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../06/06-normalisasi-1NF-3NF.html" class="navigation navigation-next " aria-label="Next page: Normalisasi 1NF sampai 3NF">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ERD ke Model Relational(2)","level":"1.7","depth":1,"next":{"title":"Normalisasi 1NF sampai 3NF","level":"1.8","depth":1,"path":"06/06-normalisasi-1NF-3NF.md","ref":"06/06-normalisasi-1NF-3NF.md","articles":[]},"previous":{"title":"ERD ke Model Relational","level":"1.6","depth":1,"path":"04/04-erd-ke-model-relational.md","ref":"04/04-erd-ke-model-relational.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"05/05-pemetaan-erd-ke-model-relational.md","mtime":"2020-05-11T16:40:53.403Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-11T16:41:36.880Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

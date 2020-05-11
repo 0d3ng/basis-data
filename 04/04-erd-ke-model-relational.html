@@ -1,0 +1,1021 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ERD ke Model Relational · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../05/05-pemetaan-erd-ke-model-relational.html" />
+    
+    
+    <link rel="prev" href="../03/03-erd-2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../01/01.contoh-penerapan-basis-data.html">
+            
+                <a href="../01/01.contoh-penerapan-basis-data.html">
+            
+                    
+                    Contoh Penerapan Basis Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../02/02.ERD.html">
+            
+                <a href="../02/02.ERD.html">
+            
+                    
+                    ERD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../03/03-erd-2.html">
+            
+                <a href="../03/03-erd-2.html">
+            
+                    
+                    ERD-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="04-erd-ke-model-relational.html">
+            
+                <a href="04-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                <a href="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../06/06-normalisasi-1NF-3NF.html">
+            
+                <a href="../06/06-normalisasi-1NF-3NF.html">
+            
+                    
+                    Normalisasi 1NF sampai 3NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../07/07-BCNF-4NF-5NF.html">
+            
+                <a href="../07/07-BCNF-4NF-5NF.html">
+            
+                    
+                    Normalisasi BCNF, 4NF, dan 5NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../08/08-ddl.html">
+            
+                <a href="../08/08-ddl.html">
+            
+                    
+                    MySQL (DDL dan DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../09/09-dml.html">
+            
+                <a href="../09/09-dml.html">
+            
+                    
+                    MySQL – Data Manipulation Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../10/12.select.html">
+            
+                <a href="../10/12.select.html">
+            
+                    
+                    MySQL – Data Retrieval Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../11/13.select-multitable.html">
+            
+                <a href="../11/13.select-multitable.html">
+            
+                    
+                    Select Multi Tabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../00/nilai.html">
+            
+                <a href="../00/nilai.html">
+            
+                    
+                    Nilai Jobsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../00/nilai-teori.html">
+            
+                <a href="../00/nilai-teori.html">
+            
+                    
+                    Nilai Teori
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ERD ke Model Relational</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jobsheet-minggu-5-pemetaan-erd-ke-model-relasional">Jobsheet Minggu-5: Pemetaan ERD Ke Model Relasional</h1>
+<h2 id="topik">Topik</h2>
+<ol>
+<li>Model Relasional</li>
+<li>Conceptual Data Model</li>
+<li>Physical Data Model</li>
+<li>Sybase Power Designer</li>
+</ol>
+<h2 id="tujuan">Tujuan</h2>
+<p>Mahasiswa diharapkan memperoleh pemahaman lebih lanjut mengenai basis data model relasional yang digambarkan dengan Conceptual Data Model (CDM) dan Physical Data Model (PDM) yang dibuat dengan Sybase Power Designer</p>
+<h2 id="pendahuluan">Pendahuluan</h2>
+<p>Komputer mempunyai fungsi utama untuk menyimpan dan mengelola informasi. Perlu dilakukan tata cara mengatur informasi tersebut cara yang sederhana dan memudahkan data untuk diakses dan dikelola. Model relasional digagas untuk mengorganisasi ke data ke dalam banyak tabel dua dimensi yang saling berelasi</p>
+<h3 id="sejarah">Sejarah</h3>
+<p>Model relasional pertama kali dikenalkan oleh Codd, pada tahun 1971. Sejak itu model relasi memainkan peranan yang sangat penting dalam berbagai perancangan basis data. Ada tiga alasan mengapa model relasi mempunyai peranan penting dalam perancangan basis data yaitu : </p>
+<ul>
+<li>Relasi merepresentasikan struktur data yang dapat dimengerti oleh user maupun designer </li>
+<li>Model relasional mendefinisikan salah satu kriteria perancangan basis data yang penting yaitu relasi bentuk normal</li>
+<li>Struktur data yang direpresentasikan oleh relasi dapat segera dikonversikan &amp; diimplementasikan ke RDBMS</li>
+</ul>
+<p>Pada tahun 1985, Codd menerbitkan daftar 12 peraturan untuk mendefinisikan sistem basis data relasional, karena kekhawatiran bahwa banyak vendor memasarkan produk sebagai &quot;relasional&quot; walaupun produk tersebut tidak memenuhi standar relasional minimum.</p>
+<p>Istilah pada Model Relasional</p>
+<ol>
+<li>Relation/table/file          : Representasi tabel yang terdiri dari sejumlah baris  dan kolom</li>
+<li>Attribute/column/field    : Kolom pada tabel</li>
+<li>Tuple/row/record        : Baris pada tabel</li>
+<li>Domain            : Himpunan nilai dari satu atau lebih attribute</li>
+<li>Degree                : Banyaknya attribute/kolom pada tabel</li>
+<li>Cardinality            : Banyaknya tuple/baris pada tabel</li>
+<li>Relational Basis Data        : Kumpulan relasi ternormalisasi dengan nama relasi yang jelas</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Istilah Formal</th>
+<th>Istilah Lain 1</th>
+<th>Istilah Lain 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relation</td>
+<td>Table</td>
+<td>File</td>
+</tr>
+<tr>
+<td>Tuple</td>
+<td>Row</td>
+<td>Record</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>Column</td>
+<td>Field</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Contoh Basis Data Model Relasional</strong></p>
+<p>Tabel Customer</p>
+<p><img src="images/01.png" alt=""></p>
+<p>Tabel Account</p>
+<p><img src="images/02.png" alt=""></p>
+<p>Tabel Depositor</p>
+<p><img src="images/03.png" alt=""></p>
+<p><img src="images/04.png" alt=""></p>
+<h3 id="relasi-basis-data">Relasi Basis Data</h3>
+<p>Skema Relasi    merupakan nama relasi didefinisikan oleh himpunan pasangan atribut dan nama domain, sedangkan Skema Basis Data relasional merupakan  himpunan skema relasi dengan nama yang  berbeda.</p>
+<h3 id="sifat-sifat-relasi">Sifat-sifat Relasi</h3>
+<p>Relasi dalam basis data model relasional memiliki sifat sebagai berikut :</p>
+<ul>
+<li>Nama relasi berbeda satu sama lain dalam skema relasional</li>
+<li>Setiap sel(baris,kolom) dari relasi berisi satu nilai atomik atau nilai tunggal</li>
+<li>Setiap atribut memiliki nama yang berbeda</li>
+<li>Nilai suatu atribut berasal dari domain yang sama</li>
+<li>Setiap tuple adalah berbeda, dan tidak ada duplikasi tuple</li>
+</ul>
+<p><strong>Relational Key</strong></p>
+<p>Relational key dalam basis data model relasional terdiri dari:</p>
+<ul>
+<li><p><strong>Superkey</strong></p>
+<p>  Sebuah atribut (atau kombinasi atribut) secara unik mengenali setiap entitas dalam sebuah tabel.</p>
+</li>
+<li><p><strong>Candidate key</strong></p>
+<p>  Sebuah superkey minimal, yaitu superkey yang tidak merupakan bagian atribut dari suatu superkey.</p>
+</li>
+<li><p><strong>Primary key</strong></p>
+<p>  Candidate key yang terpilih untuk mengenali secara unik seluruh nilai atribut pada sebuah baris. Tidak boleh kosong.</p>
+</li>
+<li><p><strong>Secondary key</strong></p>
+<p>  Sebuah atribut (atau kombinasi atribut) secara paksa digunakan untuk tujuan pengambilan data.</p>
+</li>
+<li><p><strong>Foreign key</strong></p>
+<p>  Sebuah atribut (atau kombinasi atribut) dalam sebuah tabel dimana nilainya cocok dengan primary key pada tabel lainnya.</p>
+</li>
+</ul>
+<p><img src="images/05.png" alt=""></p>
+<h3 id="aturan-aturan-basis-data-model-relasional">Aturan-aturan Basis Data Model Relasional</h3>
+<p>Setiap himpunan entitas akan diimplementasikan sebagai sebuah tabel sesuai dengan ketentuan berikut;</p>
+<ol>
+<li><p>Atribut multivalue</p>
+<p> Atribut bernilai banyak membuat sebuah tabel baru dengan mengambil kunci utama sebuah entitas</p>
+</li>
+<li><p>Derajat relasi 1-1</p>
+<p> Relasi one to one  menghubungkan 2 buah himpunan entitas, dipresentasikan dengan penambahan field relasi ke tabel yang mewakili salah satu dari kedua  himpunan entitas</p>
+</li>
+<li><p>Derajat relasi 1-N</p>
+<p> Relasi one to many yang menghubungkan 2 buah himpunan entitas, juga akan dipresentasikan dalam bentuk pemberian atribut key dari himpunan entitas pertama (berderajat 1) ke tabel yang mewakili himpunan entitas kedua (berderajat N). Atribut key dari himpunan entitas pertama ini menjadi atribut tambahan bagi himpunan entitas kedua.</p>
+</li>
+<li><p>Derajat Relasi N-N</p>
+<p> Relasi many to many yang menghubungkan 2 buah himpunan entitas, akan diwujdukan dalam betuk tabel  khusus yang memiliki field (foreign key) yang berasal dari key-key himpunan entitas yang dihubungkan.</p>
+</li>
+<li><p>Entitas Lemah</p>
+<p> Penggunaan Himpunan Entitas Lemah (Weak  Entity Sets) dan Sub-Entitas dalam Diagram E-R diterapkan dalam bentuk tabel sebagaimana Himpunan Entitas Kuat (Strong Entity Sets).</p>
+</li>
+<li><p>Relasi Tunggal(Unary)</p>
+<p> Penerapan Relasi Tunggal (Unary Relation) dari/ke himpunan entitas yang sama dalam Diagram E-R tergantung pada Derajat Relasinya. Unit Relasi Tunggal dengan Derajat Relasi satu-ke-banyak dapat diimplementasikan melalui penggunaan field key sebanyak dua kali lipat untuk fungsi yang berbeda.</p>
+</li>
+<li><p>Multi Entitas (n-ary)</p>
+<p> Relasi multi entitas menghubungkan lebih dari dua himpunan entitas, untuk itu akan diterapkan sebuah tabel khusus. Namun jika  dapat dipastikan bahwa hubungan antar entitas adalah 1-N maka cukup ditambahkan field pada entitas yang bersangkutan.</p>
+</li>
+<li><p>Relasi Ganda</p>
+<p> Relasi ganda diterapkan dengan cara yang sama dengan kardinalitasnya sesuai penjelasan sebelumnya.</p>
+</li>
+<li><p>Spesialisasi dan Generalisasi</p>
+<p> Generalisasi menyusutkan jumlah entitas,  sehingga hanya butuh satu entitas dengan panambahan field. Spesialisasi akan menghasilkan sejumlah himpunan entitas baru.</p>
+</li>
+</ol>
+<h2 id="praktikum-&#x2013;-bagian-1-membuat-tabel-deskripsi">Praktikum &#x2013; Bagian 1: Membuat Tabel Deskripsi</h2>
+<ol>
+<li><p>Perhatikan dan pahami skenario berikut :
+&#x201C;Amazing course adalah sebuah tempat kursus komputer. Mereka yang ingin kursus komputer harus melakukan registrasi terlebih dahulu. Awalnya tempat kursus ini menggunakan sistem manual, namun karena banyaknya orang yang mendaftar maka dirancanglah sebuah database agar mempermudah kerja para pegawainya.</p>
+<p> Setiap orang yang akan mendaftar kursus harus melakukan pendaftaran sebagai anggota. Anggota memiliki informasi mengenai kode anggota, nama, alamat dan nomor telepon. Kode anggota terdiri dari 5 karakter (harus diawali dengan huruf &#x2018;NT&#x2019; dan diikuti dengan 3 digit angka), selain itu nama anggota wajib diisi. Anggota dapat melakukan banyak pendaftaran secara sekaligus, dan setiap pendaftaran diwakili oleh setiap anggota atau salah satu anggota saja.  </p>
+<p> Proses pendaftaran akan melalui pemilihan jenis kursus. Informasi yang disimpan di dalam tabel kursus adalah kode kursus, nama kursus, dan biaya. Kode kursus terdiri dari 5 karakter (harus diawali dengan huruf &#x2018;MK&#x2019; dan diikuti dengan 3 digit angka), selain itu nama jenis kursus wajib disimpan sebagai salah satu alternatif pilihan. Banyak pendaftaran dapat dilakukan di meja kasir secara sekaligus, dan kasir melayani setiap pendaftaran yang dilakukan. Di saat pendaftaran jenis kursus telah dilakukan maka jumlah pertemuan kursus akan diketahui.</p>
+<p> Setelah melakukan pemilihan kursus, maka proses pendaftaran dilanjutkan ke kasir. Kasir menyimpan informasi mengenai mengenai kode kasir, nama, alamat dan nomor telepon. Kode kasir terdiri dari 5 karakter (harus diawali dengan huruf &#x2018;KY&#x2019; dan diikuti dengan 3 digit angka), selain itu nama petugas kasir juga wajib diisi. Sekali mendaftar beberapa kursus dapat dilakukan sekaligus, dan setiap jenis kursus diperoleh dari banyak proses pendaftaran&#x201D;</p>
+</li>
+<li><p>Buatlah tabel deskripsi untuk <strong>tabel Anggota</strong> sesuai dengan skenario uji coba bagian 1 nomor 1!</p>
+<p> Tabel Anggota</p>
+<p> Primary key : kdAnggota</p>
+ <table>
+ <tr>
+     <td>Nama Field</td>
+     <td>Tipe Data</td>
+     <td>Length</td>
+     <td>Keterangan</td>
+ </tr>
+ <tr>
+     <td>KdAnggota</td>
+     <td>char</td>
+     <td>5</td>
+     <td>Harus diisi dan panjang=5, harus diawali dengan &#x2018;NT&#x2019; dan 3 digit terakhirnya angka</td>
+ </tr>
+ <tr>
+     <td>Nama</td>
+     <td>varchar</td>
+     <td>30</td>
+     <td>Harus diisi</td>
+ </tr>
+ <tr>
+     <td>Alamat</td>
+     <td>varchar</td>
+     <td>50</td>
+     <td>-</td>
+ </tr>
+ <tr>
+     <td>Telp</td>
+     <td>integer</td>
+     <td>-</td>
+     <td>Panjangnya maksimal 10</td>
+ </tr>
+ </table>
+</li>
+<li><p>Buatlah tabel deskripsi untuk <strong>tabel Kasir</strong> sesuai dengan skenario uji coba bagian 1 nomor 1!</p>
+<p> Tabel Kasir</p>
+<p> Primary key : kdKasir</p>
+ <table>
+ <tr>
+     <td>Nama Field</td>
+     <td>Tipe Data</td>
+     <td>Length</td>
+     <td>Keterangan</td>
+ </tr>
+ <tr>
+     <td>KdKasir</td>
+     <td>char</td>
+     <td>5</td>
+     <td>Harus diisi dan panjang=5, harus diawali dengan &#x2018;KY&#x2019; dan 3 digit terakhirnya angka</td>
+ </tr>
+ <tr>
+     <td>Nama</td>
+     <td>varchar</td>
+     <td>30</td>
+     <td>Harus diisi</td>
+ </tr>
+ <tr>
+     <td>Alamat</td>
+     <td>varchar</td>
+     <td>50</td>
+     <td>-</td>
+ </tr>
+ <tr>
+     <td>Telp</td>
+     <td>integer</td>
+     <td>-</td>
+     <td>Panjangnya maksimal 10</td>
+ </tr>
+ </table>
+</li>
+<li><p>Buatlah tabel deskripsi untuk <strong>tabel Kursus</strong> sesuai dengan skenario uji coba bagian 1 nomor 1!</p>
+<p> Tabel Kursus</p>
+<p> Primary key : kdKursus</p>
+ <table>
+ <tr>
+     <td>Nama Field</td>
+     <td>Tipe Data</td>
+     <td>Length</td>
+     <td>Keterangan</td>
+ </tr>
+ <tr>
+     <td>KdKursus</td>
+     <td>char</td>
+     <td>5</td>
+     <td>Harus diisi dan panjang=5, harus diawali dengan &#x2018;MK&#x2019; dan 3 digit terakhirnya angka</td>
+ </tr>
+ <tr>
+     <td>NamaKursus</td>
+     <td>varchar</td>
+     <td>30</td>
+     <td>Harus diisi</td>
+ </tr>
+ <tr>
+     <td>Biaya</td>
+     <td>integer</td>
+     <td>-</td>
+     <td>-</td>
+ </tr>
+ </table>
+</li>
+<li><p>Buatlah tabel deskripsi untuk <strong>tabel HeaderPendaftaran</strong> sesuai dengan skenario uji coba bagian 1 nomor 1!</p>
+<p> Tabel HeaderPendaftaran</p>
+<p> Primary Key: kdPendaftaran</p>
+<p> Foreign key : kdAnggota, kdKasir</p>
+ <table>
+ <tr>
+     <td>Nama Field</td>
+     <td>Tipe Data</td>
+     <td>Length</td>
+     <td>Keterangan</td>
+ </tr>
+ <tr>
+     <td>KdPendaftaran</td>
+     <td>char</td>
+     <td>5</td>
+     <td>Harus diisi dan panjang=5, harus diawali dengan &#x2018;KP&#x2019; dan 3 digit terakhirnya angka</td>
+ </tr>
+ <tr>
+     <td>KdKasir</td>
+     <td>char</td>
+     <td>5</td>
+     <td>-</td>
+ </tr>
+ <tr>
+     <td>kdAnggota</td>
+     <td>char</td>
+     <td>5</td>
+     <td>-</td>
+ </tr>
+ <tr>
+     <td>TanggalPendaftaran</td>
+     <td>Datetime</td>
+     <td>-</td>
+     <td>-</td>
+ </tr>
+ </table>
+</li>
+<li><p>Buatlah tabel deskripsi untuk <strong>tabel Detail Pendaftaran</strong> sesuai dengan skenario uji coba bagian 1 nomor 1!</p>
+<p> Tabel DetailPendaftaran</p>
+<p> Primary Key : kdKursus, kdPendaftaran</p>
+<p> Foreign Key : kdKursus, kdPendaftaran</p>
+ <table>
+ <tr>
+     <td>Nama Field</td>
+     <td>Tipe Data</td>
+     <td>Length</td>
+     <td>Keterangan</td>
+ </tr>
+ <tr>
+     <td>kdKursus</td>
+     <td>char</td>
+     <td>5</td>
+     <td>-</td>
+ </tr>
+ <tr>
+     <td>kdPendaftaran</td>
+     <td>char</td>
+     <td>5</td>
+     <td>-</td>
+ </tr>
+ <tr>
+     <td>Jumlah Pertemuan</td>
+     <td>integer</td>
+     <td>-</td>
+     <td>Harus diisi</td>
+ </tr>
+ </table>
+</li>
+<li><p>Lanjutkan praktikum ke praktikum-bagian 2!</p>
+</li>
+</ol>
+<h2 id="praktikum-&#x2013;-bagian-2-membuat-cdm">Praktikum &#x2013; Bagian 2: Membuat CDM</h2>
+<ol>
+<li><p>Bukalah file PowerDesigner.exe pada folder PowerDesigner (Sybase Power Designer versi 12.5 portable) untuk mulai membuat CDM!</p>
+<blockquote>
+<p>Silakan download di <a href="https://drive.google.com/open?id=1jKlvNzMSncLoz60jjnFoY0dsT6vIqxsM" target="_blank">sini</a> untuk master Power Desginer.</p>
+</blockquote>
+<p> <img src="images/06.png" alt=""></p>
+</li>
+<li><p>Kemudian klik menu &#x2018;new&#x2019; di kiri atas untuk mulai membuat CDM. Selanjutnya akan muncul gambar seperti ini:</p>
+<p> <img src="images/07.png" alt=""></p>
+<p> Pilih model type &#x2018;Conceptual Data Model&#x2019; dan di tab &#x2018;General&#x2019; sebelah kanan, isikan model name dengan &#x2018;Amazing_Course&#x2019; dan klik button &#x2018;OK&#x2019;!</p>
+</li>
+<li><p>Buatlah entitas dengan memilih menu &#x2018;Palette&#x2019;!</p>
+<p> <img src="images/08.png" alt=""></p>
+</li>
+<li><p>Double klik pada setiap entitas dan isikan atribut sesuai dengan tabel deskripsi! 
+Lakukan tahap ini untuk tabel Anggota, Kasir, Kursus dan HeaderPendaftaran!
+Setelah mengisikan &#x2018;Name&#x2019;, &#x2018;Data_Type&#x2019;, dan &#x2018;Length&#x2019; centang pilihan &#x2018;M&#x2019; untuk mandatory, &#x2018;P&#x2019; untuk primary key!</p>
+<p> <img src="images/09.png" alt=""></p>
+</li>
+<li><p>Buatlah relasi  dengan memilih menu &#x2018;Palette&#x2019;!</p>
+<p> <img src="images/10.png" alt=""></p>
+</li>
+<li><p>Double klik pada relasi untuk mengganti cardinalitas ataupun merubah nama sesuai tampilan berikut!</p>
+<p> <img src="images/11.png" alt=""></p>
+</li>
+<li><p>Pastikan CDM sudah sesuai dengan gambar di bawah ini!</p>
+<p> <img src="images/12.png" alt=""></p>
+</li>
+<li><p>Lanjutkan praktikum ke <strong>praktikum-bagian 3!</strong></p>
+</li>
+</ol>
+<h2 id="praktikum-&#x2013;-bagian-3-membuat-pdm">Praktikum &#x2013; Bagian 3: Membuat PDM</h2>
+<ol>
+<li><p>Sebelum melanjutkan ke praktikum bagian 3 pastikan CDM yang telah Anda buat sudah benar dengan cara memilih menu &#x2018;Tools&#x2019; dan pilih &#x2018;Check Model&#x2019;, kemudian klik &#x2018;OK&#x2019;</p>
+<p> <img src="images/13.png" alt=""></p>
+<p> Setelah &#x2018;OK&#x2019; akan muncul tampilan untuk memastikan ada error atau warning seperti gambar di bawah ini:</p>
+<p> <img src="images/14.png" alt=""></p>
+</li>
+<li><p>PDM akan dibuat dengan cara generate CDM. Pilih menu &#x2018;Tools&#x2019; dan pilih &#x2018;Generating Physical Data Model&#x2019;</p>
+<p> <img src="images/15.png" alt=""></p>
+</li>
+<li><p>Pastikan PDM yang telah Anda generate sudah sesuai dengan tampilan berikut :</p>
+<p> <img src="images/16.png" alt=""></p>
+</li>
+<li><p>Ubahlah nama tabel baru hasil generate kardinalitas many to many antara tabel Kursus dengan HeaderPendaftaran menjadi Detail_Pendaftaran dan tambahkan atribut &#x2018;JumlahPertemuan&#x2019; sesuai dengan skenario. Lakukan perubahan dengan cara double klik pada tabel Memilih</p>
+<p> <img src="images/17.png" alt=""></p>
+</li>
+<li><p>Pastikan kembali PDM Anda sudah sesuai dengan PDM berikut:</p>
+<p> <img src="images/18.png" alt=""></p>
+</li>
+<li><p>Lanjutkan praktikum ke bagian <em>Tugas!</em></p>
+</li>
+</ol>
+<h2 id="tugas">Tugas</h2>
+<ol>
+<li><p>Buatlah CDM dan PDM untuk skenario berikut dengan terlebih dahulu membuat relational key yang terdiri dari nama relasi, superkey, candidate key, primary key, foreign key, dan alternate key.
+&#x201C;Salah satu toko boneka di Malang ingin merubah sistem penjualan yang awalnya manual menjadi otomatis. Oleh karena itu dibutuhkan peracangan basis data dengan memperhatikan proses bisnis dan objek yang terlibat dalam kegiatan jual bali di toko boneka tersebut. Terdapat beberapa ketentuan di toko tersebut sebagai berikut:</p>
+<ol>
+<li>Member memiliki salah satu jenis member</li>
+<li>Member dapat melakukan pembelian sebanyak mungkin selama membutuhkan. Dan setiap transaksi penjualan dilakukan oleh setiap member secara bergantian</li>
+<li>Pegawai dapat melayani banyak transaksi penjualan dalam sehari</li>
+<li><p>Setiap hari banyak boneka yang terjual, dan sekali transaksi penjualan dapat terdiri dari beberapa boneka secara sekaligus&#x201D;</p>
+<p>Selain informasi mengenai ketentuan toko boneka tersebut ditentukan juga informasi mengenai objek beserta atribut-atributnya sesuai dengan tabel-tabel di bawah ini:</p>
+<p>Tabel JenisMember</p>
+<p>Primary key : KdJenisMember</p>
+<table>
+<tr>
+ <td>Nama Field</td>
+ <td>Tipe Data</td>
+ <td>Length</td>
+ <td>Keterangan</td>
+</tr>
+<tr>
+ <td>KdJenisMember</td>
+ <td>char</td>
+ <td>5</td>
+ <td>Harus diisi dan panjang=5, harus diawali dengan &#x2018;JM&#x2019; dan 3 digit terakhirnya angka</td>
+</tr>
+<tr>
+ <td>JenisMember</td>
+ <td>varchar</td>
+ <td>10</td>
+ <td>Harus diisi</td>
+</tr>
+<tr>
+ <td>Disc</td>
+ <td>Decimal</td>
+ <td>(2,2)</td>
+ <td>-</td>
+</tr>
+</table>
+
+<p>Tabel Member</p>
+<p>Primary key : KdMember
+Foreign Key : KdJenisMember</p>
+<table>
+<tr>
+ <td>Nama Field</td>
+ <td>Tipe Data</td>
+ <td>Length</td>
+ <td>Keterangan</td>
+</tr>
+<tr>
+ <td>KdMember</td>
+ <td>char</td>
+ <td>5</td>
+ <td>Harus diisi dan panjang=5, harus diawali dengan &#x2018;NM&#x2019; dan 3 digit terakhirnya angka</td>
+</tr>
+<tr>
+ <td>KdJenisMember</td>
+ <td>char</td>
+ <td>5</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>NamaMember</td>
+ <td>varchar</td>
+ <td>50</td>
+ <td>Harus diisi</td>
+</tr>
+<tr>
+ <td>TelpMember</td>
+ <td>integer</td>
+ <td>-</td>
+ <td>Panjangnya maksimal 10</td>
+</tr>
+</table>
+
+<p>Tabel HeaderPenjualan
+Primary key : KdPenjualan
+Foreign Key : KdMember, KdPegawai</p>
+<table>
+<tr>
+ <td>Nama Field</td>
+ <td>Tipe Data</td>
+ <td>Length</td>
+ <td>Keterangan</td>
+</tr>
+<tr>
+ <td>KdPenjualan</td>
+ <td>char</td>
+ <td>5</td>
+ <td>Harus diisi dan panjang=5, harus diawali dengan &#x2018;KP&#x2019; dan 3 digit terakhirnya angka</td>
+</tr>
+<tr>
+ <td>KdMember</td>
+ <td>char</td>
+ <td>5</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>KdPegawai</td>
+ <td>char</td>
+ <td>5</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>TglPenjualan</td>
+ <td>datetime</td>
+ <td>-</td>
+ <td>Harus disi</td>
+</tr>
+</table>
+
+<p>Tabel Pegawai</p>
+<p>Primary key : KdPegawai</p>
+<table>
+<tr>
+ <td>Nama Field</td>
+ <td>Tipe Data</td>
+ <td>Length</td>
+ <td>Keterangan</td>
+</tr>
+<tr>
+ <td>KdPegawai</td>
+ <td>char</td>
+ <td>5</td>
+ <td>Harus diisi dan panjang=5, harus diawali dengan &#x2018;KG&#x2019; dan 3 digit terakhirnya angka</td>
+</tr>
+<tr>
+ <td>NamaPegawai</td>
+ <td>varchar</td>
+ <td>30</td>
+ <td>Harus diisi</td>
+</tr>
+<tr>
+ <td>AlamatPegawai</td>
+ <td>varchar</td>
+ <td>50</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>TelpPegawai</td>
+ <td>integer</td>
+ <td>-</td>
+ <td>Panjangnya maksimal 10</td>
+</tr>
+</table>
+
+<p>Tabel Boneka</p>
+<p>Primary key : KdBoneka</p>
+<table>
+<tr>
+ <td>Nama Field</td>
+ <td>Tipe Data</td>
+ <td>Length</td>
+ <td>Keterangan</td>
+</tr>
+<tr>
+ <td>KdBoneka</td>
+ <td>char</td>
+ <td>5</td>
+ <td>Harus diisi dan panjang=5, harus diawali dengan &#x2018;KB&#x2019; dan 3 digit terakhirnya angka</td>
+</tr>
+<tr>
+ <td>NamaBoneka</td>
+ <td>varchar</td>
+ <td>30</td>
+ <td>Harus diisi</td>
+</tr>
+<tr>
+ <td>Harga</td>
+ <td>integer</td>
+ <td>-</td>
+ <td>Harus diisi, panjang maksimal 10</td>
+</tr>
+<tr>
+ <td>Stock</td>
+ <td>integer</td>
+ <td>-</td>
+ <td>Harus diisi, panjangnya maksimal 10</td>
+</tr>
+</table>
+
+<p>Tabel DetilPenjualan</p>
+<p>Primary key : KdPenjualan, KdBoneka</p>
+<p>Foreign Key : KdPenjualan, KdBoneka</p>
+<table>
+<tr>
+ <td>Nama Field</td>
+ <td>Tipe Data</td>
+ <td>Length</td>
+ <td>Keterangan</td>
+</tr>
+<tr>
+ <td>KdPenjualan</td>
+ <td>char</td>
+ <td>5</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>KdBoneka</td>
+ <td>char</td>
+ <td>5</td>
+ <td>-</td>
+</tr>
+<tr>
+ <td>Qty</td>
+ <td>integer</td>
+ <td>5</td>
+ <td>Harus diisi</td>
+</tr>
+</table>
+</li>
+</ol>
+</li>
+<li><p>Buatlah tabel deskripsi, CDM dan PDM untuk skenario berikut:</p>
+<p> &#x201C;Salah satu restaurant terbesar di Indonesia ingin memperbaiki sistem booking yang dulunya manual menjadi otomatis. Untuk itu diperlukan perncangan basis data sesuai dengan kebutuhan dan sistem yang ada di restaurant tersebut.</p>
+<p> Konsumen         : kode konsumen, nama awal, nama akhir, no telepon, email, dan 
+ keterangan.</p>
+<p> Booking         : kode booking, dan tanggal</p>
+<p> Meja             : no meja dan detil meja</p>
+<p> Pesanan         : kode pesan, dan tanggal</p>
+<p> Staf             : kode staf, nama awal, nama akhir</p>
+<p> Peranan        : kode peranan, nama peranan</p>
+<p> Menu pesanan     : kode menu pesanan, kuantitas, komen</p>
+<p> Menu            : kode menu, tanggal</p>
+<p> Item menu        : kode item menu, keterangan, harga</p>
+<p> Bahan            : kode bahan, nama bahan</p>
+<p> Item bahan        : kode item bahan dan kuantitas</p>
+<p> Tipe bahan        : kode tipe bahan dan deskripsi</p>
+<p> Terdapat beberapa aturan dalam proses pemesanan di restaurant tersebut. Mulai dari setiap konsumen dapat melakukan banyak booking atau tidak sama sekali, setiap meja dapat dibooking oleh banyak konsumen atau tidak sama sekali. Setelah mendapatkan meja pemesanan dapat dilakukan atau tidak jadi dilakukan. Setiap pesanan dilakukan hanya pada satu meja, dan setiap staf dapat melayani banyak pesanan dalam suatu waktu atau tidak sama sekali. Staf yang melayani konsumen pasti memiliki peranan tertetu. Pemesanan dapat memesan banyak menu pesanan atau tidak sama sekali (dalam artian hanya meminjam meja saja tetapi menu dari luar). Setiap item menu terdapat dalam banyak menu pesanan atau tidak sama sekali. Item menu dapat tertulis atau tidak tertulis di dalam menu yang disediakan. Item menu yang ada terdiri dari banyak Item bahan atau bahkan tidak tertulis di dalam item bahan. Semua bahan yang digunakan dalam item bahan tersimpan di dalam informasi bahan, tetapi belum tentu sebaliknya. Ternyata bahan tersebut memiliki tipe bahan yang bisa jadi sama antara satu bahan dengan bahan yang lain atau bahkan tidak ada di dalam bahan yang tersedia&#x201D;</p>
+</li>
+<li><p>Buatlah tabel deskripsi, CDM dan PDM untuk skenario berikut :</p>
+<p> Sebuah kampus memiliki fasilitas-fasilitas seperti lapangan futsal, lapangan basket, lapangan badminton, lapangan voli, dan stadion sepakbola. Penggunaan fasilitas-fasilitas tersebut harus dengan melakukan penyewaan yang dapat dilakukan oleh masyarakat secara umum dan warga kampus (mahasiswa, dosen, karyawan). </p>
+<p> Jika ingin melakukan penyewaan, orang umum diharuskan melakukan registrasi menjadi member pada kantor bagian fasilitas umum, warga kampus tidak perlu melakukan registrasi, cukup menunjukkan kartu identitas saja. Data member terdiri dari kode member, nomor identitas, nama, alamat, dan nomor telepon. Data mahasiswa terdiri dari NIM, nama mahasiswa, alamat, dan nomor telepon. Untuk data dosen dan karyawan terdiri dari NIP, nama, alamat, dan nomor telepon. Seorang member maupun warga kampus dapat melakukan penyewaan fasilitas kampus lebih dari satu kali, begitu pula sebuah fasilitas kampus dapat disewa lebih dari satu kali.
+ Ketika yang melakukan penyewaan adalah seorang warga kampus, dapat diketahui data mahasiswa atau dosen dari prodi, jurusan, dan fakultas tertentu. Sebuah fakultas dapat memiliki beberapa jurusan, sebuah jurusan dapat memiliki beberapa prodi. Seorang mahasiswa dan dosen hanya berada pada sebuah prodi.</p>
+<p> Transaksi penyewaan fasilitas kampus menyimpan data tanggal transaksi, nominal transaksi, dan durasi penyewaan. Terdapat diskon 15 persen bagi penyewa warga kampus. Setiap transaksi dilayani oleh seorang pegawai, sehingga data NIP dan nama seorang pegawai juga direkam dalam setiap aktivitas transaksi penyewaan fasilitas kampus.  </p>
+</li>
+</ol>
+<p>Praktikum dan tugas dikumpulkan dalam sebuah laporan yang berisi deskripsi tabel, cdm, dan pdm. Tidak perlu menyertakan file asli cdm dan pdm. Kumpulkan dalam format dokumen pdf. </p>
+<h2 id="daftar-pustaka">Daftar Pustaka</h2>
+<ol>
+<li>Dwi Puspitasari, S.Kom, &#x201C;Buku Ajar Dasar Basis Data&#x201D;, Program Studi Manajemen Informatika Politeknik Negeri Malang, 2012.</li>
+<li>indrajani.  Pengantar Sistem Basis Data Case Study All in One. Elex Media Komputindo. 2014</li>
+<li>Fathansyah, &#x201C;Basisdata Revisi Kedua&#x201D;, Bandung: Informatika, 2015.</li>
+<li><a href="http://www.dcs.warwick.ac.uk/~hugh/TTM/The-Relational-Model.pdf" target="_blank">http://www.dcs.warwick.ac.uk/~hugh/TTM/The-Relational-Model.pdf</a></li>
+<li><a href="http://infolab.stanford.edu/~ullman/focs/ch08.pdf" target="_blank">http://infolab.stanford.edu/~ullman/focs/ch08.pdf</a></li>
+<li><a href="http://www.inf.unibz.it/~nutt/IDBs1011/IDBSlides/5-db-erToRel.pdf" target="_blank">http://www.inf.unibz.it/~nutt/IDBs1011/IDBSlides/5-db-erToRel.pdf</a></li>
+<li><a href="http://teknikinformatika.fasilkom.mercubuana.ac.id/wp-content/uploads/2015/03/3.-Modul-3-Model-Data-Relasional.pdf" target="_blank">http://teknikinformatika.fasilkom.mercubuana.ac.id/wp-content/uploads/2015/03/3.-Modul-3-Model-Data-Relasional.pdf</a></li>
+<li><a href="http://www.databaseanswers.org" target="_blank">http://www.databaseanswers.org</a></li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../03/03-erd-2.html" class="navigation navigation-prev " aria-label="Previous page: ERD-2">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../05/05-pemetaan-erd-ke-model-relational.html" class="navigation navigation-next " aria-label="Next page: ERD ke Model Relational(2)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ERD ke Model Relational","level":"1.6","depth":1,"next":{"title":"ERD ke Model Relational(2)","level":"1.7","depth":1,"path":"05/05-pemetaan-erd-ke-model-relational.md","ref":"05/05-pemetaan-erd-ke-model-relational.md","articles":[]},"previous":{"title":"ERD-2","level":"1.5","depth":1,"path":"03/03-erd-2.md","ref":"03/03-erd-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"04/04-erd-ke-model-relational.md","mtime":"2020-05-11T16:40:53.395Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-11T16:41:36.880Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

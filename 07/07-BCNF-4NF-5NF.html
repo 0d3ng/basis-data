@@ -1,0 +1,818 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Normalisasi BCNF, 4NF, dan 5NF · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../08/08-ddl.html" />
+    
+    
+    <link rel="prev" href="../06/06-normalisasi-1NF-3NF.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../01/01.contoh-penerapan-basis-data.html">
+            
+                <a href="../01/01.contoh-penerapan-basis-data.html">
+            
+                    
+                    Contoh Penerapan Basis Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../02/02.ERD.html">
+            
+                <a href="../02/02.ERD.html">
+            
+                    
+                    ERD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../03/03-erd-2.html">
+            
+                <a href="../03/03-erd-2.html">
+            
+                    
+                    ERD-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../04/04-erd-ke-model-relational.html">
+            
+                <a href="../04/04-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                <a href="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../06/06-normalisasi-1NF-3NF.html">
+            
+                <a href="../06/06-normalisasi-1NF-3NF.html">
+            
+                    
+                    Normalisasi 1NF sampai 3NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="07-BCNF-4NF-5NF.html">
+            
+                <a href="07-BCNF-4NF-5NF.html">
+            
+                    
+                    Normalisasi BCNF, 4NF, dan 5NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../08/08-ddl.html">
+            
+                <a href="../08/08-ddl.html">
+            
+                    
+                    MySQL (DDL dan DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../09/09-dml.html">
+            
+                <a href="../09/09-dml.html">
+            
+                    
+                    MySQL – Data Manipulation Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../10/12.select.html">
+            
+                <a href="../10/12.select.html">
+            
+                    
+                    MySQL – Data Retrieval Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../11/13.select-multitable.html">
+            
+                <a href="../11/13.select-multitable.html">
+            
+                    
+                    Select Multi Tabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../00/nilai.html">
+            
+                <a href="../00/nilai.html">
+            
+                    
+                    Nilai Jobsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../00/nilai-teori.html">
+            
+                <a href="../00/nilai-teori.html">
+            
+                    
+                    Nilai Teori
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Normalisasi BCNF, 4NF, dan 5NF</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jobsheet-8-normalisasi-data-bcnf-4nf-dan-5nf">Jobsheet-8: Normalisasi Data BCNF, 4NF, dan 5NF</h1>
+<h2 id="topik">Topik</h2>
+<p>Contoh Normalisasi Data BCNF, 4NF, dan 5NF</p>
+<h2 id="tujuan">Tujuan</h2>
+<p>Mahasiswa memahami:</p>
+<ol>
+<li>Konsep normaslisasi skema relasional ke dalam bentuk yang diinginkan</li>
+<li>Ciri-ciri tahapan normalisasi 1NF hingga 5NF</li>
+</ol>
+<h2 id="pendahuluan">Pendahuluan</h2>
+<h3 id="pengertian">Pengertian</h3>
+<p>Normalisasi merupakan sebuah teknik dalam logical desain sebuah basis data yang mengelompokkan atribut dari suatu relasi sehingga membentuk struktur relasi yang baik (tanpa redudansi). Normalisasi adalah proses pembentukan struktur basis data sehingga sebagian besar ambiguity bisa dihilangkan. Normalisasi adalah suatu teknik yang menstrukturkan data dalam cara-cara tertentu untuk membantu mengurangi atau mencegah timbulnya masalah yang berhubungan dengan pengolahan data dalam basis data. Kriteria yang mendefinisikan level-level pada normalisasi adalah bentuk normal (norm form)</p>
+<h3 id="tujuan-normalisasi">Tujuan normalisasi</h3>
+<p>Normalisasi perlu dilakukan agar kerelasian dalam basis data menjadi mudah dimengerti, mudah dipelihara, mudah memprosesnya, dan mudah untuk dikembangkan sesuai kebutuhan baru</p>
+<h3 id="penyimpangan-dalam-modifikasi">Penyimpangan dalam modifikasi</h3>
+<ul>
+<li>Penyimpangan dalam proses modifikasi data disebut anomalies</li>
+<li><p>Ada 3 bentuk penyimpangan :</p>
+<ul>
+<li><p>Delete anomalies</p>
+<p>  Adalah proses penghapusan suatu entity logik yang mengakibatkan hilangnya informasi tentang entity yang tidak direlasikan secara logik</p>
+<p>  Contoh :</p>
+  <table>
+                      <tr>
+                          <td>Nomhs </td>
+                          <td>Nama</td>
+                          <td>Kode Mtk</td>
+                          <td>SKS</td>
+                      </tr>
+                      <tr>
+                          <td>123456</td>
+                          <td>Ali baba</td>
+                          <td>INA 101</td>
+                          <td>3</td>
+                      </tr>
+                      <tr>
+                          <td>123457</td>
+                          <td>Pipiyot</td>
+                          <td>TFD 234</td>
+                          <td>2</td>
+                      </tr>
+                      <tr>
+                          <td>123467</td>
+                          <td>Nirmala</td>
+                          <td>INA 201</td>
+                          <td>3</td>
+                      </tr>
+                      <tr>
+                          <td>123445</td>
+                          <td>Lala</td>
+                          <td>INA 101</td>
+                          <td>3</td>
+                      </tr>
+                  </table>
+
+<p>  Apabila &#x201C;Ali baba&#x201D; membatalkan mengambil matakuliah &#x201C;INA 101&#x201D;, maka apabila record tersebut dihapus akan menyebabkan seluruh informasi tentang &#x2018;Ali baba&#x201D; akan ikut terhapus</p>
+</li>
+<li><p>Insert anomalies</p>
+<p>  Adalah proses penyisipan entity logik yang memerlukan penyisipan entity logik yang lain</p>
+</li>
+<li><p>Update anomalies</p>
+<p>  Adalah proses mengupdate data pada suatu entity logik yang mengakibatkan perubahan pada lebih dari satu tempat dalam suatu relasi</p>
+<p>  Contoh : Perubahan SKS pada &#x201C;INA 101&#x201D; tidak hanya dilakukan pada satu record saja, tetapi pada record dan relasi lain yang memuat data tersebut</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="keharusan-menghilangkan-masalah-masalah-akibat-ketergantungan">Keharusan menghilangkan masalah-masalah akibat ketergantungan</h3>
+<ul>
+<li>Yang harus dilakukan adalah jika struktur data dalam relasi dirancang sedemikian rupa sehingga atribut-atribut bukan kunci hanya tergantung pada atribut kunci dan tidak pada atribut lain</li>
+<li><p>Ada 3 ketergantungan :</p>
+<ul>
+<li><p>Functional Dependence (FD)</p>
+<ul>
+<li>FD akan muncul diantara dua rinci data dalam suatu struktur data jika nilai salah satu rinci data mengimplikasikan nilai pada rinci data kedua</li>
+<li>Atau rinci data pertama menentukan (determines) rinci data kedua</li>
+<li><p>Contoh :</p>
+<p>  Matakuliah (Kode, Nama, SKS, Semester)</p>
+<p>  FD = Matakuliah.Kode &#x2192; (Matakuliah.Nama, Matakuliah.Semester)</p>
+<p>  Matakuliah.nama &#x2192; (Matakuliah.Kode, Matakuliah.Semester)</p>
+</li>
+</ul>
+</li>
+<li><p>Full Functional Dependence (FFD)</p>
+<ul>
+<li>Suatu rinci data dikatakan FFD pada suatu kombinasi rinci data jika FD pada kombinasi rinci data dan tidak FD pada bagian lain dari kombinasi rinci data</li>
+<li>Contoh : SKS pada tabel matakuliah hanya bergantung pada kode matakuliah, dan tidak ditentukan oleh siapa yang mengambil matakuliah tersebut</li>
+</ul>
+</li>
+<li>Transitive Dependence (TD)<ul>
+<li>Muncul jika suatu nilai pada rinci data pertama menentukan nilai pada rinci data kedua yang bukan Candidate Key (CK), dan nilai pada rinci data kedua menentukan nilai pada rinci data ketiga</li>
+<li>Jadi TD terjadi jika suatu nilai rinci data mempunyai ketergantungan pada dua nilai rinci data</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="efek-efek-normalisasi">Efek-efek normalisasi</h3>
+<ul>
+<li>Akibat yang muncul dalam proses normalisasi :<ul>
+<li>Masalah kekangan dalam basis data<ul>
+<li>Duplikasi rinci data</li>
+<li>Adanya Integritas referensial yang harus terjaga dan nilai-nilai pada Attribute Key (AK) tidak boleh null maka proses dekomposisi akan menghasilkan suatu set yang inheren pada batasan integritas referensial</li>
+</ul>
+</li>
+<li>Ketidakefisienan dalam menampilkan kembali data tersebut</li>
+</ul>
+</li>
+</ul>
+<h3 id="atribut-tabel">Atribut tabel</h3>
+<ul>
+<li>Atribut adalah karakteristik atau sifat yang melekat pada sebuah tabel, atau disebut juga kolom data</li>
+<li><p>Pengelompokan atribut :</p>
+<ul>
+<li><p>Atribut Key
+  Adalah satu atau gabungan dari beberapa atribut yang dapat membedakan semua baris data dalam tabel secara unik (tidak boleh ada dua atau lebih baris data dengan nilai yang sama untuk atribut tetentu). Ada 3 key :</p>
+<ul>
+<li><p>Superkey
+   Merupakan satu atau kumpulan atribut yang dapat membedakan setiap baris data dalam sebuah tabel secara unik</p>
+<p>   Contoh : superkey di tabel mahasiswa</p>
+<ul>
+<li>(nomhs, nama, alamat, tgllahir)</li>
+<li>(nomhs, nama, tgllahir)</li>
+<li>(nomhs, nama)</li>
+<li>(nomhs)</li>
+</ul>
+</li>
+<li><p>Candidate key
+   Merupakan kumpulan atribut minimal yang dapat membedakan setiap baris data dalam sebuah tabel secara unik
+   Sebuah CK  pasti superkey, tapi belum tentu sebaliknya</p>
+<p>   Contoh : pada tabel mahasiswa</p>
+<ul>
+<li>(nomhs)</li>
+<li>(nama)</li>
+</ul>
+</li>
+<li><p>Primary key
+   Dari beberapa CK dapat dipilih satu untuk dijadikan PK, yang memiliki keunikan paling baik</p>
+<p>  Contoh : dari tabel mahasiswa, yang layak dijadikan PK adalah nomhs</p>
+</li>
+</ul>
+</li>
+<li><p>Atribut deskriptif
+  Merupakan atribut yang bukan merupakan anggota dari PK</p>
+</li>
+<li><p>Atribut sederhana
+  Adalah atribut atomik yang tidak dapat dipilah lagi</p>
+<p>  Contoh : Nomhs, Nama</p>
+</li>
+<li><p>Atribut komposit
+  Adalah atribut yang masih bisa diuraikan lagi menjadi sub-atribut yang masing-masing memiliki makna</p>
+<p>  Contoh : Alamat &#x2192; Alamat, Kota, Propinsi, Kode Pos</p>
+</li>
+<li><p>Atribut bernilai tunggal
+  Ditujukan pada atribut-atribut yang memiliki paling banyak satu nilai untuk setiap baris data</p>
+<p>  Contoh : Nomhs, Nama, Tanggal lahir &#x2192; hanya dapat berisi satu nilai untuk seorang mahasiswa</p>
+</li>
+<li><p>Atribut bernilai banyak
+  Ditujukan pada atribut-atribut yang dapat diisi dengan lebih dari satu nilai, tapi jenisnya sama</p>
+<p>  Contoh : pada tabel mahasiswa dapat ditambah atribut HOBBY, karena seorang mahasiswa dapat memiliki beberapa hobby</p>
+</li>
+<li>Atribut harus bernilai (mandatory)
+  Adalah atribut yang nilainya tidak boleh kosong, atau harus ada nilainya. Misalnya data Nomhs dan Nama mahasiswa<ul>
+<li>Nilai NULL digunakan untuk mengisi atribut yang nilainya belum siap atau tidak ada</li>
+<li>NULL (karakter ke 0) tidak sama dengan SPASI (karakter ke 32)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="domain-dan-tipe-data">Domain dan tipe data</h3>
+<ul>
+<li><p>Domain, memiliki pengertian yang hampir sama dengan tipe data, namun domain lebih ditekankan pada batas-batas nilai yang diperbolehkan pada suatu atribut</p>
+<p>   Contoh : data SKS bertipe integer. Namun dalam kenyataan tidak ada sks yang bernilai negatif. Berarti domain nilai sks adalah integer &gt; 0</p>
+</li>
+<li>Tipe data merujuk pada kemampuan penyimpanan data yang mungkin bagi suatu atribut secara fisik, tanpa melihat kelayakan data tersebut bila dilihat dari kenyataan pemakaiannya</li>
+</ul>
+<h3 id="bentuk-bentuk-normal">Bentuk-bentuk normal</h3>
+<ul>
+<li>Normalisasi merupakan sebuah teknik dalam logical desain sebuah basis data, teknik pengelompokan atribut dari suatu relasi sehingga membentuk struktur relasi yang baik (tanpa redundansi)</li>
+<li><p>Bentuk-bentuk normal :</p>
+<ul>
+<li><p><strong>First Normal Form (1NF)</strong></p>
+<ul>
+<li>Tidak diperkenankan atribut dengan nilai jamak, komposit, dan segala kombinasinya yang akan menyebabkan redundansi</li>
+<li><p>Contoh</p>
+<ul>
+<li>Departemen {DNUMBER, DNAME,DMGR,DLOC}</li>
+<li>DLOC memiliki kemungkinan lebih dari satu lokasi</li>
+<li><p>Skema DEPARTEMEN dengan kunci DNUMBER</p>
+<p>  <img src="images/01.png" alt=""></p>
+</li>
+<li><p>Instant DEPARTEMEN</p>
+<p>  <img src="images/02.png" alt=""></p>
+</li>
+<li><p>1NF dengan Redundansi, Kunci menjadi {DNUMBER dan DLOC}</p>
+<p>  <img src="images/03.png" alt=""></p>
+</li>
+<li><p>1NF tanpa redundansi, tabel dipecah menjadi dua</p>
+<p>  <img src="images/04.png" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>Contoh Lain:</p>
+<ul>
+<li>CASHFLOW {NO_TRANSAKSI, ITEM, JUMLAH, NOMINAL, STATUS}</li>
+<li>STATUS adalah atribut yang berisi data &#x201D;Keluar&#x201D;/&#x201D;Masuk&#x201D; atau &#x201D;Debit&#x201D;/&#x201D;Kredit&#x201D;</li>
+<li>Dalam aplikasinya nanti, proses untuk memasukkan data &#x201D;Keluar&#x201D; atau &#x201D;Masuk&#x201D; bisa menimbulkan kesalahan data yang menyebabkan ketidak-konsistenan cara penulisan</li>
+<li><p>Normalisasi NF1, STATUS dijadikan entiti baru dengan atribut STATUS dan atribut kunci baru (misalkan) KODE.</p>
+<p>  <img src="images/05.png" alt=""></p>
+<p>  Dilakukan NF1 menjadi:</p>
+<p>  <img src="images/06.png" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>Contoh Lain:</p>
+<ul>
+<li>SISWA {NRP, NAMA, KELAS, JENIS_KELAMIN}</li>
+<li>Jika penulisan JENIS_KELAMIN misalkan &#x201D;Laki-laki&#x201D; atau &#x201D;Pria&#x201D; atau &#x201D;Perempuan&#x201D; atau &#x201D;Wanita&#x201D; bisa menimbulkan masalah konsistensi</li>
+<li>Kalau penulisan menggunakan &#x201D;L&#x201D;/&#x201D;P&#x201D; atau &#x201D;1&#x201D;/&#x201D;2&#x201D; masih dianggap benar</li>
+<li>Normalisasi NF1, JENIS_KELAMIN dijadikan entiti baru dengan atribut KODE sebagai key dan JENIS_KELAMIN</li>
+</ul>
+</li>
+<li>Catatan:<ul>
+<li>Perbedaan antara redundansi dan tidak unik &#x2192; lihat penjelasan mengenai mapping pada atribut jamak</li>
+<li>Masalah penambahan kunci baru pada entiti yang tidak memiliki kunci (dianggap banyak data yang kembar atau tidak unik) &#xF0E0; lihat penjelasan pada Catatan saat dilakukan mapping<ul>
+<li>Data yang &#x201C;kebetulan kembar&#x201D; bukan masalah, yang tidak diperbolehkan adalah data yang &#x201C;benar-benar kembar&#x201D; &#xF0E0; lihat penjelasan mengenai perbedaan redundansi dan tidak unik.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Contoh lain:</p>
+<ul>
+<li>Anggap ada suatu relasi MELANGGAR antara SISWA dan GURU dengan rasio N:M sehingga dalam mapping-nya harus dibuatkan entiti baru</li>
+<li>Pada entiti baru tersebut memiliki atribut NRP, NIP, TANGGAL dan PELANGGARAN</li>
+<li><p>Contoh data-datanya</p>
+<p>  <img src="images/07.png" alt=""></p>
+</li>
+<li><p>Apakah atribut NRP, NIP dan TANGGAL tidak unik ? Ya, karena memang banyak data yang kembar</p>
+</li>
+<li>Apakah atribut tersebut redundant ? Ya, karena pada atribut tersebut digunakan untuk menyimpan data yang memang maksudnya sama. Contoh NRP 1235 disimpan berulang-ulang</li>
+<li>Apakah entiti tersebut perlu dibuatkan kunci yang bersifat unik ? Tidak perlu, selama entiti PELANGGARAN dianggap memang tidak memerlukan kunci.<ul>
+<li>Kalau memang diinginkan suatu kunci ? Harus sudah dibuat sejak dirancang spesifikasi atau ERD, misalkan NO_PELANGGARAN</li>
+</ul>
+</li>
+<li>Apakah entiti tersebut perlu dinormalisasi (dipisahkan NRP, NIP dan TANGGAL menjadi entiti baru) ? Tidak<ul>
+<li>Mengapa ? Karena atribut tersebut sudah berupa data yang dianggap sederhana dan mungkin tidak dapat disederhanakan lagi.</li>
+<li>Contoh, apakah ada kunci lain sebagai pengganti NRP ? Kalau ada, kunci ini seharusnya sudah digunaan saat merancang spesifikasi atau ERD</li>
+<li>Contoh, apakah ada data lain yang lebih sederhana untuk menggantikan tanggal ?</li>
+</ul>
+</li>
+<li><p>Contoh tabel yang sama namun dengan data-data yang berbeda</p>
+<p>  <img src="images/08.png" alt=""></p>
+</li>
+<li><p>Apakah atribut NRP, NIP, TANGGAL dan PELANGGARAN tidak unik ? Ya, karena memang banyak data yang kembar</p>
+</li>
+<li>Khusus untuk NRP, NIP dan TANGGAL sudah dibahas pada penjelasan sebelumnya</li>
+<li>Apakah atribut PELANGGARAN berisi data yang redundant ? Ya, karena berisi data yang maksudnya sama</li>
+<li>Apakah entiti tersebut perlu dinormalisasi dengan memisah atribut PELANGGARAN menjadi entiti baru ? Bisa Ya, bisa Tidak.  </li>
+<li>Jika data-data pada atribut PELANGGARAN dimaksudkan berupa data yang bersifat mandiri, berupa keterangan yang boleh ditulis bebas, tidak mengapa menuliskan dengan cara yang berbeda meskipun maksudnya sama, maka tidak perlu dilakukan normalisasi.<ul>
+<li>Contoh, tidak mengapa menuliskan pelanggaran, misalkan, &#x201D;Memakai sandal&#x201D;, dan kadang ditulis &#x201D;Memakai sandal jepit&#x201D;.</li>
+</ul>
+</li>
+<li>Namun, jika diinginkan untuk jenis-jenis pelanggaran yang sama harus persis dituliskan sama, dan kelak ingin dilakukan analisa dengan cara mengelompokkan jenis pelanggaran, maka ini harus dilakukan normalisasi</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Second Normal Form (2NF)</strong></p>
+<ul>
+<li>Ketergantungan fungsional secara penuh<ul>
+<li>Suatu atribut harus bergantung sepenuhnya dengan kunci utama, tidak boleh dengan kombinasi antara kunci utama dengan atribut lain</li>
+</ul>
+</li>
+<li>Contoh</li>
+<li>Kuliah {Hari, Jam, Ruang MataKuliah}<ul>
+<li>Misalkan, ruang kuliah selalu sama pada satu hari, tetapi mata kuliah berbeda untuk jam kuliah tertentu</li>
+</ul>
+</li>
+<li>Ruang bergantung Hari (bergantung penuh)</li>
+<li>MK bergantung Hari dan Jam (bergantung sebagian/tidak penuh/parsial)</li>
+<li><p>Skema</p>
+<p>  <img src="images/image013.png" alt=""></p>
+</li>
+<li><p>Instant</p>
+<p>  <img src="images/image015.png" alt=""></p>
+</li>
+<li><p>Normalisasi bentuk ke dua (2NF)</p>
+<p>  <img src="images/image017.png" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p><strong>Third Normal Form (3NF)</strong></p>
+<ul>
+<li>Ketergantungan fungsional langsung</li>
+<li>Suatu atribut harus bergantung secara langsung dengan kunci utama, tanpa melalui perantara atribut lain (bergantung tidak langsung)</li>
+<li><p>Contoh</p>
+<ul>
+<li>Data Pegawai {NIP, NAMA, ALAMAT, LULUSAN, JURUSAN, KAJUR, SEKJUR}</li>
+<li>Nama, Alamat, Lulusan, Jurusan bergantung langsung dengan NIP</li>
+<li>Kajur dan Sekjur bergantung langsung dengan Jurusan dan bergantung tidak langsung dengan NIP</li>
+<li><p>Skema</p>
+<p>  <img src="images/image019.png" alt=""></p>
+</li>
+<li><p>Instant</p>
+<p>  <img src="images/image021.png" alt=""></p>
+</li>
+<li><p>Normalisasi bentuk ke 3 (3NF)</p>
+<p>  <img src="images/image023.png" alt=""></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Catatan:</p>
+<ul>
+<li>Jika perancangan ERD dilakukan secara detil (segala aspek diperhitungkan), biasanya yang sering dilakukan hanya sampai NF1 (membuang redundansi), Sedangkan NF2 dan NF3 hampir tidak perlu dilakukan</li>
+<li>Jangan menambahkan atribut baru, misalkan atribut kunci, dengan alasan tidak ada kunci atau alasan lainnya. Lakukan penambahan kunci dan sebagainya pada tahap masih di ERD atau di spesifikasinya. Pada saat Pemetaan (mapping atau pembuatan skema), tidak diperkenankan menambahkan atribut baru, kecuali entiti baru hasil dari relasi N:M atau relasi orde lebih dari 2 atau hasil dari Normalisasi.</li>
+</ul>
+</li>
+<li><p><strong>Boyce-Codd Normal Form (BCNF)</strong></p>
+<ul>
+<li>Bentuk BCNF terpenuhi dalam sebuah tabel, jika untuk setiap functional dependency terhadap setiap atribut atau gabungan atribut dalam bentuk:<br>X &#x2192; Y maka X adalah super key </li>
+<li>tabel tersebut harus di-dekomposisi berdasarkan functional dependency yang ada, sehingga X menjadi super key dari tabel-tabel hasil dekomposisi </li>
+<li>Setiap tabel dalam BCNF merupakan 3NF. Akan tetapi setiap 3NF belum tentu termasuk BCNF . Perbedaannya, untuk functional dependency X &#xF0E0; A, BCNF tidak membolehkan A sebagai bagian dari primary key.</li>
+</ul>
+</li>
+<li><p><strong>Four Normal Form (4NF)</strong></p>
+<p>  Bentuk normal 4NF terpenuhi dalam sebuah tabel jika telah memenuhi bentuk BCNF, dan tabel tersebut tidak boleh memiliki lebih dari sebuah multivalued atribute .Untuk setiap multivalued dependencies (MVD) juga harus merupakan functional dependencies </p>
+</li>
+<li><p><strong>Five Normal Form (5NF)</strong></p>
+<p>  Bentuk normal 5NF terpenuhi jika tidak dapat memiliki sebuah lossless decomposition menjadi tabel-tabel yg lebih kecil. Jika 4 bentuk normal sebelumnya dibentuk berdasarkan functional dependency, 5NF dibentuk berdasarkan konsep join dependence. Yakni apabila sebuah tabel telah di-dekomposisi menjadi tabel-tabel lebih kecil, harus bisa digabungkan lagi (join) untuk membentuk tabel semula</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="praktikum">Praktikum</h3>
+<h4 id="langkah-1--menganalisis-tabel">Langkah 1 : menganalisis tabel</h4>
+<ol>
+<li><p>Bukalah berkas spreadsheet bernama <a href="files/08-DataPasien.xlsx">03.DataPasien</a> yang dilampirkan bersama jobsheet ini. File tersebut berisi data pasien pada suatu rumah sakit.</p>
+<p><img src="images/image024.png" alt=""></p>
+</li>
+<li><p>Pada berkas tersebut buatlah sebuah &#x2018;sheet&#x2019; baru. Beri nama sheet tersebut dengan nama &#x2018;normalisasi&#x2019; dan beri nama sheet yang satunya dengan nama &#x2018;data asli&#x2019;. Kita akan menggunakan sheet ini untuk melakukan normalisasi tanpa mengubah data yang asli.</p>
+<p> <img src="images/image025.png" alt=""></p>
+<ul>
+<li>Teliti setiap atribut yang tertulis pada data tersebut dan amati ketidak sesuaian atribut yang ada sehingga mempersulit proses insert, update, delete dan modifikasi. </li>
+<li>Pertimbangkan pula bagaimana bentuk yang baik dan sesuai dengan aturan normalisasi yang efisien.</li>
+</ul>
+</li>
+<li><p>Lakukan pengecekan (Lossless&#x2013;Join Decomposition) pada tabel baru hasil dekomposisi tersebut!\<soal></soal></p>
+</li>
+</ol>
+<h4 id="langkah-2">Langkah 2</h4>
+<ol>
+<li><p>Normalisasi data sesuai bentuk normal kesatu karena data pada langkah 1 tidak memenuhi bentuk normal data bagian satu (1NF).</p>
+<p> <img src="images/image026.png" alt=""></p>
+<p> Kemudian lakukan dekomposisi tabel sebagai berikut :</p>
+<p> Tabel pasien {Kode_dokter, Nama_dokter, kode_pasien, Nama_pasien, No_antrian, Tanggal_antrian, Jam_Antrian, Kode_suster, Nama_Suster, Kode_tindakan, Nama_tindakan, Biaya}</p>
+</li>
+<li><p>Pengecekan FD pada tabel hasil langkah 2 akan menghasilkan data FD sebagai berikut :
+Ketergantungan </p>
+<p>{kode_dokter,kode_pasien,kode_suster,kode_tindakan } &#x219B; nama_dokter</p>
+<p>{kode_dokter,kode_pasien, kode_suster,kode_tindakan } &#x219B; nama_pasien</p>
+<p>{kode_dokter,kode_pasien, kode_suster,kode_tindakan } &#x219B; nama_suster</p>
+<p>{kode_dokter,kode_pasien, kode_suster,kode_tindakan } &#x2192; no_antrian</p>
+<p>{kode_dokter,kode_pasien, kode_suster,kode_tindakan } &#x2192; tanggal_antrian</p>
+<p>{kode_dokter,kode_pasien, kode_suster,kode_tindakan } &#x2192; jam_antrian</p>
+<p>{kode_dokter,kode_pasien, kode_suster,kode_tindakan } &#x219B; nama_tindakan</p>
+<p>{kode_dokter,kode_pasien, kode_suster,kode_tindakan } &#x219B; biaya</p>
+</li>
+<li><p>Normalisasi tabel menjadi bentuk 2NF. Berdasarkan informasi FD maka dekomposisi tabel yang semula 1 tabel menjadi 4 tabel sebagai berikut :</p>
+<p>ANTRIAN {kode_dokter,kode_pasien, kode_suster, kode_tindakan, no_antrian, tgl_antrian, jam_antrian} </p>
+<p>DOKTER {kode_dokter,nama_dokter} </p>
+<p>PASIEN {kode_pasien,nama_pasien} </p>
+<p>SUSTER {kode_suster, nama_suster} </p>
+<p>TINDAKAN {kode_tindakan,nama_tindakan,biaya}</p>
+</li>
+</ol>
+<p>Lakukan pengecekan (Lossless&#x2013;Join Decomposition) pada tabel baru hasil dekomposisi tersebut! \<soal> </soal></p>
+<h4 id="langkah-3">Langkah 3</h4>
+<ol>
+<li><p>Mencari hubungan syarat 3NF dengan mempertimbangkan X &#x2192; A sesuai dengan ketentuan 3NF. 
+ <strong>ANTRIAN {kode_dokter,kode_pasien, kode_suster,kode_tindakan, no_antrian, tgl_antrian, jam_antrian}</strong> 
+ no_antrian &#x2192; tgl_antrian,jam_antrian</p>
+<p> Berdasarkan FD tersebut maka tabel pada langkah 3 diperbaharui dekomposisinya menjadi :</p>
+<p> **ANTRIAN {kode_dokter,kode_pasien, kode_suster,kode_tindakan, no_antrian } </p>
+<p> <strong>DETAIL_ANTRIAN {no_antrian, tgl_antrian, jam_antrian}**</strong> </p>
+<p> DOKTER {kode_dokter,nama_dokter} </p>
+<p> PASIEN {kode_pasien,nama_pasien} </p>
+<p> SUSTER {kode_suster,nama_suster} </p>
+<p> PROSEDUR {kode_tindakan, nama_tindakan, biaya} </p>
+</li>
+<li><p>Lakukan pengecekan (Lossless&#x2013;Join Decomposition) pada tabel baru hasil dekomposisi tersebut! <soal></soal></p>
+</li>
+</ol>
+<h3 id="tugas">Tugas</h3>
+<ol>
+<li>Jawablah \<soal> dengan terlebih dahulu melakukan langkah-langkah kegiatan diatas!</soal></li>
+<li><p>Lakukan normalisasi sesuai dengan langkah-langkah percobaan di atas sekaligus lakukan pengecekan mulai bentuk 1NF sampai dengan 5NF yang sesuai dengan 3 kriteria bentuk normal yang baik pada studi kasus di bawah ini!</p>
+<p><img src="images/image028.png" alt=""> </p>
+</li>
+<li><p>Lakukan normalisasi pada studi kasus di bawah ini, sekaligus lakukan pengecekan yang sesuai dengan  kriteria bentuk normal yang baik! (Bentuk normalisasi tidak dibatasi, silahkan disesuaikan dengan kondisi studi kasus)</p>
+<p><img src="images/image029.jpg" alt=""></p>
+</li>
+<li><p>Dokumentasikan jawaban pertanyaan 1 sampai 3 dalam sebuah laporan dengan format <strong>PDF</strong>!</p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../06/06-normalisasi-1NF-3NF.html" class="navigation navigation-prev " aria-label="Previous page: Normalisasi 1NF sampai 3NF">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../08/08-ddl.html" class="navigation navigation-next " aria-label="Next page: MySQL (DDL dan DML)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Normalisasi BCNF, 4NF, dan 5NF","level":"1.9","depth":1,"next":{"title":"MySQL (DDL dan DML)","level":"1.10","depth":1,"path":"08/08-ddl.md","ref":"08/08-ddl.md","articles":[]},"previous":{"title":"Normalisasi 1NF sampai 3NF","level":"1.8","depth":1,"path":"06/06-normalisasi-1NF-3NF.md","ref":"06/06-normalisasi-1NF-3NF.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"07/07-BCNF-4NF-5NF.md","mtime":"2020-05-11T16:40:53.411Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-11T16:41:36.880Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

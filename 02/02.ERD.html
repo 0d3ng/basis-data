@@ -1,0 +1,621 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ERD · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../03/03-erd-2.html" />
+    
+    
+    <link rel="prev" href="../01/01.contoh-penerapan-basis-data.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../01/01.contoh-penerapan-basis-data.html">
+            
+                <a href="../01/01.contoh-penerapan-basis-data.html">
+            
+                    
+                    Contoh Penerapan Basis Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="02.ERD.html">
+            
+                <a href="02.ERD.html">
+            
+                    
+                    ERD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../03/03-erd-2.html">
+            
+                <a href="../03/03-erd-2.html">
+            
+                    
+                    ERD-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../04/04-erd-ke-model-relational.html">
+            
+                <a href="../04/04-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                <a href="../05/05-pemetaan-erd-ke-model-relational.html">
+            
+                    
+                    ERD ke Model Relational(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../06/06-normalisasi-1NF-3NF.html">
+            
+                <a href="../06/06-normalisasi-1NF-3NF.html">
+            
+                    
+                    Normalisasi 1NF sampai 3NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../07/07-BCNF-4NF-5NF.html">
+            
+                <a href="../07/07-BCNF-4NF-5NF.html">
+            
+                    
+                    Normalisasi BCNF, 4NF, dan 5NF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../08/08-ddl.html">
+            
+                <a href="../08/08-ddl.html">
+            
+                    
+                    MySQL (DDL dan DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../09/09-dml.html">
+            
+                <a href="../09/09-dml.html">
+            
+                    
+                    MySQL – Data Manipulation Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../10/12.select.html">
+            
+                <a href="../10/12.select.html">
+            
+                    
+                    MySQL – Data Retrieval Language (DML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../11/13.select-multitable.html">
+            
+                <a href="../11/13.select-multitable.html">
+            
+                    
+                    Select Multi Tabel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../00/nilai.html">
+            
+                <a href="../00/nilai.html">
+            
+                    
+                    Nilai Jobsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../00/nilai-teori.html">
+            
+                <a href="../00/nilai-teori.html">
+            
+                    
+                    Nilai Teori
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ERD</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jobsheet-2-entity-relationship-diagram-erd">Jobsheet-2: Entity Relationship Diagram (ERD)</h1>
+<h2 id="topik">Topik</h2>
+<p>Entity Relationship Diagram (ERD) </p>
+<h2 id="tujuan">Tujuan</h2>
+<ol>
+<li>Mahasiswa mampu merancang basis data melalui tahap-tahap perancangannya</li>
+<li>Mahasiswa mampu mewujudkan hasil perancangan basis data ke dalam diagram E-R secara manual</li>
+</ol>
+<h2 id="teori">Teori</h2>
+<p>Basis data adalah kumpulan data, yang dapat digambarkan sebagai aktivitas dari satu atau lebih organisasi yang berelasi. 
+Contoh, basis data universitas yang berisi informasi mengenai: </p>
+<ul>
+<li>Entitas, semisal mahasiswa, fakultas, mata kuliah, dan ruang kelas</li>
+<li><p>Relasi diantara entitas, seperti pengambilan kuliah yang dilakukan oleh mahasiswa, staf pengajar, dan penggunaan 
+ruang perkuliahan.</p>
+</li>
+<li><p>ER &#x2013; Model</p>
+<p>  ER model digunakan sebagai inisialisasi desain dari basis data. ER model menyediakan suatu konsep yang dapat mengubah 
+  deskripsi informal dari apa yang diinginkan oleh user menjadi hal yang lebih detail, presisi, dan deskripsi detail yang 
+  dapat diimplementasikan ke dalam DBMS. </p>
+</li>
+<li><p>Entitas </p>
+<p>  Entitas adalah suatu obyek yang dapat dikenali dari objek yang lain. Objek yang dapat menjadi entitas adalah objek-objek 
+  yang nantinya perlu untuk disimpan datanya.
+  Contoh: karyawan, perusahaan, peristiwa, tanaman dan lain &#x2013; lain. 
+  Entitas memiliki atribut, contoh: entitas penduduk mempunyai nama, alamat, tanggal lahir, pekerjaan, dan golongan darah.</p>
+</li>
+<li><p>Attribut</p>
+<p>  Entitas direpresentasikan oleh sekumpulan atribut, yang mana properti deskriptifnya dikuasai oleh seluruh anggota 
+  dalam kumpulan entitas.</p>
+<p>  Tipe atribut:</p>
+<ol>
+<li><code>Simple (sederhana) dan composite (gabungan) attributes.</code></li>
+<li><code>Single-valued (satu-nilai) dan multi-valued (multi-nilai) attributes.</code>
+Contoh : attribute multi-valued: nomor telepon.</li>
+<li><code>Derived (turunan) attributes</code> : dapat diperhitungkan dari attribute lain.
+Contoh : umur, tanggal kelahiran.</li>
+</ol>
+</li>
+<li><p>Kardinalitas</p>
+<p>  Merepresentasikan jumlah relasi entitas ke entitas yang lain. Jenis kardinalitas harus memenuhi salah satu tipe berikut:</p>
+<ol>
+<li>One to one (satu ke satu)</li>
+<li>One to many (satu ke banyak)</li>
+<li>Many to one (banyak ke satu)</li>
+<li>Many to many (banyak ke banyak)</li>
+</ol>
+</li>
+<li><p>ERD (Entity Relationship Diagram)</p>
+<p>  hubungan antara entities (table-tabel) dan relationships (hubungan-hubungan) diantara entities tersebut</p>
+</li>
+</ul>
+<h2 id="aturan-untuk-model-database">Aturan untuk Model Database</h2>
+<ol>
+<li>Tiap baris harus berdiri sendiri (independent): tidak tergantung baris-baris yang lain, dan urutan baris tidak 
+mempengaruhi model database.</li>
+<li>Tiap baris harus unik: tidak boleh ada 2 atau lebih baris yang sama.</li>
+<li>Kolom harus berdiri sendiri (independent): tidak tergantung kolom-kolom yang lain, dan urutan kolom tidak mempengaruhi 
+model database.</li>
+<li>Nilai tiap kolom harus berupa satu kesatuan: tidak berupa sebuah daftar.</li>
+</ol>
+<h2 id="tahap-pembuatan-database">Tahap Pembuatan Database</h2>
+<ol>
+<li>Tentukan Entities</li>
+<li>Tentukan Attributes</li>
+<li>Tentukan Relationships</li>
+<li>Pembuatan ERD</li>
+<li>Pembentukan rancangan fisik Database</li>
+<li>Implementasi Database </li>
+</ol>
+<h2 id="langkah-kerja">Langkah Kerja</h2>
+<h3 id="rancanglah-sebuah-database-untuk-menyelesaikan-masalah-berikut">Rancanglah sebuah database untuk menyelesaikan masalah berikut:</h3>
+<p>Suatu perusahaan software diminta membuatkan basis data yang akan menangani data-data perbankan. Data-data yang 
+ditanganinya adalah: data pribadi mengenai nasabah, data account deposit yang dimiliki oleh nasabah, cabang bank 
+di mana nasabah membuka depositnya, dan data transaksi yang dilakukan nasabah. Nasabah boleh mempunyai lebih dari 
+satu account deposit, dan satu account deposit boleh dimiliki oleh lebih dari satu nasabah sekaligus (join account).</p>
+<p>Langkah-langkah perancangan database perbankan :</p>
+<ol>
+<li><p>Menentukan entitas (object-object dasar) yang perlu ada didatabase.</p>
+<ul>
+<li>Nasabah: menyimpan semua data pribadi semua nasabah</li>
+<li>Rekening: menyimpan informasi semua rekening yang telah dibuka</li>
+<li>Cabang_bank: menyimpan informasi tentang semua cabang bank</li>
+<li>Transaksi: menyimpan informasi tentang semua transaksi yang telah terjadi</li>
+</ul>
+</li>
+<li><p>Menentukkan atribut (sifat-sifat) masing-masing entity sesuai kebutuhan database</p>
+<ul>
+<li><p>Nasabah</p>
+<ul>
+<li>id_nasabah: nomor id untuk nasabah (integer) PK</li>
+<li>nama_nasabah: nama lengkap nasabah (varchar(45))</li>
+<li>alamat_nasabah: alamat lengkap nasabah (varchar(255))</li>
+</ul>
+</li>
+<li><p>Rekening</p>
+<ul>
+<li>no_rekening: nomor rekening (integer) PK</li>
+<li>pin: Personal Identification Number (varchar(10))</li>
+<li>saldo: Jumlah saldo rekening dalam Rp (integer)</li>
+</ul>
+</li>
+<li><p>Cabank_bank</p>
+<ul>
+<li>kode_cabang: kode untuk cabang bank (varchar(10)) PK</li>
+<li>nama_cabang: nama lengkap cabang bank (varchar(20))</li>
+<li>alamat_cabang: alamat lengkap cabang bank (varchar(255)) </li>
+</ul>
+</li>
+<li><p>Transaksi</p>
+<ul>
+<li>no_transaksi: nomor transaksi (integer) PK</li>
+<li>jenis_transaksi: kredit atau debit (varchar(10))</li>
+<li>tanggal: tanggal terjadinya transaksi (date)</li>
+<li>jumlah: besarnya transaksi dalam Rp (integer)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Menentukan Relationship (Hubungan) diantara entities tersebut</p>
+<table>
+<tbody>
+  <tr>
+    <th></th>
+    <th>Nasabah</th>
+    <th>Rekening</th>
+    <th>Cabang_Bank</th>
+    <th>Transaksi</th>
+  </tr>
+  <tr>
+    <td>Nasabah</td>
+    <td></td>
+    <td>M:N</td>
+    <td></td>
+    <td>1:N</td>
+  </tr>
+  <tr>
+    <td>Rekening</td>
+    <td></td>
+    <td></td>
+    <td>N:1</td>
+    <td>1:N</td>
+  </tr>
+  <tr>
+    <td>Cabang_Bank</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Transaksi</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+<p>Hubungan</p>
+<ul>
+<li><p>nasabah memiliki rekening:</p>
+<ul>
+<li>Tabel utama : nasabah, rekening</li>
+<li>Tabel kedua : nasabah_has_rekening</li>
+<li>Relationship : Many-to-many (m : n) </li>
+<li>Attribute penghubung : id_nasabah, no_rekening (FK id_nasabah, no_rekening, dinasabah_has_rekening)</li>
+</ul>
+</li>
+<li><p>nasabah melakukan transaksi:</p>
+<ul>
+<li>Tabel utama : nasabah</li>
+<li>Tabel kedua : transaksi</li>
+<li>Relationship : One-to-many (1 : n)</li>
+<li>Attribute penghubung : id_nasabah, (FK id_nasabah, di transaksi)</li>
+</ul>
+</li>
+<li><p>cabang_bank menangani rekening:</p>
+<ul>
+<li>Tabel utama : cabang_bank</li>
+<li>Tabel kedua : rekening</li>
+<li>Relationship : One-to-many (1 : n)</li>
+<li>Attribute penghubung : kode_cabang (FK kode_cabang di rekening)</li>
+</ul>
+</li>
+<li><p>rekening terlibat dalam transaksi :  </p>
+<ul>
+<li>Tabel utama : rekening</li>
+<li>Tabel kedua : transaksi</li>
+<li>Relationship : One-to-many (1 : n)</li>
+<li>Attribute penghubung : no_rekening (FK no_rekening, di transaksi)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Menggambar E-R Diagram Manual:</p>
+<p> <img src="images/erd-tugas.png" alt="ERD Tugas"></p>
+</li>
+</ol>
+<h2 id="tugas">TUGAS</h2>
+<ol>
+<li>Buatlah rancangan sebuah database untuk menangani data perkuliahan. Data-data yang akan ditanganinya adalah: data 
+pribadi mengenai mahasiswa, data pribadi mengenai dosen, data mata kuliah dan data ruang kelas. Mahasiswa boleh mengambil 
+lebih dari satu mata kuliah, dan satu mata kuliah bisa diampu oleh lebih dari satu dosen. Satu kelas mata kuliah boleh 
+diambil oleh lebih dari satu mahasiswa sekaligus.
+Buatlah ER Diagram manual untuk kasus tersebut dari tahap 1 sampai tahap 4!</li>
+<li>Ambil contoh sembarang database, boleh dari sistem atau aplikasi yang sudah ada. Buatlah rancangan ER Diagram 
+manual database tersebut dari tahap 1-4 dengan ketentuan database minimal mengandung 4 buah entitas.</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../01/01.contoh-penerapan-basis-data.html" class="navigation navigation-prev " aria-label="Previous page: Contoh Penerapan Basis Data">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../03/03-erd-2.html" class="navigation navigation-next " aria-label="Next page: ERD-2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ERD","level":"1.4","depth":1,"next":{"title":"ERD-2","level":"1.5","depth":1,"path":"03/03-erd-2.md","ref":"03/03-erd-2.md","articles":[]},"previous":{"title":"Contoh Penerapan Basis Data","level":"1.3","depth":1,"path":"01/01.contoh-penerapan-basis-data.md","ref":"01/01.contoh-penerapan-basis-data.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"02/02.ERD.md","mtime":"2020-05-11T16:40:53.383Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-11T16:41:36.880Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
